@@ -38,3 +38,11 @@ D:\visual nha\TPT\QUANLYSINHVIEN\QLSV_Database\bin\Debug\CrystalDecisions.Report
 D:\visual nha\TPT\QUANLYSINHVIEN\QLSV_Database\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\visual nha\TPT\QUANLYSINHVIEN\QLSV_Database\bin\Debug\stdole.dll
 D:\visual nha\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_Database.csproj.CopyComplete
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QLSV_Database\bin\Debug\QLSV_Database.exe
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QLSV_Database\bin\Debug\QLSV_Database.pdb
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_Database.csprojAssemblyReference.cache
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_GiaoDien.Properties.Resources.resources
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_Database.csproj.GenerateResource.cache
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_Database.csproj.CoreCompileInputs.cache
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_Database.exe
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_Database.pdb

@@ -424,8 +424,16 @@ namespace QLSV_GiaoDien
 
         private void xuatDSSVToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmReportSinhVien frm = new frmReportSinhVien();
             frm.Show();
+            
+            frm.FormClosed += Frm_FormClosed;
+        }
+
+        private void Frm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
         }
 
         private void xemDiemToolStripMenuItem_Click(object sender, EventArgs e)

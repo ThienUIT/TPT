@@ -20,45 +20,39 @@ namespace QLSV_GiaoDien.Reports
             InitializeComponent();
         }
 
-        private void frmReportSinhVien_Load(object sender, EventArgs e)
-        {
-
-            xlLop.cmbMAKHOAHOC = cmbKhoaHoc;
-            xlLop.LoadDLVaoCombobox_MaKhoaHoc();
-            cmbKhoaHoc.Text = "-- Chọn khóa học --";
-           
-        }
-
-       
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
             if (cmbLop.SelectedValue != null)
             {
                 xlBaocao.MALOP = cmbLop.SelectedValue.ToString();
-                crpSinhVien crp = new crpSinhVien();
-                crp.SetDataSource(xlBaocao.BaoCaoSV());
-                crystalReportViewer1.ReportSource = crp;
-                crystalReportViewer1.Refresh();
+                dgvSinhVien.DataSource=xlBaocao.BaoCaoSV();              
             }
             else
             {
                 cmbLop.DisplayMember = "";
                 MessageBox.Show("Không có môn học nào trong khóa này");
             }
-            
-            
+
         }
 
-       
+
         private void cmbKhoa_SelectedValueChanged(object sender, EventArgs e)
         {
-            
+
             xlBaocao.MAKHOAHOC = cmbKhoaHoc.SelectedValue.ToString();
             xlBaocao.CMB = cmbLop;
             xlBaocao.LayDLVaocmbLop();
-           
+
             cmbLop.Enabled = true;
         }
+
+        private void frmLoad(object sender, EventArgs e)
+        {
+            xlLop.cmbMAKHOAHOC = cmbKhoaHoc;
+            xlLop.LoadDLVaoCombobox_MaKhoaHoc();
+            cmbKhoaHoc.Text = "-- Chọn khóa học --";
+        }
+
     }
 }

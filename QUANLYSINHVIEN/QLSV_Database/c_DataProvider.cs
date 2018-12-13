@@ -9,7 +9,7 @@ namespace QLSV_Database
 {
     public class c_DataProvider
     {
-        string strCn = @"Data Source=DESKTOP-698SUCC\SQLENTERPRISE;Initial Catalog=TPT_QLSV;Integrated Security=True";
+        string strCn = @"Data Source=DESKTOP-GQ59EQL\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True";
         public SqlConnection OpenCN()
         { 
             SqlConnection cn = new SqlConnection(strCn);
