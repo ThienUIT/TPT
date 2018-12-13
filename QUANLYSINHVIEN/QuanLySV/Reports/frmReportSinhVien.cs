@@ -36,8 +36,10 @@ namespace QLSV_GiaoDien.Reports
             if (cmbLop.SelectedValue != null)
             {
                 xlBaocao.MALOP = cmbLop.SelectedValue.ToString();
-                dgvSinhVien.DataSource = xlBaocao.BaoCaoSV();
-                
+                crpSinhVien crp = new crpSinhVien();
+                crp.SetDataSource(xlBaocao.BaoCaoSV());
+                crystalReportViewer1.ReportSource = crp;
+                crystalReportViewer1.Refresh();
             }
             else
             {
