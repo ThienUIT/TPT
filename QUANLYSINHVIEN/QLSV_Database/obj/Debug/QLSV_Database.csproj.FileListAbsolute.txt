@@ -38,3 +38,11 @@ D:\visual nha\TPT\QUANLYSINHVIEN\QLSV_Database\bin\Debug\CrystalDecisions.Report
 D:\visual nha\TPT\QUANLYSINHVIEN\QLSV_Database\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\visual nha\TPT\QUANLYSINHVIEN\QLSV_Database\bin\Debug\stdole.dll
 D:\visual nha\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_Database.csproj.CopyComplete
+D:\New folder (3)\TPT\QUANLYSINHVIEN\QLSV_Database\bin\Debug\QLSV_Database.exe
+D:\New folder (3)\TPT\QUANLYSINHVIEN\QLSV_Database\bin\Debug\QLSV_Database.pdb
+D:\New folder (3)\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_Database.csprojAssemblyReference.cache
+D:\New folder (3)\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_GiaoDien.Properties.Resources.resources
+D:\New folder (3)\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_Database.csproj.GenerateResource.cache
+D:\New folder (3)\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_Database.csproj.CoreCompileInputs.cache
+D:\New folder (3)\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_Database.exe
+D:\New folder (3)\TPT\QUANLYSINHVIEN\QLSV_Database\obj\Debug\QLSV_Database.pdb

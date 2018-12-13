@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbKhoaHoc = new System.Windows.Forms.ComboBox();
@@ -36,22 +35,16 @@
             this.btnDongY = new System.Windows.Forms.Button();
             this.cmbLop = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dgvSinhVien = new System.Windows.Forms.DataGridView();
+            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MSSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QUEQUAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOISINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).BeginInit();
             this.SuspendLayout();
-            // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 78);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.SelectionFormula = "";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(681, 515);
-            this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
             // label1
             // 
@@ -121,21 +114,94 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Chọn Lớp:";
             // 
+            // dgvSinhVien
+            // 
+            this.dgvSinhVien.AllowUserToOrderColumns = true;
+            this.dgvSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.HOTEN,
+            this.MSSV,
+            this.QUEQUAN,
+            this.NGAYSINH,
+            this.NOISINH,
+            this.GIOITINH});
+            this.dgvSinhVien.Location = new System.Drawing.Point(8, 77);
+            this.dgvSinhVien.Name = "dgvSinhVien";
+            this.dgvSinhVien.ReadOnly = true;
+            this.dgvSinhVien.Size = new System.Drawing.Size(795, 310);
+            this.dgvSinhVien.TabIndex = 3;
+            // 
+            // HOTEN
+            // 
+            this.HOTEN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HOTEN.DataPropertyName = "HOTEN";
+            this.HOTEN.FillWeight = 57.43292F;
+            this.HOTEN.HeaderText = "Họ Tên";
+            this.HOTEN.Name = "HOTEN";
+            this.HOTEN.ReadOnly = true;
+            // 
+            // MSSV
+            // 
+            this.MSSV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MSSV.DataPropertyName = "MaSinhVien";
+            this.MSSV.FillWeight = 57.43292F;
+            this.MSSV.HeaderText = "MSSV";
+            this.MSSV.Name = "MSSV";
+            this.MSSV.ReadOnly = true;
+            // 
+            // QUEQUAN
+            // 
+            this.QUEQUAN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.QUEQUAN.DataPropertyName = "QueQuan";
+            this.QUEQUAN.FillWeight = 40F;
+            this.QUEQUAN.HeaderText = "Quê Quán";
+            this.QUEQUAN.Name = "QUEQUAN";
+            this.QUEQUAN.ReadOnly = true;
+            // 
+            // NGAYSINH
+            // 
+            this.NGAYSINH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NGAYSINH.DataPropertyName = "NgaySinh";
+            this.NGAYSINH.FillWeight = 57.43292F;
+            this.NGAYSINH.HeaderText = "Ngày Sinh";
+            this.NGAYSINH.Name = "NGAYSINH";
+            this.NGAYSINH.ReadOnly = true;
+            // 
+            // NOISINH
+            // 
+            this.NOISINH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NOISINH.DataPropertyName = "NoiSinh";
+            this.NOISINH.FillWeight = 57.43292F;
+            this.NOISINH.HeaderText = "Nơi Sinh";
+            this.NOISINH.Name = "NOISINH";
+            this.NOISINH.ReadOnly = true;
+            // 
+            // GIOITINH
+            // 
+            this.GIOITINH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GIOITINH.DataPropertyName = "GioiTinh";
+            this.GIOITINH.FillWeight = 57.43292F;
+            this.GIOITINH.HeaderText = "Giới Tính";
+            this.GIOITINH.Name = "GIOITINH";
+            this.GIOITINH.ReadOnly = true;
+            // 
             // frmReportSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 593);
+            this.ClientSize = new System.Drawing.Size(835, 593);
+            this.Controls.Add(this.dgvSinhVien);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.crystalReportViewer1);
+            this.MaximizeBox = false;
             this.Name = "frmReportSinhVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xuất Danh Sách Sinh Viên";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.frmReportSinhVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,7 +209,7 @@
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        //private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnDongY;
@@ -151,5 +217,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbKhoaHoc;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dgvSinhVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MSSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QUEQUAN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NGAYSINH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOISINH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GIOITINH;
     }
 }
