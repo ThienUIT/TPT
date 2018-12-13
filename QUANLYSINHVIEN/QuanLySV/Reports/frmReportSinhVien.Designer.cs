@@ -49,7 +49,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(174, 13);
+            this.label1.Location = new System.Drawing.Point(273, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 1;
@@ -61,9 +61,9 @@
             this.groupBox1.Controls.Add(this.btnDongY);
             this.groupBox1.Controls.Add(this.cmbLop);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(8, 12);
+            this.groupBox1.Location = new System.Drawing.Point(107, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(624, 59);
+            this.groupBox1.Size = new System.Drawing.Size(621, 59);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Xuất Danh Sách Sinh Viên";
@@ -125,7 +125,7 @@
             this.NGAYSINH,
             this.NOISINH,
             this.GIOITINH});
-            this.dgvSinhVien.Location = new System.Drawing.Point(8, 77);
+            this.dgvSinhVien.Location = new System.Drawing.Point(20, 77);
             this.dgvSinhVien.Name = "dgvSinhVien";
             this.dgvSinhVien.ReadOnly = true;
             this.dgvSinhVien.Size = new System.Drawing.Size(795, 310);
