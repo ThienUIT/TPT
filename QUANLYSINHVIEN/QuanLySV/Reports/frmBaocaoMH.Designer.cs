@@ -27,35 +27,29 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+        {            
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDongY = new System.Windows.Forms.Button();
             this.cmbKhoa = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dgvMonHoc = new System.Windows.Forms.DataGridView();
+            this.TenMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTinChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HinhThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongSoTiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTietLyThuyet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTietThucHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).BeginInit();
             this.SuspendLayout();
-            // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 77);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.SelectionFormula = "";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(684, 516);
-            this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnDongY);
             this.groupBox1.Controls.Add(this.cmbKhoa);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 10);
+            this.groupBox1.Location = new System.Drawing.Point(108, 11);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(414, 59);
             this.groupBox1.TabIndex = 3;
@@ -89,30 +83,118 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Xuất danh sách theo Khoa:";
             // 
+            // dgvMonHoc
+            // 
+            this.dgvMonHoc.AllowUserToOrderColumns = true;
+            this.dgvMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMonHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenMonHoc,
+            this.SoTinChi,
+            this.HinhThuc,
+            this.TongSoTiet,
+            this.SoTietLyThuyet,
+            this.SoTietThucHanh,
+            this.GhiChu});
+            this.dgvMonHoc.Location = new System.Drawing.Point(13, 83);
+            this.dgvMonHoc.Name = "dgvMonHoc";
+            this.dgvMonHoc.ReadOnly = true;
+            this.dgvMonHoc.Size = new System.Drawing.Size(604, 328);
+            this.dgvMonHoc.TabIndex = 4;
+            // 
+            // TenMonHoc
+            // 
+            this.TenMonHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenMonHoc.DataPropertyName = "TenMonHoc";
+            this.TenMonHoc.FillWeight = 57.43292F;
+            this.TenMonHoc.HeaderText = "Tên Môn Học";
+            this.TenMonHoc.Name = "TenMonHoc";
+            this.TenMonHoc.ReadOnly = true;
+            // 
+            // SoTinChi
+            // 
+            this.SoTinChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SoTinChi.DataPropertyName = "SoTinChi";
+            this.SoTinChi.FillWeight = 57.43292F;
+            this.SoTinChi.HeaderText = "Số Tín Chỉ";
+            this.SoTinChi.Name = "SoTinChi";
+            this.SoTinChi.ReadOnly = true;
+            // 
+            // HinhThuc
+            // 
+            this.HinhThuc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HinhThuc.DataPropertyName = "HinhThuc";
+            this.HinhThuc.FillWeight = 40F;
+            this.HinhThuc.HeaderText = "Hình Thức";
+            this.HinhThuc.Name = "HinhThuc";
+            this.HinhThuc.ReadOnly = true;
+            // 
+            // TongSoTiet
+            // 
+            this.TongSoTiet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TongSoTiet.DataPropertyName = "TongSoTiet";
+            this.TongSoTiet.FillWeight = 57.43292F;
+            this.TongSoTiet.HeaderText = "Tổng Số Tiết";
+            this.TongSoTiet.Name = "TongSoTiet";
+            this.TongSoTiet.ReadOnly = true;
+            // 
+            // SoTietLyThuyet
+            // 
+            this.SoTietLyThuyet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SoTietLyThuyet.DataPropertyName = "SoTietLyThuyet";
+            this.SoTietLyThuyet.FillWeight = 57.43292F;
+            this.SoTietLyThuyet.HeaderText = "Số Tiết Lý Thuyết";
+            this.SoTietLyThuyet.Name = "SoTietLyThuyet";
+            this.SoTietLyThuyet.ReadOnly = true;
+            // 
+            // SoTietThucHanh
+            // 
+            this.SoTietThucHanh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SoTietThucHanh.DataPropertyName = "SoTietThucHanh";
+            this.SoTietThucHanh.FillWeight = 57.43292F;
+            this.SoTietThucHanh.HeaderText = "Số Tiết Thực Hành";
+            this.SoTietThucHanh.Name = "SoTietThucHanh";
+            this.SoTietThucHanh.ReadOnly = true;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Ghi Chú";
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.ReadOnly = true;
+            // 
             // frmBaocaoMH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 593);
+            this.ClientSize = new System.Drawing.Size(631, 422);
+            this.Controls.Add(this.dgvMonHoc);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.crystalReportViewer1);
+            this.MaximizeBox = false;
             this.Name = "frmBaocaoMH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xuất danh sách môn học";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmBaocaoMH_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnDongY;
         private System.Windows.Forms.ComboBox cmbKhoa;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgvMonHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenMonHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoTinChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HinhThuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TongSoTiet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoTietLyThuyet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoTietThucHanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
     }
 }

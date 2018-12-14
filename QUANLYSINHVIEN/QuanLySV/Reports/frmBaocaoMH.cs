@@ -21,10 +21,8 @@ namespace QLSV_GiaoDien.Reports
         private void btnDongY_Click(object sender, EventArgs e)
         {
             xlBaocaoMH.MAKHOA = cmbKhoa.SelectedValue.ToString();
-            crpMonHoc crpMH = new crpMonHoc();
-            crpMH.SetDataSource(xlBaocaoMH.BaoCaoMH());
-            crystalReportViewer1.ReportSource = crpMH;
-            crystalReportViewer1.Refresh();
+            dgvMonHoc.DataSource = xlBaocaoMH.BaoCaoMH();
+
         }
 
         private void frmBaocaoMH_Load(object sender, EventArgs e)
