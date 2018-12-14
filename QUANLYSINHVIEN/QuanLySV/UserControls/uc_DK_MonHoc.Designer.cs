@@ -78,6 +78,7 @@
             // 
             // btnLamlai
             // 
+            this.btnLamlai.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
             this.btnLamlai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLamlai.Location = new System.Drawing.Point(651, 230);
             this.btnLamlai.Margin = new System.Windows.Forms.Padding(4);
@@ -217,6 +218,7 @@
             // 
             // btnDongy
             // 
+            this.btnDongy.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnDongy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnDongy.Location = new System.Drawing.Point(455, 230);
             this.btnDongy.Margin = new System.Windows.Forms.Padding(4);

@@ -132,5 +132,10 @@ namespace QLSV_GiaoDien
             dgvMonhoc.DataSource = qlsv_xlMonHoc.TimKiemMH();
 
         }
+
+        private void btnback_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

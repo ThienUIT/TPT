@@ -23,7 +23,6 @@ namespace QLSV_GiaoDien.UserControls
         private void uc_GiaoVien_KhoaHoc_Khoa_He_Load(object sender, EventArgs e)
         {
            
-            dgvHE.DataSource = qlsv_xlHe.LoadDL();
             dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
 
             dgvGiaoVien.DataSource = qlsv_xlGiaoVien.LoadDLGiaoVien();
@@ -37,66 +36,7 @@ namespace QLSV_GiaoDien.UserControls
 
 
 
-        #region Quản lý Hệ
-        private void btnThemHe_Click(object sender, EventArgs e)
-        {
-            txtMaHe.Text = qlsv_xlHe.TaoMaHe().ToString() ;
-            qlsv_xlHe.MAHE = txtMaHe.Text;
-            qlsv_xlHe.TENHE = txtTenHe.Text;
-            qlsv_xlHe.GHICHU = txtGhiChu_He.Text;
-            qlsv_xlHe.ThemHe();
-            dgvHE.DataSource = qlsv_xlHe.LoadDL();
-            cXLC.ClearAllTextBox(groupBox8);
-        }
-
-        private void groupBox9_Enter(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void dgvHE_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            txtMaHe.Text = dgvHE.CurrentRow.Cells[2].Value.ToString();
-            txtTenHe.Text = dgvHE.CurrentRow.Cells[3].Value.ToString();
-            txtGhiChu_He.Text = dgvHE.CurrentRow.Cells[4].Value.ToString();
-            //int n = dgvHE.SelectedRows.Count;
-            //for (int i = 0; i < n; i++)
-            //{
-            //    txtMaHe.Text = dgvHE.SelectedRows[i].Cells[0].Value.ToString();
-            //    txtTenHe.Text = dgvHE.SelectedRows[i].Cells[1].Value.ToString();
-            //    txtGhiChu_He.Text = dgvHE.SelectedRows[i].Cells[2].Value.ToString();
-            //}
-
-            qlsv_xlHe.MAHE = txtMaHe.Text;
-            qlsv_xlHe.TENHE = txtTenHe.Text;
-            qlsv_xlHe.GHICHU = txtGhiChu_He.Text;
-            if (e.ColumnIndex == 0)
-            {
-                
-                qlsv_xlHe.CapNhatHe();
-                dgvHE.DataSource = qlsv_xlHe.LoadDL();
-                cXLC.ClearAllTextBox(groupBox8);
-            }
-            if (e.ColumnIndex == 1)
-            {
-                
-                qlsv_xlHe.XoaHe();
-                dgvHE.DataSource = qlsv_xlHe.LoadDL();
-                cXLC.ClearAllTextBox(groupBox8);
-                
-            }
-           
-        }
-
-       
-
-        private void btnLamlai_He_Click(object sender, EventArgs e)
-        {
-            cXLC.ClearAllTextBox(groupBox8);
-        }
-        #endregion
-
+      
 
         #region Quản lý Khóa Học
         QLSV_XKhoaHoc qlsv_xKhoaHoc = new QLSV_XKhoaHoc();

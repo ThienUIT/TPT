@@ -93,6 +93,16 @@ namespace QLSV_GiaoDien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_delete {
+            get {
+                object obj = ResourceManager.GetObject("button delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_exit {
             get {
                 object obj = ResourceManager.GetObject("button exit", resourceCulture);
@@ -103,9 +113,29 @@ namespace QLSV_GiaoDien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_exit1 {
+            get {
+                object obj = ResourceManager.GetObject("button exit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_login {
             get {
                 object obj = ResourceManager.GetObject("button login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit {
+            get {
+                object obj = ResourceManager.GetObject("edit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +156,16 @@ namespace QLSV_GiaoDien.Properties {
         internal static System.Drawing.Bitmap Magnify {
             get {
                 object obj = ResourceManager.GetObject("Magnify", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refesh {
+            get {
+                object obj = ResourceManager.GetObject("refesh", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

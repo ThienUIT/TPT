@@ -34,7 +34,6 @@
             this.txtTimKiem_MSSV = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.Thoát = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -95,11 +94,12 @@
             // 
             // btnTim
             // 
+            this.btnTim.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.Magnify;
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTim.Location = new System.Drawing.Point(421, 26);
+            this.btnTim.Location = new System.Drawing.Point(421, 12);
             this.btnTim.Margin = new System.Windows.Forms.Padding(4);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(100, 28);
+            this.btnTim.Size = new System.Drawing.Size(100, 42);
             this.btnTim.TabIndex = 2;
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
@@ -124,7 +124,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.Thoát);
             this.groupBox3.Controls.Add(this.btnSua);
             this.groupBox3.Controls.Add(this.btnXoa);
             this.groupBox3.Controls.Add(this.btnThem);
@@ -153,47 +152,39 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Nhập điểm";
             // 
-            // Thoát
-            // 
-            this.Thoát.Location = new System.Drawing.Point(424, 489);
-            this.Thoát.Margin = new System.Windows.Forms.Padding(4);
-            this.Thoát.Name = "Thoát";
-            this.Thoát.Size = new System.Drawing.Size(100, 28);
-            this.Thoát.TabIndex = 18;
-            this.Thoát.Text = "Thoát";
-            this.Thoát.UseVisualStyleBackColor = true;
-            this.Thoát.Click += new System.EventHandler(this.Thoát_Click);
-            // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(292, 489);
+            this.btnSua.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
+            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSua.Location = new System.Drawing.Point(389, 481);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(100, 28);
+            this.btnSua.Size = new System.Drawing.Size(100, 36);
             this.btnSua.TabIndex = 17;
-            this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(163, 489);
+            this.btnXoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXoa.Location = new System.Drawing.Point(224, 481);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(100, 28);
+            this.btnXoa.Size = new System.Drawing.Size(100, 36);
             this.btnXoa.TabIndex = 16;
-            this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(36, 489);
+            this.btnThem.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
+            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThem.Location = new System.Drawing.Point(36, 481);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 28);
+            this.btnThem.Size = new System.Drawing.Size(100, 36);
             this.btnThem.TabIndex = 15;
-            this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
@@ -203,6 +194,7 @@
             this.dgvDiem.Location = new System.Drawing.Point(8, 267);
             this.dgvDiem.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDiem.Name = "dgvDiem";
+            this.dgvDiem.ReadOnly = true;
             this.dgvDiem.Size = new System.Drawing.Size(551, 174);
             this.dgvDiem.TabIndex = 14;
             this.dgvDiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDiem_CellClick);
@@ -449,7 +441,6 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dgvDiem;
-        private System.Windows.Forms.Button Thoát;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnTim;
         private System.Windows.Forms.TextBox txtTimKiem_MSSV;

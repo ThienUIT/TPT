@@ -38,12 +38,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvGiaoVien = new System.Windows.Forms.DataGridView();
-            this.MaGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu_GV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnsua_GV = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXoa_Gv = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupboxGV = new System.Windows.Forms.GroupBox();
             this.btnLamlai = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -58,11 +52,6 @@
             this.tabKhoa = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dgvKhoa = new System.Windows.Forms.DataGridView();
-            this.Ma_Khoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu_Khoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSua_Khoa = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXoa_Khoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupboxKhoa = new System.Windows.Forms.GroupBox();
             this.btnNhaplaiKhoa = new System.Windows.Forms.Button();
             this.btnThemKhoa = new System.Windows.Forms.Button();
@@ -75,13 +64,6 @@
             this.tabKhoaHoc = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgvKhoaHoc = new System.Windows.Forms.DataGridView();
-            this.MaKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChuKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSuaKhoaHoc = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXoaKhoaHoc = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.dtpNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayBatDau = new System.Windows.Forms.DateTimePicker();
@@ -95,23 +77,24 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.tabHe = new System.Windows.Forms.TabPage();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.dgvHE = new System.Windows.Forms.DataGridView();
-            this.MaHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSua_He = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXoa_He = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.btnLamlai_He = new System.Windows.Forms.Button();
-            this.btnThemHe = new System.Windows.Forms.Button();
-            this.txtGhiChu_He = new System.Windows.Forms.TextBox();
-            this.txtTenHe = new System.Windows.Forms.TextBox();
-            this.txtMaHe = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.MaKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChuKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSuaKhoaHoc = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnXoaKhoaHoc = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Ma_Khoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu_Khoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSua_Khoa = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnXoa_Khoa = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.MaGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu_GV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnsua_GV = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnXoa_Gv = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabGV_Khoa_KhoaHoc_He.SuspendLayout();
             this.tabGiaoVien.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -126,10 +109,6 @@
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoaHoc)).BeginInit();
             this.groupBox7.SuspendLayout();
-            this.tabHe.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHE)).BeginInit();
-            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabGV_Khoa_KhoaHoc_He
@@ -137,7 +116,6 @@
             this.tabGV_Khoa_KhoaHoc_He.Controls.Add(this.tabGiaoVien);
             this.tabGV_Khoa_KhoaHoc_He.Controls.Add(this.tabKhoa);
             this.tabGV_Khoa_KhoaHoc_He.Controls.Add(this.tabKhoaHoc);
-            this.tabGV_Khoa_KhoaHoc_He.Controls.Add(this.tabHe);
             this.tabGV_Khoa_KhoaHoc_He.Location = new System.Drawing.Point(3, 2);
             this.tabGV_Khoa_KhoaHoc_He.Margin = new System.Windows.Forms.Padding(4);
             this.tabGV_Khoa_KhoaHoc_He.Name = "tabGV_Khoa_KhoaHoc_He";
@@ -177,6 +155,7 @@
             // 
             // btnTim
             // 
+            this.btnTim.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.Magnify;
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTim.Location = new System.Drawing.Point(289, 119);
             this.btnTim.Margin = new System.Windows.Forms.Padding(4);
@@ -253,51 +232,10 @@
             this.dgvGiaoVien.Location = new System.Drawing.Point(8, 23);
             this.dgvGiaoVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvGiaoVien.Name = "dgvGiaoVien";
+            this.dgvGiaoVien.ReadOnly = true;
             this.dgvGiaoVien.Size = new System.Drawing.Size(859, 240);
             this.dgvGiaoVien.TabIndex = 0;
             this.dgvGiaoVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaoVien_CellClick);
-            // 
-            // MaGiaoVien
-            // 
-            this.MaGiaoVien.DataPropertyName = "MaGiaoVien";
-            this.MaGiaoVien.HeaderText = "Mã GV";
-            this.MaGiaoVien.Name = "MaGiaoVien";
-            // 
-            // TenGiaoVien
-            // 
-            this.TenGiaoVien.DataPropertyName = "TenGiaoVien";
-            this.TenGiaoVien.HeaderText = "Tên GV";
-            this.TenGiaoVien.Name = "TenGiaoVien";
-            this.TenGiaoVien.Width = 150;
-            // 
-            // MaKhoa
-            // 
-            this.MaKhoa.DataPropertyName = "MaKhoa";
-            this.MaKhoa.HeaderText = "Mã khoa";
-            this.MaKhoa.Name = "MaKhoa";
-            // 
-            // GhiChu_GV
-            // 
-            this.GhiChu_GV.DataPropertyName = "GhiChu";
-            this.GhiChu_GV.HeaderText = "Ghi chú";
-            this.GhiChu_GV.Name = "GhiChu_GV";
-            this.GhiChu_GV.Width = 150;
-            // 
-            // btnsua_GV
-            // 
-            this.btnsua_GV.HeaderText = "Sửa";
-            this.btnsua_GV.Name = "btnsua_GV";
-            this.btnsua_GV.Text = "Sửa";
-            this.btnsua_GV.UseColumnTextForButtonValue = true;
-            this.btnsua_GV.Width = 50;
-            // 
-            // btnXoa_Gv
-            // 
-            this.btnXoa_Gv.HeaderText = "Xóa";
-            this.btnXoa_Gv.Name = "btnXoa_Gv";
-            this.btnXoa_Gv.Text = "Xóa";
-            this.btnXoa_Gv.UseColumnTextForButtonValue = true;
-            this.btnXoa_Gv.Width = 50;
             // 
             // groupboxGV
             // 
@@ -322,6 +260,7 @@
             // 
             // btnLamlai
             // 
+            this.btnLamlai.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
             this.btnLamlai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnLamlai.Location = new System.Drawing.Point(276, 210);
             this.btnLamlai.Margin = new System.Windows.Forms.Padding(4);
@@ -333,7 +272,7 @@
             // 
             // btnThem
             // 
-         
+            this.btnThem.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnThem.Location = new System.Drawing.Point(156, 210);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
@@ -455,45 +394,10 @@
             this.dgvKhoa.Location = new System.Drawing.Point(11, 36);
             this.dgvKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.dgvKhoa.Name = "dgvKhoa";
+            this.dgvKhoa.ReadOnly = true;
             this.dgvKhoa.Size = new System.Drawing.Size(875, 310);
             this.dgvKhoa.TabIndex = 0;
             this.dgvKhoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhoa_CellClick);
-            // 
-            // Ma_Khoa
-            // 
-            this.Ma_Khoa.DataPropertyName = "MaKhoa";
-            this.Ma_Khoa.HeaderText = "Mã Khoa";
-            this.Ma_Khoa.Name = "Ma_Khoa";
-            // 
-            // TenKhoa
-            // 
-            this.TenKhoa.DataPropertyName = "TenKhoa";
-            this.TenKhoa.HeaderText = "Tên Khoa";
-            this.TenKhoa.Name = "TenKhoa";
-            this.TenKhoa.Width = 200;
-            // 
-            // GhiChu_Khoa
-            // 
-            this.GhiChu_Khoa.DataPropertyName = "GhiChu";
-            this.GhiChu_Khoa.HeaderText = "Ghi Chú";
-            this.GhiChu_Khoa.Name = "GhiChu_Khoa";
-            this.GhiChu_Khoa.Width = 212;
-            // 
-            // btnSua_Khoa
-            // 
-            this.btnSua_Khoa.HeaderText = "Sửa";
-            this.btnSua_Khoa.Name = "btnSua_Khoa";
-            this.btnSua_Khoa.Text = "Sửa";
-            this.btnSua_Khoa.UseColumnTextForButtonValue = true;
-            this.btnSua_Khoa.Width = 50;
-            // 
-            // btnXoa_Khoa
-            // 
-            this.btnXoa_Khoa.HeaderText = "Xóa";
-            this.btnXoa_Khoa.Name = "btnXoa_Khoa";
-            this.btnXoa_Khoa.Text = "Xóa";
-            this.btnXoa_Khoa.UseColumnTextForButtonValue = true;
-            this.btnXoa_Khoa.Width = 50;
             // 
             // groupboxKhoa
             // 
@@ -516,6 +420,7 @@
             // 
             // btnNhaplaiKhoa
             // 
+            this.btnNhaplaiKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
             this.btnNhaplaiKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNhaplaiKhoa.Location = new System.Drawing.Point(690, 113);
             this.btnNhaplaiKhoa.Margin = new System.Windows.Forms.Padding(4);
@@ -527,6 +432,7 @@
             // 
             // btnThemKhoa
             // 
+            this.btnThemKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThemKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnThemKhoa.Location = new System.Drawing.Point(524, 113);
             this.btnThemKhoa.Margin = new System.Windows.Forms.Padding(4);
@@ -632,59 +538,11 @@
             this.dgvKhoaHoc.Location = new System.Drawing.Point(11, 36);
             this.dgvKhoaHoc.Margin = new System.Windows.Forms.Padding(4);
             this.dgvKhoaHoc.Name = "dgvKhoaHoc";
+            this.dgvKhoaHoc.ReadOnly = true;
             this.dgvKhoaHoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKhoaHoc.Size = new System.Drawing.Size(875, 265);
             this.dgvKhoaHoc.TabIndex = 0;
             this.dgvKhoaHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhoaHoc_CellClick);
-            // 
-            // MaKhoaHoc
-            // 
-            this.MaKhoaHoc.DataPropertyName = "MaKhoaHoc";
-            this.MaKhoaHoc.HeaderText = "Mã Khóa Học";
-            this.MaKhoaHoc.Name = "MaKhoaHoc";
-            // 
-            // TenKhoaHoc
-            // 
-            this.TenKhoaHoc.DataPropertyName = "TenKhoaHoc";
-            this.TenKhoaHoc.HeaderText = "Tên Khóa Học";
-            this.TenKhoaHoc.Name = "TenKhoaHoc";
-            this.TenKhoaHoc.Width = 120;
-            // 
-            // NgayBatDau
-            // 
-            this.NgayBatDau.DataPropertyName = "NgayBatDau";
-            this.NgayBatDau.HeaderText = "Ngày Bắt Đầu";
-            this.NgayBatDau.Name = "NgayBatDau";
-            // 
-            // NgayKetThuc
-            // 
-            this.NgayKetThuc.DataPropertyName = "NgayKetThuc";
-            this.NgayKetThuc.HeaderText = "Ngày Kết Thúc";
-            this.NgayKetThuc.Name = "NgayKetThuc";
-            // 
-            // GhiChuKhoaHoc
-            // 
-            this.GhiChuKhoaHoc.DataPropertyName = "GhiChu";
-            this.GhiChuKhoaHoc.HeaderText = "Ghi Chú";
-            this.GhiChuKhoaHoc.Name = "GhiChuKhoaHoc";
-            // 
-            // btnSuaKhoaHoc
-            // 
-            this.btnSuaKhoaHoc.HeaderText = "Sửa";
-            this.btnSuaKhoaHoc.Name = "btnSuaKhoaHoc";
-            this.btnSuaKhoaHoc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnSuaKhoaHoc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnSuaKhoaHoc.Text = "Sửa";
-            this.btnSuaKhoaHoc.UseColumnTextForButtonValue = true;
-            this.btnSuaKhoaHoc.Width = 50;
-            // 
-            // btnXoaKhoaHoc
-            // 
-            this.btnXoaKhoaHoc.HeaderText = "Xóa";
-            this.btnXoaKhoaHoc.Name = "btnXoaKhoaHoc";
-            this.btnXoaKhoaHoc.Text = "Xóa";
-            this.btnXoaKhoaHoc.UseColumnTextForButtonValue = true;
-            this.btnXoaKhoaHoc.Width = 50;
             // 
             // groupBox7
             // 
@@ -753,6 +611,7 @@
             // 
             // btnNhapLaiKhoahoc
             // 
+            this.btnNhapLaiKhoahoc.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
             this.btnNhapLaiKhoahoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnNhapLaiKhoahoc.Location = new System.Drawing.Point(681, 130);
             this.btnNhapLaiKhoahoc.Margin = new System.Windows.Forms.Padding(4);
@@ -764,6 +623,7 @@
             // 
             // btnThemKhoaHoc
             // 
+            this.btnThemKhoaHoc.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThemKhoaHoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnThemKhoaHoc.Location = new System.Drawing.Point(521, 130);
             this.btnThemKhoaHoc.Margin = new System.Windows.Forms.Padding(4);
@@ -830,189 +690,157 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Mã khóa học";
             // 
-            // tabHe
+            // MaKhoaHoc
             // 
-            this.tabHe.Controls.Add(this.groupBox9);
-            this.tabHe.Controls.Add(this.groupBox8);
-            this.tabHe.Location = new System.Drawing.Point(4, 25);
-            this.tabHe.Margin = new System.Windows.Forms.Padding(4);
-            this.tabHe.Name = "tabHe";
-            this.tabHe.Padding = new System.Windows.Forms.Padding(4);
-            this.tabHe.Size = new System.Drawing.Size(912, 611);
-            this.tabHe.TabIndex = 3;
-            this.tabHe.Text = "Hệ";
-            this.tabHe.UseVisualStyleBackColor = true;
+            this.MaKhoaHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaKhoaHoc.DataPropertyName = "MaKhoaHoc";
+            this.MaKhoaHoc.HeaderText = "Mã Khóa Học";
+            this.MaKhoaHoc.Name = "MaKhoaHoc";
+            this.MaKhoaHoc.ReadOnly = true;
             // 
-            // groupBox9
+            // TenKhoaHoc
             // 
-            this.groupBox9.Controls.Add(this.dgvHE);
-            this.groupBox9.Location = new System.Drawing.Point(21, 238);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox9.Size = new System.Drawing.Size(880, 270);
-            this.groupBox9.TabIndex = 1;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Danh sách các hệ đào tạo";
-            this.groupBox9.Enter += new System.EventHandler(this.groupBox9_Enter);
+            this.TenKhoaHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenKhoaHoc.DataPropertyName = "TenKhoaHoc";
+            this.TenKhoaHoc.HeaderText = "Tên Khóa Học";
+            this.TenKhoaHoc.Name = "TenKhoaHoc";
+            this.TenKhoaHoc.ReadOnly = true;
             // 
-            // dgvHE
+            // NgayBatDau
             // 
-            this.dgvHE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHE.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MaHe,
-            this.TenHe,
-            this.Ghichu,
-            this.btnSua_He,
-            this.btnXoa_He});
-            this.dgvHE.Location = new System.Drawing.Point(15, 23);
-            this.dgvHE.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvHE.Name = "dgvHE";
-            this.dgvHE.Size = new System.Drawing.Size(855, 239);
-            this.dgvHE.TabIndex = 0;
-            this.dgvHE.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHE_CellClick);
+            this.NgayBatDau.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NgayBatDau.DataPropertyName = "NgayBatDau";
+            this.NgayBatDau.HeaderText = "Ngày Bắt Đầu";
+            this.NgayBatDau.Name = "NgayBatDau";
+            this.NgayBatDau.ReadOnly = true;
             // 
-            // MaHe
+            // NgayKetThuc
             // 
-            this.MaHe.DataPropertyName = "MaHe";
-            this.MaHe.HeaderText = "Mã Hệ";
-            this.MaHe.Name = "MaHe";
-            this.MaHe.ReadOnly = true;
+            this.NgayKetThuc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NgayKetThuc.DataPropertyName = "NgayKetThuc";
+            this.NgayKetThuc.HeaderText = "Ngày Kết Thúc";
+            this.NgayKetThuc.Name = "NgayKetThuc";
+            this.NgayKetThuc.ReadOnly = true;
             // 
-            // TenHe
+            // GhiChuKhoaHoc
             // 
-            this.TenHe.DataPropertyName = "TenHe";
-            this.TenHe.HeaderText = "Tên Hệ";
-            this.TenHe.Name = "TenHe";
-            this.TenHe.ReadOnly = true;
-            this.TenHe.Width = 200;
+            this.GhiChuKhoaHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GhiChuKhoaHoc.DataPropertyName = "GhiChu";
+            this.GhiChuKhoaHoc.HeaderText = "Ghi Chú";
+            this.GhiChuKhoaHoc.Name = "GhiChuKhoaHoc";
+            this.GhiChuKhoaHoc.ReadOnly = true;
             // 
-            // Ghichu
+            // btnSuaKhoaHoc
             // 
-            this.Ghichu.DataPropertyName = "GhiChu";
-            this.Ghichu.HeaderText = "Ghi Chú";
-            this.Ghichu.Name = "Ghichu";
-            this.Ghichu.ReadOnly = true;
-            this.Ghichu.Width = 135;
+            this.btnSuaKhoaHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnSuaKhoaHoc.HeaderText = "Sửa";
+            this.btnSuaKhoaHoc.Name = "btnSuaKhoaHoc";
+            this.btnSuaKhoaHoc.ReadOnly = true;
+            this.btnSuaKhoaHoc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnSuaKhoaHoc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnSuaKhoaHoc.Text = "Sửa";
+            this.btnSuaKhoaHoc.UseColumnTextForButtonValue = true;
             // 
-            // btnSua_He
+            // btnXoaKhoaHoc
             // 
-            this.btnSua_He.HeaderText = "Sửa";
-            this.btnSua_He.Name = "btnSua_He";
-            this.btnSua_He.ReadOnly = true;
-            this.btnSua_He.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnSua_He.Text = "Sửa";
-            this.btnSua_He.ToolTipText = "Sửa";
-            this.btnSua_He.UseColumnTextForButtonValue = true;
-            this.btnSua_He.Width = 80;
+            this.btnXoaKhoaHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnXoaKhoaHoc.HeaderText = "Xóa";
+            this.btnXoaKhoaHoc.Name = "btnXoaKhoaHoc";
+            this.btnXoaKhoaHoc.ReadOnly = true;
+            this.btnXoaKhoaHoc.Text = "Xóa";
+            this.btnXoaKhoaHoc.UseColumnTextForButtonValue = true;
             // 
-            // btnXoa_He
+            // Ma_Khoa
             // 
-            this.btnXoa_He.HeaderText = "Xóa";
-            this.btnXoa_He.Name = "btnXoa_He";
-            this.btnXoa_He.ReadOnly = true;
-            this.btnXoa_He.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnXoa_He.Text = "Xóa";
-            this.btnXoa_He.ToolTipText = "Xóa";
-            this.btnXoa_He.UseColumnTextForButtonValue = true;
-            this.btnXoa_He.Width = 80;
+            this.Ma_Khoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ma_Khoa.DataPropertyName = "MaKhoa";
+            this.Ma_Khoa.HeaderText = "Mã Khoa";
+            this.Ma_Khoa.Name = "Ma_Khoa";
+            this.Ma_Khoa.ReadOnly = true;
             // 
-            // groupBox8
+            // TenKhoa
             // 
-            this.groupBox8.Controls.Add(this.btnLamlai_He);
-            this.groupBox8.Controls.Add(this.btnThemHe);
-            this.groupBox8.Controls.Add(this.txtGhiChu_He);
-            this.groupBox8.Controls.Add(this.txtTenHe);
-            this.groupBox8.Controls.Add(this.txtMaHe);
-            this.groupBox8.Controls.Add(this.label17);
-            this.groupBox8.Controls.Add(this.label16);
-            this.groupBox8.Controls.Add(this.label15);
-            this.groupBox8.Location = new System.Drawing.Point(21, 20);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox8.Size = new System.Drawing.Size(556, 176);
-            this.groupBox8.TabIndex = 0;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Thêm Hệ đào tạo";
+            this.TenKhoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenKhoa.DataPropertyName = "TenKhoa";
+            this.TenKhoa.HeaderText = "Tên Khoa";
+            this.TenKhoa.Name = "TenKhoa";
+            this.TenKhoa.ReadOnly = true;
             // 
-            // btnLamlai_He
+            // GhiChu_Khoa
             // 
-            this.btnLamlai_He.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLamlai_He.Location = new System.Drawing.Point(428, 116);
-            this.btnLamlai_He.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLamlai_He.Name = "btnLamlai_He";
-            this.btnLamlai_He.Size = new System.Drawing.Size(100, 53);
-            this.btnLamlai_He.TabIndex = 7;
-            this.btnLamlai_He.UseVisualStyleBackColor = true;
-            this.btnLamlai_He.Click += new System.EventHandler(this.btnLamlai_He_Click);
+            this.GhiChu_Khoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GhiChu_Khoa.DataPropertyName = "GhiChu";
+            this.GhiChu_Khoa.HeaderText = "Ghi Chú";
+            this.GhiChu_Khoa.Name = "GhiChu_Khoa";
+            this.GhiChu_Khoa.ReadOnly = true;
             // 
-            // btnThemHe
+            // btnSua_Khoa
             // 
-            this.btnThemHe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThemHe.Location = new System.Drawing.Point(428, 41);
-            this.btnThemHe.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThemHe.Name = "btnThemHe";
-            this.btnThemHe.Size = new System.Drawing.Size(100, 60);
-            this.btnThemHe.TabIndex = 6;
-            this.btnThemHe.UseVisualStyleBackColor = true;
-            this.btnThemHe.Click += new System.EventHandler(this.btnThemHe_Click);
+            this.btnSua_Khoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnSua_Khoa.HeaderText = "Sửa";
+            this.btnSua_Khoa.Name = "btnSua_Khoa";
+            this.btnSua_Khoa.ReadOnly = true;
+            this.btnSua_Khoa.Text = "Sửa";
+            this.btnSua_Khoa.UseColumnTextForButtonValue = true;
             // 
-            // txtGhiChu_He
+            // btnXoa_Khoa
             // 
-            this.txtGhiChu_He.Location = new System.Drawing.Point(87, 112);
-            this.txtGhiChu_He.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGhiChu_He.Multiline = true;
-            this.txtGhiChu_He.Name = "txtGhiChu_He";
-            this.txtGhiChu_He.Size = new System.Drawing.Size(291, 56);
-            this.txtGhiChu_He.TabIndex = 5;
+            this.btnXoa_Khoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnXoa_Khoa.HeaderText = "Xóa";
+            this.btnXoa_Khoa.Name = "btnXoa_Khoa";
+            this.btnXoa_Khoa.ReadOnly = true;
+            this.btnXoa_Khoa.Text = "Xóa";
+            this.btnXoa_Khoa.UseColumnTextForButtonValue = true;
             // 
-            // txtTenHe
+            // MaGiaoVien
             // 
-            this.txtTenHe.Location = new System.Drawing.Point(87, 75);
-            this.txtTenHe.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenHe.Name = "txtTenHe";
-            this.txtTenHe.Size = new System.Drawing.Size(249, 22);
-            this.txtTenHe.TabIndex = 4;
+            this.MaGiaoVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaGiaoVien.DataPropertyName = "MaGiaoVien";
+            this.MaGiaoVien.HeaderText = "Mã GV";
+            this.MaGiaoVien.Name = "MaGiaoVien";
+            this.MaGiaoVien.ReadOnly = true;
             // 
-            // txtMaHe
+            // TenGiaoVien
             // 
-            this.txtMaHe.Enabled = false;
-            this.txtMaHe.Location = new System.Drawing.Point(87, 37);
-            this.txtMaHe.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaHe.Name = "txtMaHe";
-            this.txtMaHe.Size = new System.Drawing.Size(199, 22);
-            this.txtMaHe.TabIndex = 3;
+            this.TenGiaoVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenGiaoVien.DataPropertyName = "TenGiaoVien";
+            this.TenGiaoVien.HeaderText = "Tên GV";
+            this.TenGiaoVien.Name = "TenGiaoVien";
+            this.TenGiaoVien.ReadOnly = true;
             // 
-            // label17
+            // MaKhoa
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(23, 116);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 17);
-            this.label17.TabIndex = 2;
-            this.label17.Text = "Ghi chú:";
+            this.MaKhoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaKhoa.DataPropertyName = "MaKhoa";
+            this.MaKhoa.HeaderText = "Mã khoa";
+            this.MaKhoa.Name = "MaKhoa";
+            this.MaKhoa.ReadOnly = true;
             // 
-            // label16
+            // GhiChu_GV
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(23, 79);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 17);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Tên Hệ:";
+            this.GhiChu_GV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GhiChu_GV.DataPropertyName = "GhiChu";
+            this.GhiChu_GV.HeaderText = "Ghi chú";
+            this.GhiChu_GV.Name = "GhiChu_GV";
+            this.GhiChu_GV.ReadOnly = true;
             // 
-            // label15
+            // btnsua_GV
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(23, 41);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 17);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Mã Hệ:";
+            this.btnsua_GV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnsua_GV.HeaderText = "Sửa";
+            this.btnsua_GV.Name = "btnsua_GV";
+            this.btnsua_GV.ReadOnly = true;
+            this.btnsua_GV.Text = "Sửa";
+            this.btnsua_GV.UseColumnTextForButtonValue = true;
+            // 
+            // btnXoa_Gv
+            // 
+            this.btnXoa_Gv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnXoa_Gv.HeaderText = "Xóa";
+            this.btnXoa_Gv.Name = "btnXoa_Gv";
+            this.btnXoa_Gv.ReadOnly = true;
+            this.btnXoa_Gv.Text = "Xóa";
+            this.btnXoa_Gv.UseColumnTextForButtonValue = true;
             // 
             // uc_GiaoVien_KhoaHoc_Khoa_He
             // 
@@ -1041,11 +869,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhoaHoc)).EndInit();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
-            this.tabHe.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHE)).EndInit();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1056,7 +879,6 @@
         private System.Windows.Forms.TabPage tabGiaoVien;
         private System.Windows.Forms.TabPage tabKhoa;
         private System.Windows.Forms.TabPage tabKhoaHoc;
-        private System.Windows.Forms.TabPage tabHe;
         private System.Windows.Forms.GroupBox groupboxGV;
         private System.Windows.Forms.ComboBox cmbMaKhoa;
         private System.Windows.Forms.TextBox txtTenGiaoVien;
@@ -1102,24 +924,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dtpNgayKetThuc;
         private System.Windows.Forms.DateTimePicker dtpNgayBatDau;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button btnLamlai_He;
-        private System.Windows.Forms.Button btnThemHe;
-        private System.Windows.Forms.TextBox txtGhiChu_He;
-        private System.Windows.Forms.TextBox txtTenHe;
-        private System.Windows.Forms.TextBox txtMaHe;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.DataGridView dgvHE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoaHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoaHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayBatDau;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayKetThuc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChuKhoaHoc;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSuaKhoaHoc;
-        private System.Windows.Forms.DataGridViewButtonColumn btnXoaKhoaHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaGiaoVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenGiaoVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoa;
@@ -1131,10 +935,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu_Khoa;
         private System.Windows.Forms.DataGridViewButtonColumn btnSua_Khoa;
         private System.Windows.Forms.DataGridViewButtonColumn btnXoa_Khoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenHe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ghichu;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSua_He;
-        private System.Windows.Forms.DataGridViewButtonColumn btnXoa_He;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoaHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoaHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayBatDau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayKetThuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChuKhoaHoc;
+        private System.Windows.Forms.DataGridViewButtonColumn btnSuaKhoaHoc;
+        private System.Windows.Forms.DataGridViewButtonColumn btnXoaKhoaHoc;
     }
 }

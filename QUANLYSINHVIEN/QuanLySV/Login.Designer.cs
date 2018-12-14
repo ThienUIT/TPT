@@ -94,7 +94,7 @@
             this.btnLogin.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_login;
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnLogin.Location = new System.Drawing.Point(203, 151);
+            this.btnLogin.Location = new System.Drawing.Point(144, 153);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(100, 57);
