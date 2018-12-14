@@ -412,7 +412,7 @@
             // DangNhapToolStripMenuItem
             // 
             this.DangNhapToolStripMenuItem.Name = "DangNhapToolStripMenuItem";
-            this.DangNhapToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.DangNhapToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.DangNhapToolStripMenuItem.Text = "Đăng nhập";
             this.DangNhapToolStripMenuItem.Click += new System.EventHandler(this.đăngNhậpToolStripMenuItem_Click);
             // 
@@ -420,7 +420,7 @@
             // 
             this.quanlyTK_ToolStripMenuItem.Enabled = false;
             this.quanlyTK_ToolStripMenuItem.Name = "quanlyTK_ToolStripMenuItem";
-            this.quanlyTK_ToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.quanlyTK_ToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.quanlyTK_ToolStripMenuItem.Text = "Quản lý tài khoản";
             this.quanlyTK_ToolStripMenuItem.Click += new System.EventHandler(this.quảnLýTàiKhoảnToolStripMenuItem_Click);
             // 
@@ -428,14 +428,14 @@
             // 
             this.DangXuatToolStripMenuItem.Enabled = false;
             this.DangXuatToolStripMenuItem.Name = "DangXuatToolStripMenuItem";
-            this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.DangXuatToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.DangXuatToolStripMenuItem.Text = "Đăng Xuất";
             this.DangXuatToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
@@ -506,8 +506,8 @@
             this.aboutMeToolStripMenuItem.Checked = true;
             this.aboutMeToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.aboutMeToolStripMenuItem.Name = "aboutMeToolStripMenuItem";
-            this.aboutMeToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
-            this.aboutMeToolStripMenuItem.Text = "About me";
+            this.aboutMeToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
+            this.aboutMeToolStripMenuItem.Text = "Thông tin";
             this.aboutMeToolStripMenuItem.Click += new System.EventHandler(this.aboutMeToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem1

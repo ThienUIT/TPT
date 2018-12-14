@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace QLSV_Xuly
 {
    public class QLSV_XUser
-    {
+    {   
         private QLSV_Database.QLSV_DUser qlsv_dUser = new QLSV_DUser();
         c_ThaoTacChung ctc = new c_ThaoTacChung();
         //public QLSV_XUser()
@@ -19,16 +19,20 @@ namespace QLSV_Xuly
         private string User;
         private string Pass;
         private string newPass;
+
+        //sử dụng để gọi ý tìm kiếm
         private TextBox txt = new TextBox();
         private string table = "tb_User";
         private int column = 0;
+
+
         public TextBox TXT
         {
             get { return txt; }
             set { txt = value; }
         }
 
-        public string NewPass
+        public string NEWPASS
         {
             get { return newPass; }
             set 
@@ -36,7 +40,7 @@ namespace QLSV_Xuly
                 newPass = value;
                 if (this.newPass == "")
                 {
-                    //throw new Exception("Vui lòng nhập mật khẩu mới");
+                    
                     MessageBox.Show("Vui lòng nhập mật khẩu mới");
                 }
             }
@@ -49,8 +53,8 @@ namespace QLSV_Xuly
                 Pass = value;
                 if (this.PASS == "")
                 {
-                    //throw new Exception("Vui long nhap Password");
-                    MessageBox.Show("Vui lòng nhập Password");
+                  
+                    MessageBox.Show("Vui lòng nhập mật khẩu");
                 }
             }
         }
@@ -62,11 +66,13 @@ namespace QLSV_Xuly
                 User = value;
                 if (this.USER == "")
                 {
-                    //throw new Exception("Chưa nhập Username");
+                   
                     MessageBox.Show("Chưa nhập Username");
                 }
             }
         }
+
+
         //mã hóa password ,using System.Security.Cryptography
         public string MahoaPass(string pass)
         {
@@ -76,14 +82,12 @@ namespace QLSV_Xuly
             hash = md5.ComputeHash(hash);
             return Convert.ToBase64String(hash);
         }
-
-       
-
+        //tạo tài khoản
         public void CreateUser()
         {
             if (this.USER == "")
             {
-                MessageBox.Show("Chưa nhập Username");
+                
             }
             else
             {
@@ -103,6 +107,7 @@ namespace QLSV_Xuly
             
 
         }
+        //xoá tài khoản
         public void DeleteUser()
         {
             if (qlsv_dUser.isExist(USER) == true)
@@ -114,7 +119,7 @@ namespace QLSV_Xuly
                 //throw new Exception("Không tồn tại User này");
                   MessageBox.Show("Không tồn tại User này");
         }
-
+        //đổi mật khẩu
         public void UpdateUser()
         {
             if (qlsv_dUser.isExist(USER) == true)
@@ -128,7 +133,7 @@ namespace QLSV_Xuly
                 }
                 else
                 {
-                    qlsv_dUser.UpdateUser(USER, MahoaPass(NewPass));
+                    qlsv_dUser.UpdateUser(USER, MahoaPass(NEWPASS));
                     MessageBox.Show("Cập nhật thành công");
                 }
             }
@@ -166,6 +171,7 @@ namespace QLSV_Xuly
             {
                 MessageBox.Show("Đăng nhập thất bại");
                 kq = false;
+                
             }
             return kq; 
         }

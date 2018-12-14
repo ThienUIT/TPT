@@ -11,7 +11,7 @@ namespace QLSV_GiaoDien.UserControls
 {
     public partial class uc_GiaoVien_KhoaHoc_Khoa_He : UserControl
     {
-        QLSV_XHe qlsv_xlHe = new QLSV_XHe();
+      
         QLSV_XGiaoVien qlsv_xlGiaoVien = new QLSV_XGiaoVien();
         QLSV_XKhoa qlsv_xlKhoa = new QLSV_XKhoa();
         c_XuLyChung cXLC = new c_XuLyChung();

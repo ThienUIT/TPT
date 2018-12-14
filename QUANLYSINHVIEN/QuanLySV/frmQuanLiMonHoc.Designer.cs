@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnback = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTim = new System.Windows.Forms.Button();
             this.txtTimMH = new System.Windows.Forms.TextBox();
@@ -58,7 +59,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnback = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoTinChi)).BeginInit();
@@ -96,13 +96,23 @@
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Location = new System.Drawing.Point(5, 4);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(948, 628);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Nhập Môn Học";
+            // 
+            // btnback
+            // 
+            this.btnback.Location = new System.Drawing.Point(812, 8);
+            this.btnback.Name = "btnback";
+            this.btnback.Size = new System.Drawing.Size(100, 23);
+            this.btnback.TabIndex = 5;
+            this.btnback.Text = "Back";
+            this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // groupBox1
             // 
@@ -112,9 +122,9 @@
             this.groupBox1.Controls.Add(this.cmbTimMH);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(24, 23);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(911, 85);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
@@ -125,7 +135,7 @@
             this.btnTim.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.Magnify;
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTim.Location = new System.Drawing.Point(788, 23);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(4);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(100, 44);
             this.btnTim.TabIndex = 4;
@@ -135,7 +145,7 @@
             // txtTimMH
             // 
             this.txtTimMH.Location = new System.Drawing.Point(524, 42);
-            this.txtTimMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimMH.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimMH.Name = "txtTimMH";
             this.txtTimMH.Size = new System.Drawing.Size(240, 22);
             this.txtTimMH.TabIndex = 3;
@@ -157,7 +167,7 @@
             "Mã môn học",
             "Tên môn học"});
             this.cmbTimMH.Location = new System.Drawing.Point(209, 42);
-            this.cmbTimMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbTimMH.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTimMH.Name = "cmbTimMH";
             this.cmbTimMH.Size = new System.Drawing.Size(179, 24);
             this.cmbTimMH.TabIndex = 1;
@@ -177,7 +187,7 @@
             // numSoTinChi
             // 
             this.numSoTinChi.Location = new System.Drawing.Point(559, 380);
-            this.numSoTinChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numSoTinChi.Margin = new System.Windows.Forms.Padding(4);
             this.numSoTinChi.Name = "numSoTinChi";
             this.numSoTinChi.Size = new System.Drawing.Size(64, 22);
             this.numSoTinChi.TabIndex = 30;
@@ -187,7 +197,7 @@
             this.btnXoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
             this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnXoa.Location = new System.Drawing.Point(731, 566);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 39);
             this.btnXoa.TabIndex = 30;
@@ -199,7 +209,7 @@
             this.btnCapNhat.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnCapNhat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCapNhat.Location = new System.Drawing.Point(731, 497);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(100, 41);
             this.btnCapNhat.TabIndex = 27;
@@ -210,7 +220,7 @@
             // 
             this.dgvMonhoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMonhoc.Location = new System.Drawing.Point(24, 116);
-            this.dgvMonhoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMonhoc.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMonhoc.Name = "dgvMonhoc";
             this.dgvMonhoc.ReadOnly = true;
             this.dgvMonhoc.Size = new System.Drawing.Size(911, 197);
@@ -222,9 +232,9 @@
             this.groupBox5.Controls.Add(this.rdMonbatbuoc);
             this.groupBox5.Controls.Add(this.rdMontuchon);
             this.groupBox5.Location = new System.Drawing.Point(139, 412);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.Size = new System.Drawing.Size(300, 44);
             this.groupBox5.TabIndex = 24;
             this.groupBox5.TabStop = false;
@@ -234,7 +244,7 @@
             this.rdMonbatbuoc.AutoSize = true;
             this.rdMonbatbuoc.Checked = true;
             this.rdMonbatbuoc.Location = new System.Drawing.Point(17, 16);
-            this.rdMonbatbuoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdMonbatbuoc.Margin = new System.Windows.Forms.Padding(4);
             this.rdMonbatbuoc.Name = "rdMonbatbuoc";
             this.rdMonbatbuoc.Size = new System.Drawing.Size(115, 21);
             this.rdMonbatbuoc.TabIndex = 18;
@@ -246,7 +256,7 @@
             // 
             this.rdMontuchon.AutoSize = true;
             this.rdMontuchon.Location = new System.Drawing.Point(161, 16);
-            this.rdMontuchon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdMontuchon.Margin = new System.Windows.Forms.Padding(4);
             this.rdMontuchon.Name = "rdMontuchon";
             this.rdMontuchon.Size = new System.Drawing.Size(107, 21);
             this.rdMontuchon.TabIndex = 19;
@@ -267,7 +277,7 @@
             // numSoTietLT
             // 
             this.numSoTietLT.Location = new System.Drawing.Point(368, 474);
-            this.numSoTietLT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numSoTietLT.Margin = new System.Windows.Forms.Padding(4);
             this.numSoTietLT.Name = "numSoTietLT";
             this.numSoTietLT.Size = new System.Drawing.Size(56, 22);
             this.numSoTietLT.TabIndex = 22;
@@ -275,7 +285,7 @@
             // numSoTietTH
             // 
             this.numSoTietTH.Location = new System.Drawing.Point(604, 474);
-            this.numSoTietTH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numSoTietTH.Margin = new System.Windows.Forms.Padding(4);
             this.numSoTietTH.Name = "numSoTietTH";
             this.numSoTietTH.Size = new System.Drawing.Size(57, 22);
             this.numSoTietTH.TabIndex = 21;
@@ -283,7 +293,7 @@
             // numTongsotiet
             // 
             this.numTongsotiet.Location = new System.Drawing.Point(139, 474);
-            this.numTongsotiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numTongsotiet.Margin = new System.Windows.Forms.Padding(4);
             this.numTongsotiet.Name = "numTongsotiet";
             this.numTongsotiet.Size = new System.Drawing.Size(71, 22);
             this.numTongsotiet.TabIndex = 20;
@@ -292,7 +302,7 @@
             // 
             this.cmbMaKhoa_MH.FormattingEnabled = true;
             this.cmbMaKhoa_MH.Location = new System.Drawing.Point(559, 335);
-            this.cmbMaKhoa_MH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbMaKhoa_MH.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMaKhoa_MH.Name = "cmbMaKhoa_MH";
             this.cmbMaKhoa_MH.Size = new System.Drawing.Size(229, 24);
             this.cmbMaKhoa_MH.TabIndex = 17;
@@ -330,7 +340,7 @@
             // txtGhichu_MH
             // 
             this.txtGhichu_MH.Location = new System.Drawing.Point(139, 521);
-            this.txtGhichu_MH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGhichu_MH.Margin = new System.Windows.Forms.Padding(4);
             this.txtGhichu_MH.Multiline = true;
             this.txtGhichu_MH.Name = "txtGhichu_MH";
             this.txtGhichu_MH.Size = new System.Drawing.Size(521, 84);
@@ -339,7 +349,7 @@
             // txtTenMh
             // 
             this.txtTenMh.Location = new System.Drawing.Point(139, 380);
-            this.txtTenMh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenMh.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenMh.Name = "txtTenMh";
             this.txtTenMh.Size = new System.Drawing.Size(299, 22);
             this.txtTenMh.TabIndex = 9;
@@ -348,7 +358,7 @@
             // 
             this.txtMaMH.Enabled = false;
             this.txtMaMH.Location = new System.Drawing.Point(139, 335);
-            this.txtMaMH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaMH.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaMH.Name = "txtMaMH";
             this.txtMaMH.Size = new System.Drawing.Size(299, 22);
             this.txtMaMH.TabIndex = 7;
@@ -403,23 +413,13 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Mã môn học:";
             // 
-            // btnback
-            // 
-            this.btnback.Location = new System.Drawing.Point(812, 8);
-            this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(100, 23);
-            this.btnback.TabIndex = 5;
-            this.btnback.Text = "Back";
-            this.btnback.UseVisualStyleBackColor = true;
-            this.btnback.Click += new System.EventHandler(this.btnback_Click);
-            // 
             // frmQuanLiMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 631);
             this.Controls.Add(this.groupBox3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQuanLiMonHoc";
             this.Text = "frmQuanLiMonHoc";
             this.Load += new System.EventHandler(this.frmQuanLiMonHoc_Load);

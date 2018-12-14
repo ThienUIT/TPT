@@ -84,7 +84,6 @@
     <Compile Include="QLSV_DDiem.cs" />
     <Compile Include="QLSV_DDKMonHoc.cs" />
     <Compile Include="QLSV_DGiaoVien.cs" />
-    <Compile Include="QLSV_DHe.cs" />
     <Compile Include="QLSV_DKhoa.cs" />
     <Compile Include="QLSV_DKhoaHoc.cs" />
     <Compile Include="QLSV_DLop.cs" />

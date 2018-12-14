@@ -58,10 +58,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnTim = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.cmbDKTimKiem = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNoidungTimKiem = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -76,9 +76,9 @@
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(8, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(912, 633);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -87,7 +87,7 @@
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(796, 12);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(100, 28);
             this.btnBack.TabIndex = 3;
@@ -100,9 +100,9 @@
             this.groupBox3.Controls.Add(this.grouptextBox);
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Location = new System.Drawing.Point(8, 126);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(896, 500);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
@@ -134,9 +134,9 @@
             this.grouptextBox.Controls.Add(this.rdNam);
             this.grouptextBox.Enabled = false;
             this.grouptextBox.Location = new System.Drawing.Point(12, 215);
-            this.grouptextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grouptextBox.Margin = new System.Windows.Forms.Padding(4);
             this.grouptextBox.Name = "grouptextBox";
-            this.grouptextBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grouptextBox.Padding = new System.Windows.Forms.Padding(4);
             this.grouptextBox.Size = new System.Drawing.Size(876, 265);
             this.grouptextBox.TabIndex = 55;
             this.grouptextBox.TabStop = false;
@@ -146,7 +146,7 @@
             this.btnXoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
             this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnXoa.Location = new System.Drawing.Point(684, 177);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 64);
             this.btnXoa.TabIndex = 56;
@@ -158,7 +158,7 @@
             this.btnSua.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
             this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSua.Location = new System.Drawing.Point(535, 177);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 64);
             this.btnSua.TabIndex = 55;
@@ -169,7 +169,7 @@
             // 
             this.txtMSSV.Enabled = false;
             this.txtMSSV.Location = new System.Drawing.Point(96, 23);
-            this.txtMSSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMSSV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMSSV.Name = "txtMSSV";
             this.txtMSSV.Size = new System.Drawing.Size(237, 22);
             this.txtMSSV.TabIndex = 42;
@@ -218,7 +218,7 @@
             // 
             this.cbMaLop.FormattingEnabled = true;
             this.cbMaLop.Location = new System.Drawing.Point(497, 23);
-            this.cbMaLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMaLop.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaLop.Name = "cbMaLop";
             this.cbMaLop.Size = new System.Drawing.Size(160, 24);
             this.cbMaLop.TabIndex = 52;
@@ -236,7 +236,7 @@
             // txtGhichu
             // 
             this.txtGhichu.Location = new System.Drawing.Point(96, 174);
-            this.txtGhichu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGhichu.Margin = new System.Windows.Forms.Padding(4);
             this.txtGhichu.Multiline = true;
             this.txtGhichu.Name = "txtGhichu";
             this.txtGhichu.Size = new System.Drawing.Size(377, 67);
@@ -255,7 +255,7 @@
             // btnBrowseHinh
             // 
             this.btnBrowseHinh.Location = new System.Drawing.Point(791, 135);
-            this.btnBrowseHinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBrowseHinh.Margin = new System.Windows.Forms.Padding(4);
             this.btnBrowseHinh.Name = "btnBrowseHinh";
             this.btnBrowseHinh.Size = new System.Drawing.Size(77, 28);
             this.btnBrowseHinh.TabIndex = 50;
@@ -276,7 +276,7 @@
             // txtHinh
             // 
             this.txtHinh.Location = new System.Drawing.Point(497, 138);
-            this.txtHinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtHinh.Name = "txtHinh";
             this.txtHinh.Size = new System.Drawing.Size(287, 22);
             this.txtHinh.TabIndex = 49;
@@ -294,10 +294,11 @@
             // txtQueQuan
             // 
             this.txtQueQuan.Location = new System.Drawing.Point(497, 100);
-            this.txtQueQuan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQueQuan.Margin = new System.Windows.Forms.Padding(4);
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(360, 22);
             this.txtQueQuan.TabIndex = 48;
+            this.txtQueQuan.TextChanged += new System.EventHandler(this.txtQueQuan_TextChanged);
             // 
             // label3
             // 
@@ -313,7 +314,7 @@
             // 
             this.dtp_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_NgaySinh.Location = new System.Drawing.Point(96, 96);
-            this.dtp_NgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp_NgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtp_NgaySinh.Name = "dtp_NgaySinh";
             this.dtp_NgaySinh.Size = new System.Drawing.Size(132, 22);
             this.dtp_NgaySinh.TabIndex = 47;
@@ -321,16 +322,17 @@
             // txtNoiSinh
             // 
             this.txtNoiSinh.Location = new System.Drawing.Point(96, 138);
-            this.txtNoiSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNoiSinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoiSinh.Name = "txtNoiSinh";
             this.txtNoiSinh.Size = new System.Drawing.Size(287, 22);
             this.txtNoiSinh.TabIndex = 43;
+            this.txtNoiSinh.TextChanged += new System.EventHandler(this.txtNoiSinh_TextChanged);
             // 
             // rdNu
             // 
             this.rdNu.AutoSize = true;
             this.rdNu.Location = new System.Drawing.Point(568, 60);
-            this.rdNu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdNu.Margin = new System.Windows.Forms.Padding(4);
             this.rdNu.Name = "rdNu";
             this.rdNu.Size = new System.Drawing.Size(47, 21);
             this.rdNu.TabIndex = 46;
@@ -340,17 +342,18 @@
             // txtHotenSv
             // 
             this.txtHotenSv.Location = new System.Drawing.Point(96, 59);
-            this.txtHotenSv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHotenSv.Margin = new System.Windows.Forms.Padding(4);
             this.txtHotenSv.Name = "txtHotenSv";
             this.txtHotenSv.Size = new System.Drawing.Size(237, 22);
             this.txtHotenSv.TabIndex = 44;
+            this.txtHotenSv.TextChanged += new System.EventHandler(this.txtHotenSv_TextChanged);
             // 
             // rdNam
             // 
             this.rdNam.AutoSize = true;
             this.rdNam.Checked = true;
             this.rdNam.Location = new System.Drawing.Point(497, 60);
-            this.rdNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdNam.Margin = new System.Windows.Forms.Padding(4);
             this.rdNam.Name = "rdNam";
             this.rdNam.Size = new System.Drawing.Size(58, 21);
             this.rdNam.TabIndex = 45;
@@ -362,7 +365,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 23);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(876, 185);
@@ -373,14 +376,14 @@
             // 
             this.groupBox2.Controls.Add(this.btnRefresh);
             this.groupBox2.Controls.Add(this.btnTim);
+            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.cmbDKTimKiem);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtNoidungTimKiem);
-            this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(8, 38);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(896, 80);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -391,7 +394,7 @@
             this.btnRefresh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
             this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRefresh.Location = new System.Drawing.Point(788, 17);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(83, 49);
             this.btnRefresh.TabIndex = 5;
@@ -403,12 +406,22 @@
             this.btnTim.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.Magnify;
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTim.Location = new System.Drawing.Point(680, 17);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(4);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(100, 49);
             this.btnTim.TabIndex = 4;
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(267, 40);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nhập nội dung tìm kiếm:";
             // 
             // cmbDKTimKiem
             // 
@@ -416,8 +429,8 @@
             this.cmbDKTimKiem.Items.AddRange(new object[] {
             "Tên Sinh Viên",
             "Mã số Sinh Viên"});
-            this.cmbDKTimKiem.Location = new System.Drawing.Point(487, 33);
-            this.cmbDKTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbDKTimKiem.Location = new System.Drawing.Point(82, 33);
+            this.cmbDKTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDKTimKiem.Name = "cmbDKTimKiem";
             this.cmbDKTimKiem.Size = new System.Drawing.Size(160, 24);
             this.cmbDKTimKiem.TabIndex = 3;
@@ -427,7 +440,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(411, 37);
+            this.label2.Location = new System.Drawing.Point(7, 40);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 17);
@@ -436,21 +449,12 @@
             // 
             // txtNoidungTimKiem
             // 
-            this.txtNoidungTimKiem.Location = new System.Drawing.Point(177, 33);
-            this.txtNoidungTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNoidungTimKiem.Location = new System.Drawing.Point(445, 33);
+            this.txtNoidungTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtNoidungTimKiem.Name = "txtNoidungTimKiem";
             this.txtNoidungTimKiem.Size = new System.Drawing.Size(224, 22);
             this.txtNoidungTimKiem.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nhập nội dung tìm kiếm:";
+            this.txtNoidungTimKiem.TextChanged += new System.EventHandler(this.txtNoidungTimKiem_TextChanged);
             // 
             // openFileDialog1
             // 
@@ -463,7 +467,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(925, 642);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQuanLySV";
             this.Text = "Quản lý Sinh Viên";
             this.Load += new System.EventHandler(this.frmQuanLySV_Load);

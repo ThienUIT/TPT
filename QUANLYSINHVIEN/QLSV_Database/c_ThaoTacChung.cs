@@ -16,6 +16,7 @@ namespace QLSV_Database
         public DataTable LayDanhSach(string strSQL)
         {
             DataTable dt = new DataTable();
+
             SqlConnection cn = conn.OpenCN();
             try
             {
@@ -112,7 +113,7 @@ namespace QLSV_Database
         }
 
         //hàm tạo gợi ý khi nhập từ khóa vào textbox
-        public void TextBox_AutoComplete(TextBox txt, string table, int column)
+        public void TextBox_AutoComplete(TextBox txt, string table, int column)//giá trị nhập, table, cột
         {
             
             txt.AutoCompleteCustomSource.Clear() ;
@@ -202,8 +203,26 @@ namespace QLSV_Database
         
         }
 
+        public string ChuanHoaString(string str)
+        {
+            string FullName = str;
+            string result = "";
+            FullName = FullName.Trim();//cắt khoảng trắng dư ở 2 đầu
+            while (FullName.IndexOf("  ") != -1)// tìm không thấy return -1
+            {
+                FullName = FullName.Replace("  ", " ");
+            }
+            string[] SubName = FullName.Split(' ');//chuỗi cắt khi gặp khoẳng trắng, thành mảng chuỗi
+            for (int i = 0; i < SubName.Length; i++)
+            {
+                string FirstChar = SubName[i].Substring(0, 1);
+                string OtherChar = SubName[i].Substring(1);
+                SubName[i] = FirstChar.ToUpper() + OtherChar.ToLower();
+                result += SubName[i] + " ";
+            }
+            return result;
+        }
 
 
-        
     }
 }

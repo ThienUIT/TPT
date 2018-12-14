@@ -118,7 +118,7 @@ namespace QLSV_GiaoDien
         private void btnSua_Click(object sender, EventArgs e)
         {
                 xl_user.USER = txtUserName.Text;
-                xl_user.NewPass = txtNewPass.Text;
+                xl_user.NEWPASS = txtNewPass.Text;
                 xl_user.PASS = txtPass.Text;
                 xl_user.UpdateUser();
                 dgvUser.DataSource = xl_user.LoadDL();

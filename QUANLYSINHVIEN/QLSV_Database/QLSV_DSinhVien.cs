@@ -25,7 +25,7 @@ namespace QLSV_Database
             SqlParameter _Hinh = new SqlParameter();
             SqlParameter _GhiChu = new SqlParameter();
 
-         
+
         public void ThemSinhVien(String MaSv, String Hoten, String Quequan, DateTime Ngaysinh, string noisinh, string gioitinh, string malop, string hinh, string ghichu)
         {
            
@@ -58,9 +58,6 @@ namespace QLSV_Database
             _GhiChu.ParameterName = "@Ghichu";
 
             ctc.ThaoTacDuLieu("qlsv_ThemSinhVien", CommandType.StoredProcedure, _Msv, _tensv, _quequan, _ngaysinh, _NoiSinh, _GioiTinh, _MaLop, _Hinh, _GhiChu);
-
-
-
         }
 
         public void CapNhatSinhVien(String MaSv, String Hoten, String Quequan, DateTime Ngaysinh, string noisinh, string gioitinh, string malop, string hinh, string ghichu)
@@ -126,11 +123,7 @@ namespace QLSV_Database
             dt = ctc.LayDanhSach("Select * from  SinhVien where " + field + " = N'" + DKTim + "'");
             return dt;
         }
-
-     
-
-      
-
+       
         public void LayMaLopVaoComBoboxMaLop(ComboBox cmb)
         {
             ctc.LoadDLVaoCombobox("Select * from Lop", cmb, "TenLop", "MaLop");

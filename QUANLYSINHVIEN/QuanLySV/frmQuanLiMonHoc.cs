@@ -137,5 +137,7 @@ namespace QLSV_GiaoDien
         {
             this.Close();
         }
+
+
     }
 }

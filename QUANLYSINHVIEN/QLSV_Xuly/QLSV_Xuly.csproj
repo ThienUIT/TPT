@@ -59,7 +59,6 @@
     <Compile Include="QLSV_XDiem.cs" />
     <Compile Include="QLSV_XDKMonHoc.cs" />
     <Compile Include="QLSV_XGiaoVien.cs" />
-    <Compile Include="QLSV_XHe.cs" />
     <Compile Include="QLSV_XKhoa.cs" />
     <Compile Include="QLSV_XKhoaHoc.cs" />
     <Compile Include="QLSV_XLop.cs" />

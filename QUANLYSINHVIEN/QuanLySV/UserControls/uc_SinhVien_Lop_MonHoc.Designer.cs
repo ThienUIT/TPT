@@ -95,6 +95,13 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvDangkyMH = new System.Windows.Forms.DataGridView();
+            this.MaMonHoc_Dk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSV_DK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTCDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSuaDK = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnXoaDK = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBoxDKMH = new System.Windows.Forms.GroupBox();
             this.numSoTCDK = new System.Windows.Forms.NumericUpDown();
             this.cmbMonHocDK = new System.Windows.Forms.ComboBox();
@@ -116,6 +123,13 @@
             this.label23 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.dgvLop = new System.Windows.Forms.DataGridView();
+            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ma_Nganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu_Lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSua_Lop = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnXoa_Lop = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupboxLOP = new System.Windows.Forms.GroupBox();
             this.btnLamlai_Lop = new System.Windows.Forms.Button();
             this.btnThemLop = new System.Windows.Forms.Button();
@@ -145,25 +159,10 @@
             this.label28 = new System.Windows.Forms.Label();
             this.oFD_Pic = new System.Windows.Forms.OpenFileDialog();
             this.MaNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnXoa = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ma_Nganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu_Lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSua_Lop = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXoa_Lop = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.MaMonHoc_Dk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSV_DK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTCDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSuaDK = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXoaDK = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabSV_MH_LOP.SuspendLayout();
             this.tabSinhVien.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -373,6 +372,7 @@
             this.txtQueQuan.Name = "txtQueQuan";
             this.txtQueQuan.Size = new System.Drawing.Size(360, 22);
             this.txtQueQuan.TabIndex = 26;
+            this.txtQueQuan.TextChanged += new System.EventHandler(this.txtQueQuan_TextChanged);
             // 
             // dtp_NgaySinh
             // 
@@ -415,6 +415,7 @@
             this.txtHotenSv.Name = "txtHotenSv";
             this.txtHotenSv.Size = new System.Drawing.Size(237, 22);
             this.txtHotenSv.TabIndex = 20;
+            this.txtHotenSv.TextChanged += new System.EventHandler(this.txtHotenSv_TextChanged);
             // 
             // txtNoiSinh
             // 
@@ -423,6 +424,7 @@
             this.txtNoiSinh.Name = "txtNoiSinh";
             this.txtNoiSinh.Size = new System.Drawing.Size(287, 22);
             this.txtNoiSinh.TabIndex = 18;
+            this.txtNoiSinh.TextChanged += new System.EventHandler(this.txtNoiSinh_TextChanged);
             // 
             // txtMSSV
             // 
@@ -962,6 +964,64 @@
             this.dgvDangkyMH.TabIndex = 0;
             this.dgvDangkyMH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDangkyMH_CellClick);
             // 
+            // MaMonHoc_Dk
+            // 
+            this.MaMonHoc_Dk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaMonHoc_Dk.DataPropertyName = "MaMonHoc";
+            this.MaMonHoc_Dk.HeaderText = "Mã MH";
+            this.MaMonHoc_Dk.Name = "MaMonHoc_Dk";
+            this.MaMonHoc_Dk.ReadOnly = true;
+            // 
+            // MaSV_DK
+            // 
+            this.MaSV_DK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaSV_DK.DataPropertyName = "MaSinhVien";
+            this.MaSV_DK.HeaderText = "Mã SV";
+            this.MaSV_DK.Name = "MaSV_DK";
+            this.MaSV_DK.ReadOnly = true;
+            // 
+            // NgayDK
+            // 
+            this.NgayDK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NgayDK.DataPropertyName = "NgayDangKy";
+            this.NgayDK.HeaderText = "Ngày ĐK";
+            this.NgayDK.Name = "NgayDK";
+            this.NgayDK.ReadOnly = true;
+            // 
+            // SoTCDK
+            // 
+            this.SoTCDK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SoTCDK.DataPropertyName = "SoTinChi";
+            this.SoTCDK.HeaderText = "Số tín chỉ";
+            this.SoTCDK.Name = "SoTCDK";
+            this.SoTCDK.ReadOnly = true;
+            // 
+            // HocKy
+            // 
+            this.HocKy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HocKy.DataPropertyName = "HocKy";
+            this.HocKy.HeaderText = "Học kỳ";
+            this.HocKy.Name = "HocKy";
+            this.HocKy.ReadOnly = true;
+            // 
+            // btnSuaDK
+            // 
+            this.btnSuaDK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnSuaDK.HeaderText = "Sửa";
+            this.btnSuaDK.Name = "btnSuaDK";
+            this.btnSuaDK.ReadOnly = true;
+            this.btnSuaDK.Text = "Sửa";
+            this.btnSuaDK.UseColumnTextForButtonValue = true;
+            // 
+            // btnXoaDK
+            // 
+            this.btnXoaDK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnXoaDK.HeaderText = "Xóa";
+            this.btnXoaDK.Name = "btnXoaDK";
+            this.btnXoaDK.ReadOnly = true;
+            this.btnXoaDK.Text = "Xóa";
+            this.btnXoaDK.UseColumnTextForButtonValue = true;
+            // 
             // groupBoxDKMH
             // 
             this.groupBoxDKMH.Controls.Add(this.numSoTCDK);
@@ -1207,6 +1267,64 @@
             this.dgvLop.TabIndex = 0;
             this.dgvLop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLop_CellClick);
             // 
+            // MaLop
+            // 
+            this.MaLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaLop.DataPropertyName = "MaLop";
+            this.MaLop.HeaderText = "Mã Lớp";
+            this.MaLop.Name = "MaLop";
+            this.MaLop.ReadOnly = true;
+            // 
+            // MaKhoaHoc
+            // 
+            this.MaKhoaHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaKhoaHoc.DataPropertyName = "MaKhoaHoc";
+            this.MaKhoaHoc.HeaderText = "Mã Khóa Học";
+            this.MaKhoaHoc.Name = "MaKhoaHoc";
+            this.MaKhoaHoc.ReadOnly = true;
+            // 
+            // Ma_Nganh
+            // 
+            this.Ma_Nganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Ma_Nganh.DataPropertyName = "MaNganh";
+            this.Ma_Nganh.HeaderText = "Mã Ngành";
+            this.Ma_Nganh.Name = "Ma_Nganh";
+            this.Ma_Nganh.ReadOnly = true;
+            // 
+            // TenLop
+            // 
+            this.TenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenLop.DataPropertyName = "TenLop";
+            this.TenLop.HeaderText = "Tên Lớp";
+            this.TenLop.Name = "TenLop";
+            this.TenLop.ReadOnly = true;
+            // 
+            // GhiChu_Lop
+            // 
+            this.GhiChu_Lop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GhiChu_Lop.DataPropertyName = "GhiChu";
+            this.GhiChu_Lop.HeaderText = "Ghi Chú";
+            this.GhiChu_Lop.Name = "GhiChu_Lop";
+            this.GhiChu_Lop.ReadOnly = true;
+            // 
+            // btnSua_Lop
+            // 
+            this.btnSua_Lop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnSua_Lop.HeaderText = "Sửa";
+            this.btnSua_Lop.Name = "btnSua_Lop";
+            this.btnSua_Lop.ReadOnly = true;
+            this.btnSua_Lop.Text = "Sửa";
+            this.btnSua_Lop.UseColumnTextForButtonValue = true;
+            // 
+            // btnXoa_Lop
+            // 
+            this.btnXoa_Lop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.btnXoa_Lop.HeaderText = "Xóa";
+            this.btnXoa_Lop.Name = "btnXoa_Lop";
+            this.btnXoa_Lop.ReadOnly = true;
+            this.btnXoa_Lop.Text = "Xóa";
+            this.btnXoa_Lop.UseColumnTextForButtonValue = true;
+            // 
             // groupboxLOP
             // 
             this.groupboxLOP.Controls.Add(this.btnLamlai_Lop);
@@ -1379,7 +1497,6 @@
             this.dgvNganh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNganh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNganh,
-            this.MaHe,
             this.TenNganh,
             this.GhiChu,
             this.btnSua,
@@ -1526,14 +1643,6 @@
             this.MaNganh.Name = "MaNganh";
             this.MaNganh.ReadOnly = true;
             // 
-            // MaHe
-            // 
-            this.MaHe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaHe.DataPropertyName = "MaHe";
-            this.MaHe.HeaderText = "Mã Hệ";
-            this.MaHe.Name = "MaHe";
-            this.MaHe.ReadOnly = true;
-            // 
             // TenNganh
             // 
             this.TenNganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -1569,122 +1678,6 @@
             this.btnXoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseColumnTextForButtonValue = true;
-            // 
-            // MaLop
-            // 
-            this.MaLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaLop.DataPropertyName = "MaLop";
-            this.MaLop.HeaderText = "Mã Lớp";
-            this.MaLop.Name = "MaLop";
-            this.MaLop.ReadOnly = true;
-            // 
-            // MaKhoaHoc
-            // 
-            this.MaKhoaHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaKhoaHoc.DataPropertyName = "MaKhoaHoc";
-            this.MaKhoaHoc.HeaderText = "Mã Khóa Học";
-            this.MaKhoaHoc.Name = "MaKhoaHoc";
-            this.MaKhoaHoc.ReadOnly = true;
-            // 
-            // Ma_Nganh
-            // 
-            this.Ma_Nganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Ma_Nganh.DataPropertyName = "MaNganh";
-            this.Ma_Nganh.HeaderText = "Mã Ngành";
-            this.Ma_Nganh.Name = "Ma_Nganh";
-            this.Ma_Nganh.ReadOnly = true;
-            // 
-            // TenLop
-            // 
-            this.TenLop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenLop.DataPropertyName = "TenLop";
-            this.TenLop.HeaderText = "Tên Lớp";
-            this.TenLop.Name = "TenLop";
-            this.TenLop.ReadOnly = true;
-            // 
-            // GhiChu_Lop
-            // 
-            this.GhiChu_Lop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GhiChu_Lop.DataPropertyName = "GhiChu";
-            this.GhiChu_Lop.HeaderText = "Ghi Chú";
-            this.GhiChu_Lop.Name = "GhiChu_Lop";
-            this.GhiChu_Lop.ReadOnly = true;
-            // 
-            // btnSua_Lop
-            // 
-            this.btnSua_Lop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnSua_Lop.HeaderText = "Sửa";
-            this.btnSua_Lop.Name = "btnSua_Lop";
-            this.btnSua_Lop.ReadOnly = true;
-            this.btnSua_Lop.Text = "Sửa";
-            this.btnSua_Lop.UseColumnTextForButtonValue = true;
-            // 
-            // btnXoa_Lop
-            // 
-            this.btnXoa_Lop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnXoa_Lop.HeaderText = "Xóa";
-            this.btnXoa_Lop.Name = "btnXoa_Lop";
-            this.btnXoa_Lop.ReadOnly = true;
-            this.btnXoa_Lop.Text = "Xóa";
-            this.btnXoa_Lop.UseColumnTextForButtonValue = true;
-            // 
-            // MaMonHoc_Dk
-            // 
-            this.MaMonHoc_Dk.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaMonHoc_Dk.DataPropertyName = "MaMonHoc";
-            this.MaMonHoc_Dk.HeaderText = "Mã MH";
-            this.MaMonHoc_Dk.Name = "MaMonHoc_Dk";
-            this.MaMonHoc_Dk.ReadOnly = true;
-            // 
-            // MaSV_DK
-            // 
-            this.MaSV_DK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaSV_DK.DataPropertyName = "MaSinhVien";
-            this.MaSV_DK.HeaderText = "Mã SV";
-            this.MaSV_DK.Name = "MaSV_DK";
-            this.MaSV_DK.ReadOnly = true;
-            // 
-            // NgayDK
-            // 
-            this.NgayDK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NgayDK.DataPropertyName = "NgayDangKy";
-            this.NgayDK.HeaderText = "Ngày ĐK";
-            this.NgayDK.Name = "NgayDK";
-            this.NgayDK.ReadOnly = true;
-            // 
-            // SoTCDK
-            // 
-            this.SoTCDK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SoTCDK.DataPropertyName = "SoTinChi";
-            this.SoTCDK.HeaderText = "Số tín chỉ";
-            this.SoTCDK.Name = "SoTCDK";
-            this.SoTCDK.ReadOnly = true;
-            // 
-            // HocKy
-            // 
-            this.HocKy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HocKy.DataPropertyName = "HocKy";
-            this.HocKy.HeaderText = "Học kỳ";
-            this.HocKy.Name = "HocKy";
-            this.HocKy.ReadOnly = true;
-            // 
-            // btnSuaDK
-            // 
-            this.btnSuaDK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnSuaDK.HeaderText = "Sửa";
-            this.btnSuaDK.Name = "btnSuaDK";
-            this.btnSuaDK.ReadOnly = true;
-            this.btnSuaDK.Text = "Sửa";
-            this.btnSuaDK.UseColumnTextForButtonValue = true;
-            // 
-            // btnXoaDK
-            // 
-            this.btnXoaDK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnXoaDK.HeaderText = "Xóa";
-            this.btnXoaDK.Name = "btnXoaDK";
-            this.btnXoaDK.ReadOnly = true;
-            this.btnXoaDK.Text = "Xóa";
-            this.btnXoaDK.UseColumnTextForButtonValue = true;
             // 
             // uc_SinhVien_Lop_MonHoc
             // 
@@ -1870,7 +1863,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn btnSua_Lop;
         private System.Windows.Forms.DataGridViewButtonColumn btnXoa_Lop;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNganh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHe;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNganh;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.DataGridViewButtonColumn btnSua;

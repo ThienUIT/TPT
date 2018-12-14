@@ -105,8 +105,8 @@ namespace QLSV_Database
             dt = cc.LayDanhSach("Select * from  tb_User where Username ='" + User + "'");
             return dt;
         }
-
-        public bool CheckUser(string User, string pass)
+        //checkuser để đăng nhập
+        public bool CheckUser(string User,string pass )
         {
             bool kq = false;
             DataTable dt = new DataTable();

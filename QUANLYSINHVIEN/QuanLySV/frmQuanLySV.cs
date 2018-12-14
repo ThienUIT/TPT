@@ -94,7 +94,7 @@ namespace QLSV_GiaoDien
             }
             
             txtNoiSinh.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-            //cbMaLop.Items.Add(dataGridView1.CurrentRow.Cells[6].Value.ToString());
+       
             txtHinh.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             txtGhichu.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
             string gioitinh = "";
@@ -160,5 +160,38 @@ namespace QLSV_GiaoDien
         {
             txtHinh.Text = openFileDialog1.FileName;
         }
+        #region chuẩn hoá
+        private void txtHotenSv_TextChanged(object sender, EventArgs e)
+        {
+
+            txtHotenSv.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(txtHotenSv.Text);
+            txtHotenSv.Select(txtHotenSv.Text.Length, 0);
+
+        }
+
+        private void txtNoiSinh_TextChanged(object sender, EventArgs e)
+        {
+
+            txtNoiSinh.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(txtNoiSinh.Text);
+            txtNoiSinh.Select(txtNoiSinh.Text.Length, 0);
+
+        }
+
+        private void txtQueQuan_TextChanged(object sender, EventArgs e)
+        {
+
+            txtQueQuan.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(txtQueQuan.Text);
+            txtQueQuan.Select(txtQueQuan.Text.Length, 0);
+
+        }
+
+        private void txtNoidungTimKiem_TextChanged(object sender, EventArgs e)
+        {
+
+            txtNoidungTimKiem.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(txtNoidungTimKiem.Text);
+            txtNoidungTimKiem.Select(txtNoidungTimKiem.Text.Length, 0);
+
+        }
+        #endregion
     }
 }

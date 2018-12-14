@@ -74,14 +74,13 @@ namespace QLSV_Xuly
             }
         }
        
-
         public string HOTEN
         {
             get { return hoten; }
             set 
             {
-                
                 hoten = value;
+                hoten = ctc.ChuanHoaString(hoten);
                 if (this.HOTEN == "")
                 {
                     MessageBox.Show("Chưa nhập họ tên sinh viên! ");
@@ -96,21 +95,37 @@ namespace QLSV_Xuly
         public string QUEQUAN
         {
             get { return quequan; }
-            set { quequan = value; }
+            set
+            {
+                quequan = value;
+                ctc.ChuanHoaString(quequan);
+                if (this.QUEQUAN == "")
+                {
+                    MessageBox.Show("Chưa nhập quê quán! ");
+                    return;
+                }
+            }
+          
         }
-       
+        public string NOISINH
+        {
+            get { return noisinh; }
+            set
+            {
+                noisinh = value;
+                ctc.ChuanHoaString(noisinh);
+                if (this.NOISINH == "")
+                {
+                    MessageBox.Show("Chưa nhập nơi sinh! ");
+                    return;
+                }
+            }
+        }
 
         public DateTime NGAYSINH
         {
             get { return NgaySinh; }
             set { NgaySinh = value; }
-        }
-       
-
-        public string NOISINH
-        {
-            get { return noisinh; }
-            set { noisinh = value; }
         }
        
 
@@ -190,10 +205,6 @@ namespace QLSV_Xuly
             dt = qlsv_dSV.TimKiemSV(FIELD,DKTIM);
             return dt;
         }
-
-       
-
-        
 
         public void LayDLVaoComboboxMaLop()
         {

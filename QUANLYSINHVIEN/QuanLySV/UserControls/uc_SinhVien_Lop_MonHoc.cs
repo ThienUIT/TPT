@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using QLSV_Xuly;
+using QLSV_Database;
 using QLSV_GiaoDien.UserControls;
 namespace QLSV_GiaoDien.UserControls
 {
@@ -17,6 +18,7 @@ namespace QLSV_GiaoDien.UserControls
         QLSV_XMonHoc qlsv_slMonHoc = new QLSV_XMonHoc();
         QLSV_XDKMonHoc qlsv_xlDKMonHoc = new QLSV_XDKMonHoc();
         c_XuLyChung xlc = new c_XuLyChung();
+        c_ThaoTacChung ctc = new c_ThaoTacChung();
         public uc_SinhVien_Lop_MonHoc()
         {
             InitializeComponent();
@@ -79,7 +81,7 @@ namespace QLSV_GiaoDien.UserControls
             qlsv_xlSV.MASV = txtMSSV.Text;
             qlsv_xlSV.HOTEN = txtHotenSv.Text;
             qlsv_xlSV.QUEQUAN = txtQueQuan.Text;
-            qlsv_xlSV.NGAYSINH = dtp_NgaySinh.Value ;
+            qlsv_xlSV.NGAYSINH = dtp_NgaySinh.Value;
             qlsv_xlSV.NOISINH = txtNoiSinh.Text;
             qlsv_xlSV.MALOP = cbMaLop.SelectedValue.ToString();
             qlsv_xlSV.HINH = txtHinh.Text;
@@ -107,7 +109,7 @@ namespace QLSV_GiaoDien.UserControls
         private void btnQuanLySV_Click(object sender, EventArgs e)
         {
             frmQuanLySV frmQLSV = new frmQuanLySV();
-            frmQLSV.Show();
+            frmQLSV.ShowDialog();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -444,19 +446,25 @@ namespace QLSV_GiaoDien.UserControls
         {
             Application.Exit();
         }
+        #region chuẩn hoá
+        private void txtHotenSv_TextChanged(object sender, EventArgs e)
+        {
+            txtHotenSv.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(txtHotenSv.Text);
+            txtHotenSv.Select(txtHotenSv.Text.Length, 0);
 
-        
+        }
 
-      
+        private void txtNoiSinh_TextChanged(object sender, EventArgs e)
+        {
+            txtNoiSinh.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(txtNoiSinh.Text);
+            txtNoiSinh.Select(txtNoiSinh.Text.Length, 0);
+        }
 
-       
-
-       
-
-       
-
-       
-
-
+        private void txtQueQuan_TextChanged(object sender, EventArgs e)
+        {
+            txtQueQuan.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(txtQueQuan.Text);
+            txtQueQuan.Select(txtQueQuan.Text.Length, 0);
+        }
+        #endregion
     }
 }
