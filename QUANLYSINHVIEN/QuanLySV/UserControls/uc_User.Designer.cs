@@ -32,13 +32,16 @@
             this.txtNewPass = new System.Windows.Forms.TextBox();
             this.lblMatkhaumoi = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.lblTacvu = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rdXoa = new System.Windows.Forms.RadioButton();
             this.rdDoiMatkhau = new System.Windows.Forms.RadioButton();
             this.rdTaoUser = new System.Windows.Forms.RadioButton();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.txtTenTimKiem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,9 +52,6 @@
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.btnTim = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -115,6 +115,17 @@
             this.btnSua.TabIndex = 10;
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXoa.Location = new System.Drawing.Point(763, 455);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(100, 54);
+            this.btnXoa.TabIndex = 11;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // lblTacvu
             // 
@@ -193,6 +204,18 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // btnThem
+            // 
+            this.btnThem.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
+            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThem.Location = new System.Drawing.Point(636, 455);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(100, 54);
+            this.btnThem.TabIndex = 9;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnRefresh);
@@ -207,6 +230,17 @@
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm User";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRefresh.Location = new System.Drawing.Point(732, 20);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(66, 50);
+            this.btnRefresh.TabIndex = 2;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // txtTenTimKiem
             // 
@@ -303,41 +337,9 @@
             this.txtUserName.Size = new System.Drawing.Size(263, 22);
             this.txtUserName.TabIndex = 6;
             // 
-            // btnXoa
-            // 
-            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXoa.Location = new System.Drawing.Point(763, 455);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(100, 54);
-            this.btnXoa.TabIndex = 11;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThem.Location = new System.Drawing.Point(636, 455);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 54);
-            this.btnThem.TabIndex = 9;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefresh.Location = new System.Drawing.Point(732, 20);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(66, 50);
-            this.btnRefresh.TabIndex = 2;
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // btnTim
             // 
+            this.btnTim.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.Magnify;
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTim.Location = new System.Drawing.Point(609, 20);
             this.btnTim.Margin = new System.Windows.Forms.Padding(4);

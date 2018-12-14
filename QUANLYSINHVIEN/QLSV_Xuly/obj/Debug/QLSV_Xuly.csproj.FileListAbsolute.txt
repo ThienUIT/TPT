@@ -32,3 +32,12 @@ C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\obj\Debug\QLSV_
 C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\obj\Debug\QLSV_Xuly.csproj.CopyComplete
 C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\obj\Debug\QLSV_Xuly.dll
 C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\obj\Debug\QLSV_Xuly.pdb
+C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\bin\Debug\QLSV_Xuly.dll
+C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\bin\Debug\QLSV_Xuly.pdb
+C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\bin\Debug\QLSV_Database.exe
+C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\bin\Debug\QLSV_Database.pdb
+C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\obj\Debug\QLSV_Xuly.csprojAssemblyReference.cache
+C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\obj\Debug\QLSV_Xuly.csproj.CoreCompileInputs.cache
+C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\obj\Debug\QLSV_Xuly.csproj.CopyComplete
+C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\obj\Debug\QLSV_Xuly.dll
+C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QLSV_Xuly\obj\Debug\QLSV_Xuly.pdb
