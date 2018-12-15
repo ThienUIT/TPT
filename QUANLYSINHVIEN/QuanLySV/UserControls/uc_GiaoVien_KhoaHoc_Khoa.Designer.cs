@@ -1,6 +1,6 @@
 ﻿namespace QLSV_GiaoDien.UserControls
 {
-    partial class uc_GiaoVien_KhoaHoc_Khoa_He
+    partial class uc_GiaoVien_KhoaHoc_Khoa
     {
         /// <summary> 
         /// Required designer variable.

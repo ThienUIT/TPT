@@ -32,8 +32,6 @@ namespace QLSV_GiaoDien.UserControls
             qlsv_xlSV.LayDLVaoComboboxMaLop();
 
             dgvNganh.DataSource = qlsv_xlNganh.LoadDL();
-            qlsv_xlNganh.CMB = cmbTenHe;
-            qlsv_xlNganh.LoadDLVaoCombobox();
 #endregion
 
             #region Lop
@@ -117,10 +115,6 @@ namespace QLSV_GiaoDien.UserControls
             xlc.ClearAllTextBox(groupBox1);
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
 
         private void cbMaLop_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -137,20 +131,13 @@ namespace QLSV_GiaoDien.UserControls
         }
 
         private void dgvNganh_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+        {//
+            
             txtMaNganh.Text = dgvNganh.CurrentRow.Cells[2].Value.ToString();
-            if (dgvNganh.CurrentRow.Cells[3].Value.ToString() != "")
-            {
-                cmbTenHe.SelectedValue = dgvNganh.CurrentRow.Cells[3].Value;
-                qlsv_xlNganh.MAHE = cmbTenHe.SelectedValue.ToString();
-            }
-          
-            
-            txtTenNganh.Text = dgvNganh.CurrentRow.Cells[4].Value.ToString();
-            txtGhiChu_Nganh.Text = dgvNganh.CurrentRow.Cells[5].Value.ToString();
-
+            txtTenNganh.Text = dgvNganh.CurrentRow.Cells[3].Value.ToString();
+            txtGhiChu_Nganh.Text = dgvNganh.CurrentRow.Cells[4].Value.ToString();
+            //
             qlsv_xlNganh.MANGANH = txtMaNganh.Text;
-            
             qlsv_xlNganh.TENNGANH = txtTenNganh.Text;
             qlsv_xlNganh.GHICHU = txtGhiChu_Nganh.Text;
 
@@ -176,7 +163,6 @@ namespace QLSV_GiaoDien.UserControls
             txtMaNganh.Text = qlsv_xlNganh.TaoMaNganh();
 
             qlsv_xlNganh.MANGANH = txtMaNganh.Text;
-            qlsv_xlNganh.MAHE = cmbTenHe.SelectedValue.ToString();
             qlsv_xlNganh.TENNGANH = txtTenNganh.Text;
             qlsv_xlNganh.GHICHU = txtGhiChu_Nganh.Text;
 
@@ -186,16 +172,6 @@ namespace QLSV_GiaoDien.UserControls
         }
 
        
-
-        private void cmbTenHe_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //label31.Text = cmbTenHe.SelectedValue.ToString();
-        }
-
-        private void btnThoat_Nganh_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
         private void btnLamlai_Nganh_Click(object sender, EventArgs e)
         {
             xlc.ClearAllTextBox(groupBox7);
@@ -466,5 +442,7 @@ namespace QLSV_GiaoDien.UserControls
             txtQueQuan.Select(txtQueQuan.Text.Length, 0);
         }
         #endregion
+
+     
     }
 }

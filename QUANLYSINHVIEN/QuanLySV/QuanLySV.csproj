@@ -155,8 +155,8 @@
     <EmbeddedResource Include="UserControls\uc_DK_MonHoc.resx">
       <DependentUpon>uc_DK_MonHoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\uc_GiaoVien_KhoaHoc_Khoa_He.resx">
-      <DependentUpon>uc_GiaoVien_KhoaHoc_Khoa_He.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\uc_GiaoVien_KhoaHoc_Khoa.resx">
+      <DependentUpon>uc_GiaoVien_KhoaHoc_Khoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uc_NhapDiem.resx">
       <DependentUpon>uc_NhapDiem.cs</DependentUpon>
@@ -231,11 +231,11 @@
     <Compile Include="UserControls\uc_DK_MonHoc.Designer.cs">
       <DependentUpon>uc_DK_MonHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\uc_GiaoVien_KhoaHoc_Khoa_He.cs">
+    <Compile Include="UserControls\uc_GiaoVien_KhoaHoc_Khoa.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\uc_GiaoVien_KhoaHoc_Khoa_He.Designer.cs">
-      <DependentUpon>uc_GiaoVien_KhoaHoc_Khoa_He.cs</DependentUpon>
+    <Compile Include="UserControls\uc_GiaoVien_KhoaHoc_Khoa.Designer.cs">
+      <DependentUpon>uc_GiaoVien_KhoaHoc_Khoa.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\uc_NhapDiem.cs">
       <SubType>UserControl</SubType>

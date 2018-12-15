@@ -195,8 +195,8 @@ namespace QLSV_GiaoDien
 
         private void lnkGV_K_e_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            lblTitle.Text = "Quản lí Giáo Viên - Khoa - Khóa học - Hệ";
-            uc_GiaoVien_KhoaHoc_Khoa_He gkh = new uc_GiaoVien_KhoaHoc_Khoa_He();
+            lblTitle.Text = "Quản lí Giáo Viên - Khoa - Khóa học";
+            uc_GiaoVien_KhoaHoc_Khoa gkh = new uc_GiaoVien_KhoaHoc_Khoa();
             qlsv_xl.AddControl(pan_Main, gkh);
             
         }
@@ -401,7 +401,7 @@ namespace QLSV_GiaoDien
         private void quanliGV_Khoa_khoahoc_HEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Quản lí Giáo Viên - Khoa - Khóa học - Hệ";
-            uc_GiaoVien_KhoaHoc_Khoa_He gkh = new uc_GiaoVien_KhoaHoc_Khoa_He();
+            uc_GiaoVien_KhoaHoc_Khoa gkh = new uc_GiaoVien_KhoaHoc_Khoa();
             qlsv_xl.AddControl(pan_Main, gkh);
         }
 

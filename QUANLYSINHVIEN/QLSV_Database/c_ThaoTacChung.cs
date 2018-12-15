@@ -149,7 +149,7 @@ namespace QLSV_Database
           
            SqlConnection cn =  conn.OpenCN();
            SqlCommand cmd = new SqlCommand();
-           // cmd.Parameters.Clear();
+            cmd.Parameters.Clear();
             cmd.CommandText = strSQL;//truyen vao ten cua storeprocedure
             cmd.CommandType = cmdT;
             cmd.Connection = cn;

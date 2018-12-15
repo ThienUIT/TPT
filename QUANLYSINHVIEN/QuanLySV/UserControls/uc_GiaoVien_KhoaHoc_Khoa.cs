@@ -9,13 +9,13 @@ using System.Windows.Forms;
 using QLSV_Xuly;
 namespace QLSV_GiaoDien.UserControls
 {
-    public partial class uc_GiaoVien_KhoaHoc_Khoa_He : UserControl
+    public partial class uc_GiaoVien_KhoaHoc_Khoa : UserControl
     {
       
         QLSV_XGiaoVien qlsv_xlGiaoVien = new QLSV_XGiaoVien();
         QLSV_XKhoa qlsv_xlKhoa = new QLSV_XKhoa();
         c_XuLyChung cXLC = new c_XuLyChung();
-        public uc_GiaoVien_KhoaHoc_Khoa_He()
+        public uc_GiaoVien_KhoaHoc_Khoa()
         {
             InitializeComponent();
         }

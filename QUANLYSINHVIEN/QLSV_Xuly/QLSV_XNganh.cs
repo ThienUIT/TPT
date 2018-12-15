@@ -12,8 +12,6 @@ namespace QLSV_Xuly
         QLSV_DNganh qlsv_dNganh = new QLSV_DNganh();
 
         private string Manganh;
-        private ComboBox cmb;
-        private string Mahe;
         private string Tennganh;
         private string Ghichu;
 
@@ -22,14 +20,6 @@ namespace QLSV_Xuly
             get { return Manganh; }
             set { Manganh = value; }
         }
-        
-
-        public string MAHE
-        {
-            get { return Mahe; }
-            set { Mahe = value; }
-        }
-       
 
         public string TENNGANH
         {
@@ -44,17 +34,12 @@ namespace QLSV_Xuly
             set { Ghichu = value; }
         }
         
-        public ComboBox CMB
-        {
-            get { return cmb; }
-            set { cmb = value; }
-        }
 
         public void ThemNganh()
         {
             try
             {
-                qlsv_dNganh.ThemNganh(MANGANH, MAHE, TENNGANH, GHICHU);
+                qlsv_dNganh.ThemNganh(MANGANH, TENNGANH, GHICHU);
             }
             catch
             { 
@@ -66,7 +51,7 @@ namespace QLSV_Xuly
         {
             try
             {
-                qlsv_dNganh.CapNhatNganh(MANGANH, MAHE, TENNGANH, GHICHU);
+                qlsv_dNganh.CapNhatNganh(MANGANH, TENNGANH, GHICHU);
             }
             catch
             {
@@ -100,11 +85,6 @@ namespace QLSV_Xuly
             
             }
             return dt;
-        }
-
-        public void LoadDLVaoCombobox()
-        {
-            qlsv_dNganh.LoadDLVaoComboBox(CMB);
         }
 
         public string TaoMaNganh()

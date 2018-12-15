@@ -146,23 +146,21 @@
             this.tabNganh = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.dgvNganh = new System.Windows.Forms.DataGridView();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.btnLamlai_Nganh = new System.Windows.Forms.Button();
-            this.btnThem_Nganh = new System.Windows.Forms.Button();
-            this.cmbTenHe = new System.Windows.Forms.ComboBox();
-            this.txtGhiChu_Nganh = new System.Windows.Forms.TextBox();
-            this.txtTenNganh = new System.Windows.Forms.TextBox();
-            this.txtMaNganh = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.oFD_Pic = new System.Windows.Forms.OpenFileDialog();
             this.MaNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnXoa = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnLamlai_Nganh = new System.Windows.Forms.Button();
+            this.btnThem_Nganh = new System.Windows.Forms.Button();
+            this.txtGhiChu_Nganh = new System.Windows.Forms.TextBox();
+            this.txtTenNganh = new System.Windows.Forms.TextBox();
+            this.txtMaNganh = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.oFD_Pic = new System.Windows.Forms.OpenFileDialog();
             this.tabSV_MH_LOP.SuspendLayout();
             this.tabSinhVien.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -1509,132 +1507,6 @@
             this.dgvNganh.TabIndex = 0;
             this.dgvNganh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNganh_CellClick);
             // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.btnLamlai_Nganh);
-            this.groupBox7.Controls.Add(this.btnThem_Nganh);
-            this.groupBox7.Controls.Add(this.cmbTenHe);
-            this.groupBox7.Controls.Add(this.txtGhiChu_Nganh);
-            this.groupBox7.Controls.Add(this.txtTenNganh);
-            this.groupBox7.Controls.Add(this.txtMaNganh);
-            this.groupBox7.Controls.Add(this.label31);
-            this.groupBox7.Controls.Add(this.label30);
-            this.groupBox7.Controls.Add(this.label29);
-            this.groupBox7.Controls.Add(this.label28);
-            this.groupBox7.Location = new System.Drawing.Point(61, 20);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox7.Size = new System.Drawing.Size(779, 191);
-            this.groupBox7.TabIndex = 0;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Thêm Ngành học mới";
-            // 
-            // btnLamlai_Nganh
-            // 
-            this.btnLamlai_Nganh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
-            this.btnLamlai_Nganh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLamlai_Nganh.Location = new System.Drawing.Point(639, 142);
-            this.btnLamlai_Nganh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLamlai_Nganh.Name = "btnLamlai_Nganh";
-            this.btnLamlai_Nganh.Size = new System.Drawing.Size(74, 41);
-            this.btnLamlai_Nganh.TabIndex = 9;
-            this.btnLamlai_Nganh.UseVisualStyleBackColor = true;
-            this.btnLamlai_Nganh.Click += new System.EventHandler(this.btnLamlai_Nganh_Click);
-            // 
-            // btnThem_Nganh
-            // 
-            this.btnThem_Nganh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
-            this.btnThem_Nganh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThem_Nganh.Location = new System.Drawing.Point(512, 142);
-            this.btnThem_Nganh.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem_Nganh.Name = "btnThem_Nganh";
-            this.btnThem_Nganh.Size = new System.Drawing.Size(69, 41);
-            this.btnThem_Nganh.TabIndex = 8;
-            this.btnThem_Nganh.UseVisualStyleBackColor = true;
-            this.btnThem_Nganh.Click += new System.EventHandler(this.btnThem_Nganh_Click);
-            // 
-            // cmbTenHe
-            // 
-            this.cmbTenHe.FormattingEnabled = true;
-            this.cmbTenHe.Location = new System.Drawing.Point(120, 117);
-            this.cmbTenHe.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbTenHe.Name = "cmbTenHe";
-            this.cmbTenHe.Size = new System.Drawing.Size(193, 24);
-            this.cmbTenHe.TabIndex = 7;
-            this.cmbTenHe.SelectedIndexChanged += new System.EventHandler(this.cmbTenHe_SelectedIndexChanged);
-            // 
-            // txtGhiChu_Nganh
-            // 
-            this.txtGhiChu_Nganh.Location = new System.Drawing.Point(436, 31);
-            this.txtGhiChu_Nganh.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGhiChu_Nganh.Multiline = true;
-            this.txtGhiChu_Nganh.Name = "txtGhiChu_Nganh";
-            this.txtGhiChu_Nganh.Size = new System.Drawing.Size(301, 85);
-            this.txtGhiChu_Nganh.TabIndex = 6;
-            // 
-            // txtTenNganh
-            // 
-            this.txtTenNganh.Location = new System.Drawing.Point(120, 74);
-            this.txtTenNganh.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTenNganh.Name = "txtTenNganh";
-            this.txtTenNganh.Size = new System.Drawing.Size(193, 22);
-            this.txtTenNganh.TabIndex = 5;
-            // 
-            // txtMaNganh
-            // 
-            this.txtMaNganh.Enabled = false;
-            this.txtMaNganh.Location = new System.Drawing.Point(120, 31);
-            this.txtMaNganh.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMaNganh.Name = "txtMaNganh";
-            this.txtMaNganh.Size = new System.Drawing.Size(193, 22);
-            this.txtMaNganh.TabIndex = 4;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(357, 34);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(57, 17);
-            this.label31.TabIndex = 3;
-            this.label31.Text = "Ghi chú";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(20, 121);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(74, 17);
-            this.label30.TabIndex = 2;
-            this.label30.Text = "Thuộc Hệ ";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(20, 78);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(79, 17);
-            this.label29.TabIndex = 1;
-            this.label29.Text = "Tên Ngành";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(20, 34);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(73, 17);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "Mã Ngành";
-            // 
-            // oFD_Pic
-            // 
-            this.oFD_Pic.FileName = "openFileDialog1";
-            this.oFD_Pic.FileOk += new System.ComponentModel.CancelEventHandler(this.oFD_Pic_FileOk);
-            // 
             // MaNganh
             // 
             this.MaNganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -1678,6 +1550,110 @@
             this.btnXoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseColumnTextForButtonValue = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.btnLamlai_Nganh);
+            this.groupBox7.Controls.Add(this.btnThem_Nganh);
+            this.groupBox7.Controls.Add(this.txtGhiChu_Nganh);
+            this.groupBox7.Controls.Add(this.txtTenNganh);
+            this.groupBox7.Controls.Add(this.txtMaNganh);
+            this.groupBox7.Controls.Add(this.label31);
+            this.groupBox7.Controls.Add(this.label29);
+            this.groupBox7.Controls.Add(this.label28);
+            this.groupBox7.Location = new System.Drawing.Point(61, 20);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox7.Size = new System.Drawing.Size(779, 191);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Thêm Ngành học mới";
+            // 
+            // btnLamlai_Nganh
+            // 
+            this.btnLamlai_Nganh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
+            this.btnLamlai_Nganh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLamlai_Nganh.Location = new System.Drawing.Point(639, 142);
+            this.btnLamlai_Nganh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLamlai_Nganh.Name = "btnLamlai_Nganh";
+            this.btnLamlai_Nganh.Size = new System.Drawing.Size(74, 41);
+            this.btnLamlai_Nganh.TabIndex = 9;
+            this.btnLamlai_Nganh.UseVisualStyleBackColor = true;
+            this.btnLamlai_Nganh.Click += new System.EventHandler(this.btnLamlai_Nganh_Click);
+            // 
+            // btnThem_Nganh
+            // 
+            this.btnThem_Nganh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
+            this.btnThem_Nganh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThem_Nganh.Location = new System.Drawing.Point(464, 142);
+            this.btnThem_Nganh.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem_Nganh.Name = "btnThem_Nganh";
+            this.btnThem_Nganh.Size = new System.Drawing.Size(69, 41);
+            this.btnThem_Nganh.TabIndex = 8;
+            this.btnThem_Nganh.UseVisualStyleBackColor = true;
+            this.btnThem_Nganh.Click += new System.EventHandler(this.btnThem_Nganh_Click);
+            // 
+            // txtGhiChu_Nganh
+            // 
+            this.txtGhiChu_Nganh.Location = new System.Drawing.Point(436, 31);
+            this.txtGhiChu_Nganh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGhiChu_Nganh.Multiline = true;
+            this.txtGhiChu_Nganh.Name = "txtGhiChu_Nganh";
+            this.txtGhiChu_Nganh.Size = new System.Drawing.Size(301, 85);
+            this.txtGhiChu_Nganh.TabIndex = 6;
+            // 
+            // txtTenNganh
+            // 
+            this.txtTenNganh.Location = new System.Drawing.Point(120, 142);
+            this.txtTenNganh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenNganh.Name = "txtTenNganh";
+            this.txtTenNganh.Size = new System.Drawing.Size(193, 22);
+            this.txtTenNganh.TabIndex = 5;
+            // 
+            // txtMaNganh
+            // 
+            this.txtMaNganh.Enabled = false;
+            this.txtMaNganh.Location = new System.Drawing.Point(120, 49);
+            this.txtMaNganh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaNganh.Name = "txtMaNganh";
+            this.txtMaNganh.Size = new System.Drawing.Size(193, 22);
+            this.txtMaNganh.TabIndex = 4;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(357, 34);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(57, 17);
+            this.label31.TabIndex = 3;
+            this.label31.Text = "Ghi chú";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(14, 142);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(79, 17);
+            this.label29.TabIndex = 1;
+            this.label29.Text = "Tên Ngành";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(14, 54);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(73, 17);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Mã Ngành";
+            // 
+            // oFD_Pic
+            // 
+            this.oFD_Pic.FileName = "openFileDialog1";
+            this.oFD_Pic.FileOk += new System.ComponentModel.CancelEventHandler(this.oFD_Pic_FileOk);
             // 
             // uc_SinhVien_Lop_MonHoc
             // 
@@ -1806,12 +1782,10 @@
         private System.Windows.Forms.TextBox txtTenNganh;
         private System.Windows.Forms.TextBox txtMaNganh;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button btnLamlai_Nganh;
         private System.Windows.Forms.Button btnThem_Nganh;
-        private System.Windows.Forms.ComboBox cmbTenHe;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.DataGridView dgvNganh;
         private System.Windows.Forms.GroupBox groupboxLOP;
