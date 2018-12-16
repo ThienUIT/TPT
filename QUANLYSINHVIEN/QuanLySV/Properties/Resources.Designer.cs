@@ -93,6 +93,16 @@ namespace QLSV_GiaoDien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_cancel {
+            get {
+                object obj = ResourceManager.GetObject("button cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button_delete {
             get {
                 object obj = ResourceManager.GetObject("button delete", resourceCulture);
@@ -126,6 +136,16 @@ namespace QLSV_GiaoDien.Properties {
         internal static System.Drawing.Bitmap button_login {
             get {
                 object obj = ResourceManager.GetObject("button login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button_tick {
+            get {
+                object obj = ResourceManager.GetObject("button tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

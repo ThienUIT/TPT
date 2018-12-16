@@ -35,8 +35,10 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cbMaLop = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCancel_SV = new System.Windows.Forms.Button();
+            this.btnLuu_SV = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnDongy = new System.Windows.Forms.Button();
+            this.btnThem_SV = new System.Windows.Forms.Button();
             this.pcHinhSV = new System.Windows.Forms.PictureBox();
             this.txtGhichu = new System.Windows.Forms.TextBox();
             this.btnBrowseHinh = new System.Windows.Forms.Button();
@@ -59,10 +61,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tabMonHoc = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnCancel_MH = new System.Windows.Forms.Button();
+            this.btnLuu_MH = new System.Windows.Forms.Button();
             this.numSoTinChi = new System.Windows.Forms.NumericUpDown();
             this.btnLamlai = new System.Windows.Forms.Button();
             this.btnQLMH = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.btnThem_MH = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvMonhoc = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -100,9 +104,9 @@
             this.NgayDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoTCDK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSuaDK = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXoaDK = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBoxDKMH = new System.Windows.Forms.GroupBox();
+            this.btnCancel_DKMH = new System.Windows.Forms.Button();
+            this.btnLuu_DKMH = new System.Windows.Forms.Button();
             this.numSoTCDK = new System.Windows.Forms.NumericUpDown();
             this.cmbMonHocDK = new System.Windows.Forms.ComboBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -128,9 +132,9 @@
             this.Ma_Nganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu_Lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSua_Lop = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXoa_Lop = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupboxLOP = new System.Windows.Forms.GroupBox();
+            this.btnCancel_LOP = new System.Windows.Forms.Button();
+            this.btnLuu_Lop = new System.Windows.Forms.Button();
             this.btnLamlai_Lop = new System.Windows.Forms.Button();
             this.btnThemLop = new System.Windows.Forms.Button();
             this.cmbMaKhoaHoc = new System.Windows.Forms.ComboBox();
@@ -149,9 +153,9 @@
             this.MaNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSua = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnCancel_NGANH = new System.Windows.Forms.Button();
+            this.btnLuu_NGANH = new System.Windows.Forms.Button();
             this.btnLamlai_Nganh = new System.Windows.Forms.Button();
             this.btnThem_Nganh = new System.Windows.Forms.Button();
             this.txtGhiChu_Nganh = new System.Windows.Forms.TextBox();
@@ -254,7 +258,6 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập Thông Tin Sinh Viên";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnQuanLySV
             // 
@@ -291,8 +294,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnCancel_SV);
+            this.groupBox2.Controls.Add(this.btnLuu_SV);
             this.groupBox2.Controls.Add(this.btnClear);
-            this.groupBox2.Controls.Add(this.btnDongy);
+            this.groupBox2.Controls.Add(this.btnThem_SV);
             this.groupBox2.Location = new System.Drawing.Point(673, 252);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -300,6 +305,30 @@
             this.groupBox2.Size = new System.Drawing.Size(203, 169);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
+            // 
+            // btnCancel_SV
+            // 
+            this.btnCancel_SV.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_cancel;
+            this.btnCancel_SV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel_SV.Location = new System.Drawing.Point(60, 102);
+            this.btnCancel_SV.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel_SV.Name = "btnCancel_SV";
+            this.btnCancel_SV.Size = new System.Drawing.Size(87, 48);
+            this.btnCancel_SV.TabIndex = 4;
+            this.btnCancel_SV.UseVisualStyleBackColor = true;
+            this.btnCancel_SV.Click += new System.EventHandler(this.btnCancel_SV_Click);
+            // 
+            // btnLuu_SV
+            // 
+            this.btnLuu_SV.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
+            this.btnLuu_SV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuu_SV.Location = new System.Drawing.Point(60, 26);
+            this.btnLuu_SV.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu_SV.Name = "btnLuu_SV";
+            this.btnLuu_SV.Size = new System.Drawing.Size(87, 52);
+            this.btnLuu_SV.TabIndex = 3;
+            this.btnLuu_SV.UseVisualStyleBackColor = true;
+            this.btnLuu_SV.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnClear
             // 
@@ -313,17 +342,17 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // btnDongy
+            // btnThem_SV
             // 
-            this.btnDongy.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
-            this.btnDongy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnDongy.Location = new System.Drawing.Point(60, 26);
-            this.btnDongy.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDongy.Name = "btnDongy";
-            this.btnDongy.Size = new System.Drawing.Size(87, 52);
-            this.btnDongy.TabIndex = 0;
-            this.btnDongy.UseVisualStyleBackColor = true;
-            this.btnDongy.Click += new System.EventHandler(this.btnDongy_Click);
+            this.btnThem_SV.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
+            this.btnThem_SV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThem_SV.Location = new System.Drawing.Point(60, 26);
+            this.btnThem_SV.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem_SV.Name = "btnThem_SV";
+            this.btnThem_SV.Size = new System.Drawing.Size(87, 52);
+            this.btnThem_SV.TabIndex = 0;
+            this.btnThem_SV.UseVisualStyleBackColor = true;
+            this.btnThem_SV.Click += new System.EventHandler(this.btnDongy_Click);
             // 
             // pcHinhSV
             // 
@@ -360,6 +389,7 @@
             this.txtHinh.Location = new System.Drawing.Point(93, 230);
             this.txtHinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtHinh.Name = "txtHinh";
+            this.txtHinh.ReadOnly = true;
             this.txtHinh.Size = new System.Drawing.Size(287, 22);
             this.txtHinh.TabIndex = 29;
             // 
@@ -538,10 +568,12 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.btnCancel_MH);
+            this.groupBox3.Controls.Add(this.btnLuu_MH);
             this.groupBox3.Controls.Add(this.numSoTinChi);
             this.groupBox3.Controls.Add(this.btnLamlai);
             this.groupBox3.Controls.Add(this.btnQLMH);
-            this.groupBox3.Controls.Add(this.btnThem);
+            this.groupBox3.Controls.Add(this.btnThem_MH);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.dgvMonhoc);
             this.groupBox3.Controls.Add(this.groupBox5);
@@ -569,6 +601,30 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Nhập Môn Học";
+            // 
+            // btnCancel_MH
+            // 
+            this.btnCancel_MH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_cancel;
+            this.btnCancel_MH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel_MH.Location = new System.Drawing.Point(368, 304);
+            this.btnCancel_MH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel_MH.Name = "btnCancel_MH";
+            this.btnCancel_MH.Size = new System.Drawing.Size(100, 39);
+            this.btnCancel_MH.TabIndex = 32;
+            this.btnCancel_MH.UseVisualStyleBackColor = true;
+            this.btnCancel_MH.Click += new System.EventHandler(this.btnCancel_MH_Click);
+            // 
+            // btnLuu_MH
+            // 
+            this.btnLuu_MH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
+            this.btnLuu_MH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuu_MH.Location = new System.Drawing.Point(242, 305);
+            this.btnLuu_MH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu_MH.Name = "btnLuu_MH";
+            this.btnLuu_MH.Size = new System.Drawing.Size(100, 41);
+            this.btnLuu_MH.TabIndex = 31;
+            this.btnLuu_MH.UseVisualStyleBackColor = true;
+            this.btnLuu_MH.Click += new System.EventHandler(this.btnLuu_MH_Click);
             // 
             // numSoTinChi
             // 
@@ -603,17 +659,17 @@
             this.btnQLMH.UseVisualStyleBackColor = true;
             this.btnQLMH.Click += new System.EventHandler(this.btnQLMH_Click);
             // 
-            // btnThem
+            // btnThem_MH
             // 
-            this.btnThem.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
-            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThem.Location = new System.Drawing.Point(243, 304);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 41);
-            this.btnThem.TabIndex = 27;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThem_MH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
+            this.btnThem_MH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThem_MH.Location = new System.Drawing.Point(243, 304);
+            this.btnThem_MH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem_MH.Name = "btnThem_MH";
+            this.btnThem_MH.Size = new System.Drawing.Size(100, 41);
+            this.btnThem_MH.TabIndex = 27;
+            this.btnThem_MH.UseVisualStyleBackColor = true;
+            this.btnThem_MH.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label7
             // 
@@ -951,9 +1007,7 @@
             this.MaSV_DK,
             this.NgayDK,
             this.SoTCDK,
-            this.HocKy,
-            this.btnSuaDK,
-            this.btnXoaDK});
+            this.HocKy});
             this.dgvDangkyMH.Location = new System.Drawing.Point(8, 59);
             this.dgvDangkyMH.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDangkyMH.Name = "dgvDangkyMH";
@@ -1002,26 +1056,10 @@
             this.HocKy.Name = "HocKy";
             this.HocKy.ReadOnly = true;
             // 
-            // btnSuaDK
-            // 
-            this.btnSuaDK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnSuaDK.HeaderText = "Sửa";
-            this.btnSuaDK.Name = "btnSuaDK";
-            this.btnSuaDK.ReadOnly = true;
-            this.btnSuaDK.Text = "Sửa";
-            this.btnSuaDK.UseColumnTextForButtonValue = true;
-            // 
-            // btnXoaDK
-            // 
-            this.btnXoaDK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnXoaDK.HeaderText = "Xóa";
-            this.btnXoaDK.Name = "btnXoaDK";
-            this.btnXoaDK.ReadOnly = true;
-            this.btnXoaDK.Text = "Xóa";
-            this.btnXoaDK.UseColumnTextForButtonValue = true;
-            // 
             // groupBoxDKMH
             // 
+            this.groupBoxDKMH.Controls.Add(this.btnCancel_DKMH);
+            this.groupBoxDKMH.Controls.Add(this.btnLuu_DKMH);
             this.groupBoxDKMH.Controls.Add(this.numSoTCDK);
             this.groupBoxDKMH.Controls.Add(this.cmbMonHocDK);
             this.groupBoxDKMH.Controls.Add(this.label27);
@@ -1042,6 +1080,30 @@
             this.groupBoxDKMH.TabIndex = 17;
             this.groupBoxDKMH.TabStop = false;
             this.groupBoxDKMH.Text = "Nhập Thông Tin Đăng Ký";
+            // 
+            // btnCancel_DKMH
+            // 
+            this.btnCancel_DKMH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_cancel;
+            this.btnCancel_DKMH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel_DKMH.Location = new System.Drawing.Point(697, 106);
+            this.btnCancel_DKMH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel_DKMH.Name = "btnCancel_DKMH";
+            this.btnCancel_DKMH.Size = new System.Drawing.Size(83, 40);
+            this.btnCancel_DKMH.TabIndex = 20;
+            this.btnCancel_DKMH.UseVisualStyleBackColor = true;
+            this.btnCancel_DKMH.Click += new System.EventHandler(this.btnCancel_DKMH_Click);
+            // 
+            // btnLuu_DKMH
+            // 
+            this.btnLuu_DKMH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
+            this.btnLuu_DKMH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuu_DKMH.Location = new System.Drawing.Point(697, 13);
+            this.btnLuu_DKMH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu_DKMH.Name = "btnLuu_DKMH";
+            this.btnLuu_DKMH.Size = new System.Drawing.Size(83, 38);
+            this.btnLuu_DKMH.TabIndex = 19;
+            this.btnLuu_DKMH.UseVisualStyleBackColor = true;
+            this.btnLuu_DKMH.Click += new System.EventHandler(this.btnLuu_DKMH_Click);
             // 
             // numSoTCDK
             // 
@@ -1072,12 +1134,12 @@
             // 
             // btnLamlai_DKMH
             // 
-            this.btnLamlai_DKMH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
+            this.btnLamlai_DKMH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
             this.btnLamlai_DKMH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLamlai_DKMH.Location = new System.Drawing.Point(697, 95);
+            this.btnLamlai_DKMH.Location = new System.Drawing.Point(697, 59);
             this.btnLamlai_DKMH.Margin = new System.Windows.Forms.Padding(4);
             this.btnLamlai_DKMH.Name = "btnLamlai_DKMH";
-            this.btnLamlai_DKMH.Size = new System.Drawing.Size(100, 40);
+            this.btnLamlai_DKMH.Size = new System.Drawing.Size(83, 40);
             this.btnLamlai_DKMH.TabIndex = 16;
             this.btnLamlai_DKMH.UseVisualStyleBackColor = true;
             this.btnLamlai_DKMH.Click += new System.EventHandler(this.btnLamlai_DKMH_Click);
@@ -1086,10 +1148,10 @@
             // 
             this.btnThem_DKMH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThem_DKMH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThem_DKMH.Location = new System.Drawing.Point(697, 22);
+            this.btnThem_DKMH.Location = new System.Drawing.Point(697, 13);
             this.btnThem_DKMH.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem_DKMH.Name = "btnThem_DKMH";
-            this.btnThem_DKMH.Size = new System.Drawing.Size(100, 42);
+            this.btnThem_DKMH.Size = new System.Drawing.Size(83, 38);
             this.btnThem_DKMH.TabIndex = 0;
             this.btnThem_DKMH.UseVisualStyleBackColor = true;
             this.btnThem_DKMH.Click += new System.EventHandler(this.btnThem_DKMH_Click);
@@ -1254,9 +1316,7 @@
             this.MaKhoaHoc,
             this.Ma_Nganh,
             this.TenLop,
-            this.GhiChu_Lop,
-            this.btnSua_Lop,
-            this.btnXoa_Lop});
+            this.GhiChu_Lop});
             this.dgvLop.Location = new System.Drawing.Point(8, 23);
             this.dgvLop.Margin = new System.Windows.Forms.Padding(4);
             this.dgvLop.Name = "dgvLop";
@@ -1305,26 +1365,10 @@
             this.GhiChu_Lop.Name = "GhiChu_Lop";
             this.GhiChu_Lop.ReadOnly = true;
             // 
-            // btnSua_Lop
-            // 
-            this.btnSua_Lop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnSua_Lop.HeaderText = "Sửa";
-            this.btnSua_Lop.Name = "btnSua_Lop";
-            this.btnSua_Lop.ReadOnly = true;
-            this.btnSua_Lop.Text = "Sửa";
-            this.btnSua_Lop.UseColumnTextForButtonValue = true;
-            // 
-            // btnXoa_Lop
-            // 
-            this.btnXoa_Lop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnXoa_Lop.HeaderText = "Xóa";
-            this.btnXoa_Lop.Name = "btnXoa_Lop";
-            this.btnXoa_Lop.ReadOnly = true;
-            this.btnXoa_Lop.Text = "Xóa";
-            this.btnXoa_Lop.UseColumnTextForButtonValue = true;
-            // 
             // groupboxLOP
             // 
+            this.groupboxLOP.Controls.Add(this.btnCancel_LOP);
+            this.groupboxLOP.Controls.Add(this.btnLuu_Lop);
             this.groupboxLOP.Controls.Add(this.btnLamlai_Lop);
             this.groupboxLOP.Controls.Add(this.btnThemLop);
             this.groupboxLOP.Controls.Add(this.cmbMaKhoaHoc);
@@ -1346,11 +1390,35 @@
             this.groupboxLOP.TabStop = false;
             this.groupboxLOP.Text = "Thêm Lớp";
             // 
+            // btnCancel_LOP
+            // 
+            this.btnCancel_LOP.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_cancel;
+            this.btnCancel_LOP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel_LOP.Location = new System.Drawing.Point(764, 119);
+            this.btnCancel_LOP.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel_LOP.Name = "btnCancel_LOP";
+            this.btnCancel_LOP.Size = new System.Drawing.Size(100, 43);
+            this.btnCancel_LOP.TabIndex = 13;
+            this.btnCancel_LOP.UseVisualStyleBackColor = true;
+            this.btnCancel_LOP.Click += new System.EventHandler(this.btnCancel_LOP_Click);
+            // 
+            // btnLuu_Lop
+            // 
+            this.btnLuu_Lop.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
+            this.btnLuu_Lop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuu_Lop.Location = new System.Drawing.Point(491, 119);
+            this.btnLuu_Lop.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu_Lop.Name = "btnLuu_Lop";
+            this.btnLuu_Lop.Size = new System.Drawing.Size(100, 43);
+            this.btnLuu_Lop.TabIndex = 12;
+            this.btnLuu_Lop.UseVisualStyleBackColor = true;
+            this.btnLuu_Lop.Click += new System.EventHandler(this.btnLuu_Lop_Click);
+            // 
             // btnLamlai_Lop
             // 
-            this.btnLamlai_Lop.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
+            this.btnLamlai_Lop.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
             this.btnLamlai_Lop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLamlai_Lop.Location = new System.Drawing.Point(651, 119);
+            this.btnLamlai_Lop.Location = new System.Drawing.Point(628, 119);
             this.btnLamlai_Lop.Margin = new System.Windows.Forms.Padding(4);
             this.btnLamlai_Lop.Name = "btnLamlai_Lop";
             this.btnLamlai_Lop.Size = new System.Drawing.Size(100, 43);
@@ -1362,7 +1430,7 @@
             // 
             this.btnThemLop.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThemLop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThemLop.Location = new System.Drawing.Point(533, 119);
+            this.btnThemLop.Location = new System.Drawing.Point(491, 119);
             this.btnThemLop.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemLop.Name = "btnThemLop";
             this.btnThemLop.Size = new System.Drawing.Size(100, 43);
@@ -1496,9 +1564,7 @@
             this.dgvNganh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNganh,
             this.TenNganh,
-            this.GhiChu,
-            this.btnSua,
-            this.btnXoa});
+            this.GhiChu});
             this.dgvNganh.Location = new System.Drawing.Point(19, 38);
             this.dgvNganh.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNganh.Name = "dgvNganh";
@@ -1531,28 +1597,10 @@
             this.GhiChu.Name = "GhiChu";
             this.GhiChu.ReadOnly = true;
             // 
-            // btnSua
-            // 
-            this.btnSua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnSua.HeaderText = "Sửa";
-            this.btnSua.Name = "btnSua";
-            this.btnSua.ReadOnly = true;
-            this.btnSua.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseColumnTextForButtonValue = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnXoa.HeaderText = "Xóa";
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.ReadOnly = true;
-            this.btnXoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseColumnTextForButtonValue = true;
-            // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.btnCancel_NGANH);
+            this.groupBox7.Controls.Add(this.btnLuu_NGANH);
             this.groupBox7.Controls.Add(this.btnLamlai_Nganh);
             this.groupBox7.Controls.Add(this.btnThem_Nganh);
             this.groupBox7.Controls.Add(this.txtGhiChu_Nganh);
@@ -1570,11 +1618,35 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Thêm Ngành học mới";
             // 
+            // btnCancel_NGANH
+            // 
+            this.btnCancel_NGANH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_cancel;
+            this.btnCancel_NGANH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel_NGANH.Location = new System.Drawing.Point(663, 142);
+            this.btnCancel_NGANH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel_NGANH.Name = "btnCancel_NGANH";
+            this.btnCancel_NGANH.Size = new System.Drawing.Size(74, 41);
+            this.btnCancel_NGANH.TabIndex = 11;
+            this.btnCancel_NGANH.UseVisualStyleBackColor = true;
+            this.btnCancel_NGANH.Click += new System.EventHandler(this.btnCancel_NGANH_Click);
+            // 
+            // btnLuu_NGANH
+            // 
+            this.btnLuu_NGANH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
+            this.btnLuu_NGANH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuu_NGANH.Location = new System.Drawing.Point(436, 142);
+            this.btnLuu_NGANH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu_NGANH.Name = "btnLuu_NGANH";
+            this.btnLuu_NGANH.Size = new System.Drawing.Size(69, 41);
+            this.btnLuu_NGANH.TabIndex = 10;
+            this.btnLuu_NGANH.UseVisualStyleBackColor = true;
+            this.btnLuu_NGANH.Click += new System.EventHandler(this.btnLuu_NGANH_Click);
+            // 
             // btnLamlai_Nganh
             // 
-            this.btnLamlai_Nganh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
+            this.btnLamlai_Nganh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
             this.btnLamlai_Nganh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLamlai_Nganh.Location = new System.Drawing.Point(639, 142);
+            this.btnLamlai_Nganh.Location = new System.Drawing.Point(546, 142);
             this.btnLamlai_Nganh.Margin = new System.Windows.Forms.Padding(4);
             this.btnLamlai_Nganh.Name = "btnLamlai_Nganh";
             this.btnLamlai_Nganh.Size = new System.Drawing.Size(74, 41);
@@ -1586,7 +1658,7 @@
             // 
             this.btnThem_Nganh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThem_Nganh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThem_Nganh.Location = new System.Drawing.Point(464, 142);
+            this.btnThem_Nganh.Location = new System.Drawing.Point(436, 142);
             this.btnThem_Nganh.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem_Nganh.Name = "btnThem_Nganh";
             this.btnThem_Nganh.Size = new System.Drawing.Size(69, 41);
@@ -1718,7 +1790,7 @@
         private System.Windows.Forms.ComboBox cbMaLop;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnDongy;
+        private System.Windows.Forms.Button btnThem_SV;
         private System.Windows.Forms.PictureBox pcHinhSV;
         private System.Windows.Forms.TextBox txtGhichu;
         private System.Windows.Forms.Button btnBrowseHinh;
@@ -1741,7 +1813,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnLamlai;
-        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnThem_MH;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvMonhoc;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -1822,24 +1894,28 @@
         private System.Windows.Forms.TextBox txtTimLop;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.OpenFileDialog oFD_Pic;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaMonHoc_Dk;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSV_DK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayDK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoTCDK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HocKy;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSuaDK;
-        private System.Windows.Forms.DataGridViewButtonColumn btnXoaDK;
+        private System.Windows.Forms.Button btnLuu_SV;
+        private System.Windows.Forms.Button btnLuu_MH;
+        private System.Windows.Forms.Button btnLuu_DKMH;
+        private System.Windows.Forms.Button btnLuu_Lop;
+        private System.Windows.Forms.Button btnLuu_NGANH;
+        private System.Windows.Forms.Button btnCancel_SV;
+        private System.Windows.Forms.Button btnCancel_MH;
+        private System.Windows.Forms.Button btnCancel_DKMH;
+        private System.Windows.Forms.Button btnCancel_LOP;
+        private System.Windows.Forms.Button btnCancel_NGANH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNganh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenNganh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoaHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ma_Nganh;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu_Lop;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSua_Lop;
-        private System.Windows.Forms.DataGridViewButtonColumn btnXoa_Lop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNganh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenNganh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSua;
-        private System.Windows.Forms.DataGridViewButtonColumn btnXoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaMonHoc_Dk;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSV_DK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayDK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoTCDK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HocKy;
     }
 }

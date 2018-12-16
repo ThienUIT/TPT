@@ -54,7 +54,7 @@ namespace QLSV_Xuly
         }
        
 
-        public TextBox TXT
+        public TextBox TXT//tìm kiếm
         {
             get { return txt; }
             set { txt = value; }
@@ -80,12 +80,13 @@ namespace QLSV_Xuly
             set 
             {
                 hoten = value;
-                hoten = ctc.ChuanHoaString(hoten);
+
                 if (this.HOTEN == "")
                 {
                     MessageBox.Show("Chưa nhập họ tên sinh viên! ");
                     return;
                 }
+                else { hoten = ctc.ChuanHoaString(hoten); }
             }
            
       
@@ -98,12 +99,14 @@ namespace QLSV_Xuly
             set
             {
                 quequan = value;
-                ctc.ChuanHoaString(quequan);
+               
                 if (this.QUEQUAN == "")
                 {
                     MessageBox.Show("Chưa nhập quê quán! ");
                     return;
                 }
+                else { ctc.ChuanHoaString(quequan); }
+                
             }
           
         }
@@ -113,12 +116,13 @@ namespace QLSV_Xuly
             set
             {
                 noisinh = value;
-                ctc.ChuanHoaString(noisinh);
+               
                 if (this.NOISINH == "")
                 {
                     MessageBox.Show("Chưa nhập nơi sinh! ");
                     return;
                 }
+                else { ctc.ChuanHoaString(noisinh); }
             }
         }
 

@@ -40,7 +40,8 @@ namespace QLSV_Database
             _Ghichu.SqlValue = ghichu;
             _Ghichu.ParameterName = "@Ghichu";
 
-            cThaotacchung.ThaoTacDuLieu("qlsv_CapNhatNganh", CommandType.StoredProcedure, _MaNganh,  _TenNganh, _Ghichu);
+            cThaotacchung.ThaoTacDuLieu("qlsv_CapNhatNganh", CommandType.StoredProcedure, _MaNganh, _TenNganh, _Ghichu);
+
         }
 
         public void XoaNganh(string manganh)
