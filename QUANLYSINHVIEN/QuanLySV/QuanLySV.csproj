@@ -152,17 +152,20 @@
     <EmbeddedResource Include="Reports\frmReportSinhVien.resx">
       <DependentUpon>frmReportSinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\uc_KhoaHoc_Nganh_Lop.resx">
+      <DependentUpon>uc_KhoaHoc_Nganh_Lop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uc_DK_MonHoc.resx">
       <DependentUpon>uc_DK_MonHoc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\uc_GiaoVien_KhoaHoc_Khoa.resx">
-      <DependentUpon>uc_GiaoVien_KhoaHoc_Khoa.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\uc_GiaoVien_Khoa.resx">
+      <DependentUpon>uc_GiaoVien_Khoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uc_NhapDiem.resx">
       <DependentUpon>uc_NhapDiem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\uc_SinhVien_Lop_MonHoc.resx">
-      <DependentUpon>uc_SinhVien_Lop_MonHoc.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\uc_SinhVien_Mon_DKMH.resx">
+      <DependentUpon>uc_SinhVien_Mon_DKMH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\uc_User.resx">
       <DependentUpon>uc_User.cs</DependentUpon>
@@ -225,17 +228,23 @@
     <Compile Include="Reports\frmReportSinhVien.Designer.cs">
       <DependentUpon>frmReportSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\uc_KhoaHoc_Nganh_Lop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\uc_KhoaHoc_Nganh_Lop.Designer.cs">
+      <DependentUpon>uc_KhoaHoc_Nganh_Lop.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\uc_DK_MonHoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\uc_DK_MonHoc.Designer.cs">
       <DependentUpon>uc_DK_MonHoc.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\uc_GiaoVien_KhoaHoc_Khoa.cs">
+    <Compile Include="UserControls\uc_GiaoVien_Khoa.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\uc_GiaoVien_KhoaHoc_Khoa.Designer.cs">
-      <DependentUpon>uc_GiaoVien_KhoaHoc_Khoa.cs</DependentUpon>
+    <Compile Include="UserControls\uc_GiaoVien_Khoa.Designer.cs">
+      <DependentUpon>uc_GiaoVien_Khoa.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\uc_NhapDiem.cs">
       <SubType>UserControl</SubType>
@@ -243,11 +252,11 @@
     <Compile Include="UserControls\uc_NhapDiem.Designer.cs">
       <DependentUpon>uc_NhapDiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\uc_SinhVien_Lop_MonHoc.cs">
+    <Compile Include="UserControls\uc_SinhVien_Mon_DKMH.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\uc_SinhVien_Lop_MonHoc.Designer.cs">
-      <DependentUpon>uc_SinhVien_Lop_MonHoc.cs</DependentUpon>
+    <Compile Include="UserControls\uc_SinhVien_Mon_DKMH.Designer.cs">
+      <DependentUpon>uc_SinhVien_Mon_DKMH.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\uc_User.cs">
       <SubType>UserControl</SubType>

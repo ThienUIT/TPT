@@ -46,9 +46,10 @@
             this.btnQLMH_ex = new System.Windows.Forms.Button();
             this.btnQLMH_Collapse = new System.Windows.Forms.Button();
             this.pan_MenuMH = new System.Windows.Forms.Panel();
+            this.lnkKH_Nganh_Lop = new System.Windows.Forms.LinkLabel();
             this.lnkNhapDiem = new System.Windows.Forms.LinkLabel();
-            this.lnkGV_K_e = new System.Windows.Forms.LinkLabel();
-            this.lnk_QuanlySv_lop_mh = new System.Windows.Forms.LinkLabel();
+            this.lnkGV_Khoa = new System.Windows.Forms.LinkLabel();
+            this.lnk_QuanlySv__Mon_DKMH = new System.Windows.Forms.LinkLabel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quảnLýToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,8 +58,9 @@
             this.DangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TacVuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quanliSV_L_MH_NGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quanliGV_Khoa_khoahoc_HEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quanliSV_MH_DKMHToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quanliGV_KhoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLíKhoáHọcNgànhLớpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhapDiemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xuatDSMonHocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -315,20 +317,36 @@
             // pan_MenuMH
             // 
             this.pan_MenuMH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pan_MenuMH.Controls.Add(this.lnkKH_Nganh_Lop);
             this.pan_MenuMH.Controls.Add(this.lnkNhapDiem);
-            this.pan_MenuMH.Controls.Add(this.lnkGV_K_e);
-            this.pan_MenuMH.Controls.Add(this.lnk_QuanlySv_lop_mh);
+            this.pan_MenuMH.Controls.Add(this.lnkGV_Khoa);
+            this.pan_MenuMH.Controls.Add(this.lnk_QuanlySv__Mon_DKMH);
             this.pan_MenuMH.Location = new System.Drawing.Point(0, 47);
             this.pan_MenuMH.Margin = new System.Windows.Forms.Padding(4);
             this.pan_MenuMH.Name = "pan_MenuMH";
             this.pan_MenuMH.Size = new System.Drawing.Size(279, 147);
             this.pan_MenuMH.TabIndex = 0;
             // 
+            // lnkKH_Nganh_Lop
+            // 
+            this.lnkKH_Nganh_Lop.AutoSize = true;
+            this.lnkKH_Nganh_Lop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lnkKH_Nganh_Lop.Location = new System.Drawing.Point(20, 53);
+            this.lnkKH_Nganh_Lop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lnkKH_Nganh_Lop.Name = "lnkKH_Nganh_Lop";
+            this.lnkKH_Nganh_Lop.Size = new System.Drawing.Size(169, 18);
+            this.lnkKH_Nganh_Lop.TabIndex = 9;
+            this.lnkKH_Nganh_Lop.TabStop = true;
+            this.lnkKH_Nganh_Lop.Text = "Khoá Học - Ngành - Lớp";
+            this.lnkKH_Nganh_Lop.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkKH_Nganh_Lop_LinkClicked);
+            this.lnkKH_Nganh_Lop.MouseLeave += new System.EventHandler(this.lnkKH_Nganh_Lop_MouseLeave);
+            this.lnkKH_Nganh_Lop.MouseHover += new System.EventHandler(this.lnkKH_Nganh_Lop_MouseHover);
+            // 
             // lnkNhapDiem
             // 
             this.lnkNhapDiem.AutoSize = true;
             this.lnkNhapDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lnkNhapDiem.Location = new System.Drawing.Point(20, 86);
+            this.lnkNhapDiem.Location = new System.Drawing.Point(21, 112);
             this.lnkNhapDiem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lnkNhapDiem.Name = "lnkNhapDiem";
             this.lnkNhapDiem.Size = new System.Drawing.Size(79, 18);
@@ -339,35 +357,35 @@
             this.lnkNhapDiem.MouseLeave += new System.EventHandler(this.lnkNhapDiem_MouseLeave);
             this.lnkNhapDiem.MouseHover += new System.EventHandler(this.lnkNhapDiem_MouseHover);
             // 
-            // lnkGV_K_e
+            // lnkGV_Khoa
             // 
-            this.lnkGV_K_e.AutoSize = true;
-            this.lnkGV_K_e.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lnkGV_K_e.Location = new System.Drawing.Point(20, 49);
-            this.lnkGV_K_e.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lnkGV_K_e.Name = "lnkGV_K_e";
-            this.lnkGV_K_e.Size = new System.Drawing.Size(202, 18);
-            this.lnkGV_K_e.TabIndex = 4;
-            this.lnkGV_K_e.TabStop = true;
-            this.lnkGV_K_e.Text = "Giáo viên - Khoa - Khóa Học ";
-            this.lnkGV_K_e.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGV_K_e_LinkClicked);
-            this.lnkGV_K_e.MouseLeave += new System.EventHandler(this.lnkGV_K_e_MouseLeave);
-            this.lnkGV_K_e.MouseHover += new System.EventHandler(this.lnkGV_K_e_MouseHover);
+            this.lnkGV_Khoa.AutoSize = true;
+            this.lnkGV_Khoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lnkGV_Khoa.Location = new System.Drawing.Point(21, 84);
+            this.lnkGV_Khoa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lnkGV_Khoa.Name = "lnkGV_Khoa";
+            this.lnkGV_Khoa.Size = new System.Drawing.Size(122, 18);
+            this.lnkGV_Khoa.TabIndex = 4;
+            this.lnkGV_Khoa.TabStop = true;
+            this.lnkGV_Khoa.Text = "Giáo viên - Khoa ";
+            this.lnkGV_Khoa.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGV_K_e_LinkClicked);
+            this.lnkGV_Khoa.MouseLeave += new System.EventHandler(this.lnkGV_K_e_MouseLeave);
+            this.lnkGV_Khoa.MouseHover += new System.EventHandler(this.lnkGV_K_e_MouseHover);
             // 
-            // lnk_QuanlySv_lop_mh
+            // lnk_QuanlySv__Mon_DKMH
             // 
-            this.lnk_QuanlySv_lop_mh.AutoSize = true;
-            this.lnk_QuanlySv_lop_mh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lnk_QuanlySv_lop_mh.Location = new System.Drawing.Point(20, 16);
-            this.lnk_QuanlySv_lop_mh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lnk_QuanlySv_lop_mh.Name = "lnk_QuanlySv_lop_mh";
-            this.lnk_QuanlySv_lop_mh.Size = new System.Drawing.Size(233, 18);
-            this.lnk_QuanlySv_lop_mh.TabIndex = 0;
-            this.lnk_QuanlySv_lop_mh.TabStop = true;
-            this.lnk_QuanlySv_lop_mh.Text = "Sinh viên - Lớp - Môn học - Ngành";
-            this.lnk_QuanlySv_lop_mh.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_QuanlySv_lop_mh_LinkClicked);
-            this.lnk_QuanlySv_lop_mh.MouseLeave += new System.EventHandler(this.lnk_QuanlySv_lop_mh_MouseLeave);
-            this.lnk_QuanlySv_lop_mh.MouseHover += new System.EventHandler(this.lnk_QuanlySv_lop_mh_MouseHover);
+            this.lnk_QuanlySv__Mon_DKMH.AutoSize = true;
+            this.lnk_QuanlySv__Mon_DKMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lnk_QuanlySv__Mon_DKMH.Location = new System.Drawing.Point(20, 20);
+            this.lnk_QuanlySv__Mon_DKMH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lnk_QuanlySv__Mon_DKMH.Name = "lnk_QuanlySv__Mon_DKMH";
+            this.lnk_QuanlySv__Mon_DKMH.Size = new System.Drawing.Size(200, 18);
+            this.lnk_QuanlySv__Mon_DKMH.TabIndex = 0;
+            this.lnk_QuanlySv__Mon_DKMH.TabStop = true;
+            this.lnk_QuanlySv__Mon_DKMH.Text = "Sinh viên - Môn Học - ĐKMH";
+            this.lnk_QuanlySv__Mon_DKMH.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnk_QuanlySv_lop_mh_LinkClicked);
+            this.lnk_QuanlySv__Mon_DKMH.MouseLeave += new System.EventHandler(this.lnk_QuanlySv_lop_mh_MouseLeave);
+            this.lnk_QuanlySv__Mon_DKMH.MouseHover += new System.EventHandler(this.lnk_QuanlySv_lop_mh_MouseHover);
             // 
             // lblTitle
             // 
@@ -442,31 +460,39 @@
             // TacVuToolStripMenuItem
             // 
             this.TacVuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quanliSV_L_MH_NGToolStripMenuItem,
-            this.quanliGV_Khoa_khoahoc_HEToolStripMenuItem,
+            this.quanliSV_MH_DKMHToolStripMenuItem,
+            this.quảnLíKhoáHọcNgànhLớpToolStripMenuItem,
+            this.quanliGV_KhoaToolStripMenuItem,
             this.nhapDiemToolStripMenuItem});
             this.TacVuToolStripMenuItem.Name = "TacVuToolStripMenuItem";
             this.TacVuToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.TacVuToolStripMenuItem.Text = "Tác vụ";
             // 
-            // quanliSV_L_MH_NGToolStripMenuItem
+            // quanliSV_MH_DKMHToolStripMenuItem
             // 
-            this.quanliSV_L_MH_NGToolStripMenuItem.Name = "quanliSV_L_MH_NGToolStripMenuItem";
-            this.quanliSV_L_MH_NGToolStripMenuItem.Size = new System.Drawing.Size(368, 26);
-            this.quanliSV_L_MH_NGToolStripMenuItem.Text = "Quản lí Sinh Viên - Lớp - Môn Học - Ngành";
-            this.quanliSV_L_MH_NGToolStripMenuItem.Click += new System.EventHandler(this.quanliSV_L_MH_NGToolStripMenuItem_Click);
+            this.quanliSV_MH_DKMHToolStripMenuItem.Name = "quanliSV_MH_DKMHToolStripMenuItem";
+            this.quanliSV_MH_DKMHToolStripMenuItem.Size = new System.Drawing.Size(329, 26);
+            this.quanliSV_MH_DKMHToolStripMenuItem.Text = "Quản lí Sinh Viên - Môn Học - DKMH";
+            this.quanliSV_MH_DKMHToolStripMenuItem.Click += new System.EventHandler(this.quanliSV_L_MH_NGToolStripMenuItem_Click);
             // 
-            // quanliGV_Khoa_khoahoc_HEToolStripMenuItem
+            // quanliGV_KhoaToolStripMenuItem
             // 
-            this.quanliGV_Khoa_khoahoc_HEToolStripMenuItem.Name = "quanliGV_Khoa_khoahoc_HEToolStripMenuItem";
-            this.quanliGV_Khoa_khoahoc_HEToolStripMenuItem.Size = new System.Drawing.Size(368, 26);
-            this.quanliGV_Khoa_khoahoc_HEToolStripMenuItem.Text = "Quản lí Giáo viên - Khoa - Khóa Học - Hệ";
-            this.quanliGV_Khoa_khoahoc_HEToolStripMenuItem.Click += new System.EventHandler(this.quanliGV_Khoa_khoahoc_HEToolStripMenuItem_Click);
+            this.quanliGV_KhoaToolStripMenuItem.Name = "quanliGV_KhoaToolStripMenuItem";
+            this.quanliGV_KhoaToolStripMenuItem.Size = new System.Drawing.Size(329, 26);
+            this.quanliGV_KhoaToolStripMenuItem.Text = "Quản lí Giáo viên - Khoa";
+            this.quanliGV_KhoaToolStripMenuItem.Click += new System.EventHandler(this.quanliGV_Khoa_khoahoc_HEToolStripMenuItem_Click);
+            // 
+            // quảnLíKhoáHọcNgànhLớpToolStripMenuItem
+            // 
+            this.quảnLíKhoáHọcNgànhLớpToolStripMenuItem.Name = "quảnLíKhoáHọcNgànhLớpToolStripMenuItem";
+            this.quảnLíKhoáHọcNgànhLớpToolStripMenuItem.Size = new System.Drawing.Size(329, 26);
+            this.quảnLíKhoáHọcNgànhLớpToolStripMenuItem.Text = "Quản lí Khoá học - Ngành - Lớp";
+            this.quảnLíKhoáHọcNgànhLớpToolStripMenuItem.Click += new System.EventHandler(this.quảnLíKhoáHọcNgànhLớpToolStripMenuItem_Click);
             // 
             // nhapDiemToolStripMenuItem
             // 
             this.nhapDiemToolStripMenuItem.Name = "nhapDiemToolStripMenuItem";
-            this.nhapDiemToolStripMenuItem.Size = new System.Drawing.Size(368, 26);
+            this.nhapDiemToolStripMenuItem.Size = new System.Drawing.Size(329, 26);
             this.nhapDiemToolStripMenuItem.Text = "Nhập điểm";
             this.nhapDiemToolStripMenuItem.Click += new System.EventHandler(this.nhapDiemToolStripMenuItem_Click);
             // 
@@ -576,9 +602,9 @@
         private System.Windows.Forms.Button btnQLDIEM_ex;
         private System.Windows.Forms.Button btnQLDIEM_Collapse;
         private System.Windows.Forms.Panel pan_MenuQLDIEM;
-        private System.Windows.Forms.LinkLabel lnk_QuanlySv_lop_mh;
+        private System.Windows.Forms.LinkLabel lnk_QuanlySv__Mon_DKMH;
         private System.Windows.Forms.LinkLabel lnkXemDiem;
-        private System.Windows.Forms.LinkLabel lnkGV_K_e;
+        private System.Windows.Forms.LinkLabel lnkGV_Khoa;
         private System.Windows.Forms.LinkLabel lnkNhapDiem;
         private System.Windows.Forms.Label lblTitle;
         public System.Windows.Forms.Panel pan_Main;
@@ -597,13 +623,14 @@
         private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutMeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem quanliSV_L_MH_NGToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quanliGV_Khoa_khoahoc_HEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quanliSV_MH_DKMHToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quanliGV_KhoaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhapDiemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xuatDSMonHocToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xuatDSSVToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemDiemToolStripMenuItem;
-
+        private System.Windows.Forms.LinkLabel lnkKH_Nganh_Lop;
+        private System.Windows.Forms.ToolStripMenuItem quảnLíKhoáHọcNgànhLớpToolStripMenuItem;
     }
 }
 

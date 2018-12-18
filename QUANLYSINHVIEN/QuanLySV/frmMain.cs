@@ -19,6 +19,7 @@ namespace QLSV_GiaoDien
         bool is_panQLSVExpand =true;//khoi tao 1 bien co de xet xem panel dang o che do expand hay collapse
         bool is_panQLMHExpand = true;
         int x_pnQlSV, y_pnQLSV, x_pnQLD, y_pnQLD, x_pnQLMH, y_pnQLMH;//ví trí
+
         private void Form1_Load(object sender, EventArgs e)
         {
          
@@ -179,41 +180,78 @@ namespace QLSV_GiaoDien
 
         #endregion
 
-
-
         #region Add User control
+        private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblTitle.Text = "Quản lý tài khoản";
+            uc_User user = new uc_User();
 
+            qlsv_xl.AddControl(pan_Main, user);
+        }
+        private void lnkTaiKhoan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            lblTitle.Text = "Quản lý tài khoản";
+            uc_User user = new uc_User();
+
+            qlsv_xl.AddControl(pan_Main, user);
+        }
+        //
         private void lnk_QuanlySv_lop_mh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            lblTitle.Text = "Quản lí Sinh Viên - Lớp - Môn học";
-            uc_SinhVien_Lop_MonHoc slv = new uc_SinhVien_Lop_MonHoc();
-
+            lblTitle.Text = "Quản lí Sinh Viên - Môn Học - DKMH";
+            uc_SinhVien_Mon_DKMH slv = new uc_SinhVien_Mon_DKMH();
             qlsv_xl.AddControl(pan_Main, slv);
-            
         }
-
-
+        private void quanliSV_L_MH_NGToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblTitle.Text = "Quản lí Sinh Viên - Môn học - ĐKMH";
+            uc_SinhVien_Mon_DKMH slv = new uc_SinhVien_Mon_DKMH();
+            qlsv_xl.AddControl(pan_Main, slv);
+        }
+        //
         private void lnkGV_K_e_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            lblTitle.Text = "Quản lí Giáo Viên - Khoa - Khóa học";
-            uc_GiaoVien_KhoaHoc_Khoa gkh = new uc_GiaoVien_KhoaHoc_Khoa();
+            lblTitle.Text = "Quản lí Giáo Viên - Khoa ";
+            uc_GiaoVien_Khoa gkh = new uc_GiaoVien_Khoa();
             qlsv_xl.AddControl(pan_Main, gkh);
             
         }
-
-
+        private void quanliGV_Khoa_khoahoc_HEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblTitle.Text = "Quản lí Giáo Viên - Khoa ";
+            uc_GiaoVien_Khoa gkh = new uc_GiaoVien_Khoa();
+            qlsv_xl.AddControl(pan_Main, gkh);
+        }
+        //
+        private void lnkKH_Nganh_Lop_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            lblTitle.Text = "Khoá Học - Ngành - Lớp";
+            uc_KhoaHoc_Nganh_Lop KH_N_L = new uc_KhoaHoc_Nganh_Lop();
+            qlsv_xl.AddControl(pan_Main, KH_N_L);
+        }
+        private void quảnLíKhoáHọcNgànhLớpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblTitle.Text = "Khoá Học - Ngành - Lớp";
+            uc_KhoaHoc_Nganh_Lop KH_N_L = new uc_KhoaHoc_Nganh_Lop();
+            qlsv_xl.AddControl(pan_Main, KH_N_L);
+        }
+        //
         private void lnkNhapDiem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             lblTitle.Text = "Nhập Điểm";
             uc_NhapDiem nhapdiem = new uc_NhapDiem();
             qlsv_xl.AddControl(pan_Main, nhapdiem);
         }
-
+        private void nhapDiemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblTitle.Text = "Nhập Điểm";
+            uc_NhapDiem nhapdiem = new uc_NhapDiem();
+            qlsv_xl.AddControl(pan_Main, nhapdiem);
+        }
 
         #endregion
 
-
-        //hàm nhận tham số truyền về từ delegate Login
+        #region hàm nhận tham số truyền về từ delegate Login
         public void enable_groupbox(bool kq)
         {
             grB_leftMenu.Enabled = kq;
@@ -237,43 +275,7 @@ namespace QLSV_GiaoDien
                 báoCáoToolStripMenuItem.Enabled = true;
             }
         }
-
-        private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lblTitle.Text = "Quản lý tài khoản";
-            uc_User user = new uc_User();
-            
-                qlsv_xl.AddControl(pan_Main, user);
-        }
-
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            grB_leftMenu.Enabled = false;
-            quanlyTK_ToolStripMenuItem.Enabled = false;
-            DangXuatToolStripMenuItem.Enabled = false;
-            DangNhapToolStripMenuItem.Enabled = true;
-            TacVuToolStripMenuItem.Enabled = false;
-            báoCáoToolStripMenuItem.Enabled = false;
-            pan_Main.Controls.Clear();
-            pan_Main.BackgroundImage = Properties.Resources.school;
-
-            lblTitle.Text = "Chương trình quản lý sinh viên";
-        }
-
-        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void lnkTaiKhoan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            lblTitle.Text = "Quản lý tài khoản";
-            uc_User user = new uc_User();
-
-            qlsv_xl.AddControl(pan_Main, user);
-        }
-
-
+        //
         private void lnkDangXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             grB_leftMenu.Enabled = false;
@@ -287,7 +289,79 @@ namespace QLSV_GiaoDien
 
             lblTitle.Text = "Chương trình quản lý sinh viên";
         }
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            grB_leftMenu.Enabled = false;
+            quanlyTK_ToolStripMenuItem.Enabled = false;
+            DangXuatToolStripMenuItem.Enabled = false;
+            DangNhapToolStripMenuItem.Enabled = true;
+            TacVuToolStripMenuItem.Enabled = false;
+            báoCáoToolStripMenuItem.Enabled = false;
+            pan_Main.Controls.Clear();
+            pan_Main.BackgroundImage = Properties.Resources.school;
 
+            lblTitle.Text = "Chương trình quản lý sinh viên";
+        }
+        //
+        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        #endregion
+
+        #region báo cáo
+        private void lnkXuatSV_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmReportSinhVien frm = new frmReportSinhVien();
+            frm.Show();
+        }
+
+        private void lnkXuatDSMH_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmBaocaoMH frmMH = new frmBaocaoMH();
+            frmMH.Show();
+        }
+
+        private void lnkXemDiem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmBaocaoDiem frmDiem = new frmBaocaoDiem();
+            frmDiem.Show();
+        }
+
+
+
+        private void xuatDSMonHocToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            frmBaocaoMH frmMH = new frmBaocaoMH();
+            frmMH.Show();
+        }
+
+        private void xuatDSSVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmReportSinhVien frm = new frmReportSinhVien();
+            frm.Show();
+            
+            frm.FormClosed += Frm_FormClosed;
+        }
+
+        private void Frm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Show();
+        }
+
+        private void xemDiemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaocaoDiem frmDiem = new frmBaocaoDiem();
+            frmDiem.Show();
+        }
+        #endregion
 
         #region mouse color
 
@@ -309,11 +383,11 @@ namespace QLSV_GiaoDien
         }
         private void lnk_QuanlySv_lop_mh_MouseHover(object sender, EventArgs e)
         {
-            lnk_QuanlySv_lop_mh.BackColor = System.Drawing.Color.AliceBlue;
+            lnk_QuanlySv__Mon_DKMH.BackColor = System.Drawing.Color.AliceBlue;
         }
         private void lnk_QuanlySv_lop_mh_MouseLeave(object sender, EventArgs e)
         {
-            lnk_QuanlySv_lop_mh.BackColor = System.Drawing.Color.Empty;
+            lnk_QuanlySv__Mon_DKMH.BackColor = System.Drawing.Color.Empty;
         }
         private void lnkNhapDiem_MouseHover(object sender, EventArgs e)
         {
@@ -325,11 +399,11 @@ namespace QLSV_GiaoDien
         }
         private void lnkGV_K_e_MouseHover(object sender, EventArgs e)
         {
-            lnkGV_K_e.BackColor = System.Drawing.Color.AliceBlue;
+            lnkGV_Khoa.BackColor = System.Drawing.Color.AliceBlue;
         }
         private void lnkGV_K_e_MouseLeave(object sender, EventArgs e)
         {
-            lnkGV_K_e.BackColor = System.Drawing.Color.Empty;
+            lnkGV_Khoa.BackColor = System.Drawing.Color.Empty;
         }
         private void lnkXuatDSMH_MouseHover(object sender, EventArgs e)
         {
@@ -360,88 +434,18 @@ namespace QLSV_GiaoDien
         {
             lnkXemDiem.BackColor = System.Drawing.Color.Empty;
         }
+        private void lnkKH_Nganh_Lop_MouseHover(object sender, EventArgs e)
+        {
+            lnkKH_Nganh_Lop.BackColor = System.Drawing.Color.AliceBlue;
+        }
+
+        private void lnkKH_Nganh_Lop_MouseLeave(object sender, EventArgs e)
+        {
+            lnkKH_Nganh_Lop.BackColor = System.Drawing.Color.Empty;
+        }
 
         #endregion
 
-
-
-
-
-        #region bao cao
-        private void lnkXuatSV_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmReportSinhVien frm = new frmReportSinhVien();
-            frm.Show();
-        }
-
-        private void lnkXuatDSMH_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmBaocaoMH frmMH = new frmBaocaoMH();
-            frmMH.Show();
-        }
-
-        private void lnkXemDiem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmBaocaoDiem frmDiem = new frmBaocaoDiem();
-            frmDiem.Show();
-        }
-        #endregion
-        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void quanliSV_L_MH_NGToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lblTitle.Text = "Quản lí Sinh Viên - Lớp - Môn học";
-            uc_SinhVien_Lop_MonHoc slv = new uc_SinhVien_Lop_MonHoc();
-            qlsv_xl.AddControl(pan_Main, slv);
-        }
-
-        private void quanliGV_Khoa_khoahoc_HEToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lblTitle.Text = "Quản lí Giáo Viên - Khoa - Khóa học - Hệ";
-            uc_GiaoVien_KhoaHoc_Khoa gkh = new uc_GiaoVien_KhoaHoc_Khoa();
-            qlsv_xl.AddControl(pan_Main, gkh);
-        }
-
-     
-
-        private void nhapDiemToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lblTitle.Text = "Nhập Điểm";
-            uc_NhapDiem nhapdiem = new uc_NhapDiem();
-            qlsv_xl.AddControl(pan_Main, nhapdiem);
-        }
-
-        #region báo cáo
-        private void xuatDSMonHocToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-            frmBaocaoMH frmMH = new frmBaocaoMH();
-            frmMH.Show();
-        }
-
-        private void xuatDSSVToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmReportSinhVien frm = new frmReportSinhVien();
-            frm.Show();
-            
-            frm.FormClosed += Frm_FormClosed;
-        }
-
-        private void Frm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Show();
-        }
-
-        private void xemDiemToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmBaocaoDiem frmDiem = new frmBaocaoDiem();
-            frmDiem.Show();
-        }
-        #endregion 
         private void aboutMeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Aboutme ab = new Aboutme();

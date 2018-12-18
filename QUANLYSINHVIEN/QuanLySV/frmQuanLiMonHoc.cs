@@ -136,6 +136,8 @@ namespace QLSV_GiaoDien
         private void btnback_Click(object sender, EventArgs e)
         {
             this.Close();
+
+
         }
 
 

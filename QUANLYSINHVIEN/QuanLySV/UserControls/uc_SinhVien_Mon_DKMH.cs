@@ -11,7 +11,7 @@ using QLSV_Database;
 using QLSV_GiaoDien.UserControls;
 namespace QLSV_GiaoDien.UserControls
 {
-    public partial class uc_SinhVien_Lop_MonHoc : UserControl
+    public partial class uc_SinhVien_Mon_DKMH : UserControl
     {
         string flag = "";// dùng để thêm hoặc sửa
         int index;
@@ -100,43 +100,9 @@ namespace QLSV_GiaoDien.UserControls
             cmbMonHocDK.Enabled = true;
             btnCancel_DKMH.Visible = true;
         }
-        public void DisEnable_LOP()
-        {
-            btnLuu_Lop.Visible = false;
-            txtMaLop.Enabled = false;
-            txtTenLop.Enabled = false;
-            txtGhichu_Lop.Enabled = false;
-            cmbMaNganh.Enabled = false;
-            cmbMaKhoaHoc.Enabled = false;
-            
-        }
-        public void Enable_LOP()
-        {
-            btnLuu_Lop.Visible = true;            
-            txtTenLop.Enabled = true;
-            txtGhichu_Lop.Enabled = true;
-            cmbMaNganh.Enabled = true;
-            cmbMaKhoaHoc.Enabled = true;
-            btnCancel_LOP.Visible = true;
-        }
-        public void Enable_NGANH()
-        {
-            btnLuu_NGANH.Visible = true;
-            txtTenNganh.Enabled = true;
-           
-            txtGhiChu_Nganh.Enabled = true;
-            btnCancel_NGANH.Visible = true;
-        }
-        public void DisEnable_NGANH()
-        {
-            btnLuu_NGANH.Visible = false;
-            txtTenNganh.Enabled = false;
-            txtMaNganh.Enabled = false;
-            txtGhiChu_Nganh.Enabled = false;
-         
-        }
+
         #endregion
-        public uc_SinhVien_Lop_MonHoc()
+        public uc_SinhVien_Mon_DKMH()
         {
             InitializeComponent();
         }
@@ -148,23 +114,9 @@ namespace QLSV_GiaoDien.UserControls
             dataGridView1.DataSource = qlsv_xlSV.LoadDL();
             qlsv_xlSV.CMB = cbMaLop;
             qlsv_xlSV.LayDLVaoComboboxMaLop();
-            dgvNganh.DataSource = qlsv_xlNganh.LoadDL();
             DisEnable_SV();
             DisEnable_MH();
             DisEnable_DKMH();
-            DisEnable_LOP();
-            DisEnable_NGANH();
-            #endregion
-
-            #region Lop
-            qlsv_xlLop.cmbMAKHOAHOC = cmbMaKhoaHoc;
-            qlsv_xlLop.LoadDLVaoCombobox_MaKhoaHoc();
-
-            qlsv_xlLop.cmbMANGANH = cmbMaNganh;
-            qlsv_xlLop.LoadDLVaoCombobox_MaNganh();
-
-            dgvLop.DataSource = qlsv_xlLop.LoadDL_dgvLop();
-
             #endregion
 
             #region Monhoc
@@ -245,263 +197,6 @@ namespace QLSV_GiaoDien.UserControls
         }
         #endregion
 
-        #region quản lý ngành
-        QLSV_XNganh qlsv_xlNganh = new QLSV_XNganh();
-
-        private void tabNganh_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvNganh_CellClick(object sender, DataGridViewCellEventArgs e)
-        {//
-            index = e.RowIndex;
-            txtMaNganh.Text = dgvNganh.CurrentRow.Cells[0].Value.ToString();
-            txtTenNganh.Text = dgvNganh.CurrentRow.Cells[1].Value.ToString();
-            txtGhiChu_Nganh.Text = dgvNganh.CurrentRow.Cells[2].Value.ToString();
-            //
-            qlsv_xlNganh.MANGANH = txtMaNganh.Text;
-            qlsv_xlNganh.TENNGANH = txtTenNganh.Text;
-            qlsv_xlNganh.GHICHU = txtGhiChu_Nganh.Text;
-        }
-        private void btnCancel_NGANH_Click(object sender, EventArgs e)
-        {
-            qlsv_xlNganh.XoaNganh();
-            dgvNganh.DataSource = qlsv_xlNganh.LoadDL();
-            xlc.ClearAllTextBox(groupBox7);
-            //xlc.ClearAllTextBox(groupBox7);
-            DisEnable_NGANH();
-        }
-        private void btnThem_Nganh_Click(object sender, EventArgs e)
-        {
-            flag = "thêm";
-            //button
-            btnThem_Nganh.Visible = false;
-            btnLamlai_Nganh.Enabled = false;
-            btnCancel_NGANH.Enabled = false;
-            dgvNganh.Enabled = false;
-
-            xlc.ClearAllTextBox(groupBox7);
-
-            Enable_NGANH();
-        }
-        private void btnLuu_NGANH_Click(object sender, EventArgs e)
-        {
-            if (flag == "thêm")
-            {
-                txtMaNganh.Text = qlsv_xlNganh.TaoMaNganh();
-                qlsv_xlNganh.MANGANH = txtMaNganh.Text;
-                qlsv_xlNganh.TENNGANH = txtTenNganh.Text;
-                qlsv_xlNganh.GHICHU = txtGhiChu_Nganh.Text;
-
-                qlsv_xlNganh.ThemNganh();
-                dgvNganh.DataSource = qlsv_xlNganh.LoadDL();
-                xlc.ClearAllTextBox(groupBox7);
-
-                DisEnable_NGANH();
-                btnThem_Nganh.Visible = true;
-                btnLamlai_Nganh.Enabled = true;
-                btnCancel_NGANH.Enabled = true;
-                dgvNganh.Enabled = true;
-                int i;
-                for (i = 0; i < dgvNganh.RowCount - 1; i++)
-                {
-                    if (dgvNganh.Rows[i].Cells[1].Value.ToString() == txtMaNganh.Text)
-                        break;
-                }
-                dgvNganh.CurrentCell = dgvNganh[0, i];
-               
-            }
-            else if(flag=="sửa")
-            {
-               
-                qlsv_xlNganh.MANGANH = txtMaNganh.Text;
-                qlsv_xlNganh.TENNGANH = txtTenNganh.Text;
-                qlsv_xlNganh.GHICHU = txtGhiChu_Nganh.Text;
-
-                qlsv_xlNganh.CapNhatNganh();
-                dgvNganh.DataSource = qlsv_xlNganh.LoadDL();
-                xlc.ClearAllTextBox(groupBox7);
-
-                DisEnable_NGANH();
-                btnThem_Nganh.Visible = true;
-                btnLamlai_Nganh.Enabled = true;
-                btnCancel_NGANH.Enabled = true;
-                dgvNganh.Enabled = true;
-                //focus
-                dgvNganh.CurrentCell = dgvNganh[0, index];
-            }
-        }
-
-        private void btnLamlai_Nganh_Click(object sender, EventArgs e)
-        {
-            flag = "sửa";
-            //button
-            btnThem_Nganh.Visible = false;
-            btnCancel_NGANH.Enabled = false;
-            dgvNganh.Enabled = false;
-
-            Enable_NGANH();
-
-        }
-        #endregion
-
-       
-        #region Quản lý lớp
-        private void btnThemLop_Click(object sender, EventArgs e)
-        {
-            
-            flag = "thêm";
-            //button
-            btnThemLop.Visible = false;
-            btnLamlai_Lop.Enabled = false;
-            btnCancel_LOP.Enabled = false;
-            dgvLop.Enabled = false;
-
-            xlc.ClearAllTextBox(groupboxLOP);
-
-            Enable_LOP();
-        }
-        private void btnLuu_Lop_Click(object sender, EventArgs e)
-        {
-         
-            if (flag == "thêm")
-            {
-                txtMaLop.Text = qlsv_xlLop.TaoMaLop();
-                qlsv_xlLop.MALOP = txtMaLop.Text;
-                qlsv_xlLop.MAKHOAHOC = cmbMaKhoaHoc.SelectedValue.ToString();
-                qlsv_xlLop.MANGANH = cmbMaNganh.SelectedValue.ToString();
-                qlsv_xlLop.TENLOP = txtTenLop.Text;
-                qlsv_xlLop.GHICHU = txtGhichu_Lop.Text;
-                qlsv_xlLop.ThemLop();
-                dgvLop.DataSource = qlsv_xlLop.LoadDL_dgvLop();
-                xlc.ClearAllTextBox(groupboxLOP);
-
-                DisEnable_LOP();
-
-                btnThemLop.Visible = true;
-                btnLamlai_Lop.Enabled = true;
-                btnCancel_LOP.Enabled = true;
-                dgvLop.Enabled = true;
-
-                int i;
-                for (i = 0; i < dgvLop.RowCount - 1; i++)
-                {
-                    if (dgvNganh.Rows[i].Cells[1].Value.ToString() == txtMaNganh.Text)
-                        break;
-                }
-                dgvNganh.CurrentCell = dgvNganh[0, i];
-
-            }
-            else if (flag == "sửa")
-            {
-
-                qlsv_xlLop.MALOP = txtMaLop.Text;
-                qlsv_xlLop.MAKHOAHOC = cmbMaKhoaHoc.SelectedValue.ToString();
-                qlsv_xlLop.MANGANH = cmbMaNganh.SelectedValue.ToString();
-                qlsv_xlLop.TENLOP = txtTenLop.Text;
-                qlsv_xlLop.GHICHU = txtGhichu_Lop.Text;
-                qlsv_xlLop.CapNhatLop();
-                dgvLop.DataSource = qlsv_xlLop.LoadDL_dgvLop();
-                xlc.ClearAllTextBox(groupboxLOP);
-                DisEnable_LOP();
-
-                btnThemLop.Visible = true;
-                btnLamlai_Lop.Enabled = true;
-                btnCancel_LOP.Enabled = true;
-                dgvLop.Enabled = true;
-
-                //focus
-                dgvLop.CurrentCell = dgvLop[0, index];
-            }
-        }
-        private void btnLamlai_Lop_Click(object sender, EventArgs e)
-        {
-            flag = "sửa";
-            //button
-            btnThemLop.Visible = false;
-            btnCancel_LOP.Enabled = false;
-            dgvLop.Enabled = false;
-
-            Enable_LOP();
-        }
-        private void btnCancel_LOP_Click(object sender, EventArgs e)
-        {
-
-            qlsv_xlLop.XoaLop();
-            dgvLop.DataSource = qlsv_xlLop.LoadDL_dgvLop();
-            xlc.ClearAllTextBox(groupboxLOP);
-            DisEnable_LOP();
-       
-           
-        }
-        private void dgvLop_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtMaLop.Text = dgvLop.CurrentRow.Cells[0].Value.ToString();
-            cmbMaKhoaHoc.SelectedValue = dgvLop.CurrentRow.Cells[1].Value;
-            cmbMaNganh.SelectedValue = dgvLop.CurrentRow.Cells[2].Value;
-            txtTenLop.Text = dgvLop.CurrentRow.Cells[3].Value.ToString();
-            txtGhichu_Lop.Text = dgvLop.CurrentRow.Cells[4].Value.ToString();
-            qlsv_xlLop.MALOP = txtMaLop.Text;
-            if ((dgvLop.CurrentRow.Cells[1].Value.ToString() != "") && (dgvLop.CurrentRow.Cells[2].Value.ToString()!=""))
-            {
-                qlsv_xlLop.MAKHOAHOC = cmbMaKhoaHoc.SelectedValue.ToString();
-                qlsv_xlLop.MANGANH = cmbMaNganh.SelectedValue.ToString();
-            }
-           
-            
-            qlsv_xlLop.TENLOP = txtTenLop.Text;
-            qlsv_xlLop.GHICHU = txtGhichu_Lop.Text;
-
-        }
-
-        private void cmbTimLop_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int cotgoiy = 0;
-            if (cmbTimLop.SelectedItem.ToString() == "Tên Lớp")
-            {
-                cotgoiy = 3;
-                qlsv_xlLop.COTGOIY = cotgoiy;
-                qlsv_xlLop.COTIMKIEM = "TenLop";
-
-                qlsv_xlLop.TXTGOIY = txtTimLop;
-                qlsv_xlLop.GoiYTimKiem();
-            }
-            else if (cmbTimLop.SelectedItem.ToString() == "Mã Khóa Học")
-            {
-                cotgoiy = 1;
-                qlsv_xlLop.COTGOIY = cotgoiy;
-                qlsv_xlLop.COTIMKIEM = "MaKhoaHoc";
-
-                qlsv_xlLop.TXTGOIY = txtTimLop;
-                qlsv_xlLop.GoiYTimKiem();
-            }
-            else if (cmbTimLop.SelectedItem.ToString() == "Mã Ngành")
-            {
-                cotgoiy = 2;
-                qlsv_xlLop.COTGOIY = cotgoiy;
-                qlsv_xlLop.COTIMKIEM = "MaNganh";
-
-                qlsv_xlLop.TXTGOIY = txtTimLop;
-                qlsv_xlLop.GoiYTimKiem();
-            }
-        }
-
-        private void btnTimLop_Click(object sender, EventArgs e)
-        {
-            if (cmbTimLop.Text == "-- Chọn điều kiện --")
-            {
-                MessageBox.Show("Vui lòng chọn điều kiện tìm kiếm ! ");
-                return;
-            }
-            qlsv_xlLop.DKTIM = txtTimLop.Text;
-            dgvLop.DataSource = qlsv_xlLop.TimKiemLop();
-            int n = qlsv_xlLop.TimKiemLop().Rows.Count;
-            MessageBox.Show("Tìm thấy " + n + " kết quả");
-        }
-        #endregion
-
-
         #region Quản lý môn học
         private void btnLuu_MH_Click(object sender, EventArgs e)
         {
@@ -551,40 +246,102 @@ namespace QLSV_GiaoDien.UserControls
         #region Dăng ký môn học
         private void btnThem_DKMH_Click(object sender, EventArgs e)
         {
-            qlsv_xlDKMonHoc.MAMONHOC = cmbMonHocDK.SelectedValue.ToString();
-            qlsv_xlDKMonHoc.MASINHVIEN = txtMSV_DKMH.Text;
-            qlsv_xlDKMonHoc.NGAYDANGKY = dtp_NgayDKMH.Value;
-            qlsv_xlDKMonHoc.SOTINCHI = (int)numSoTCDK.Value;
-            if (txtHocky.Text == "")
-            {
-                MessageBox.Show("Chưa nhập học kỳ! ");
-                return;
-            }
-            else
-                qlsv_xlDKMonHoc.HOCKY = int.Parse(txtHocky.Text);
+            flag = "thêm";
+            //button
+            btnThem_DKMH.Visible = false;
+            btnLamlai_DKMH.Enabled = false;
+            btnCancel_DKMH.Enabled = false;
+            dgvDangkyMH.Enabled = false;
+            txtMSV_DKMH.Focus();
+            xlc.ClearAllTextBox(groupBoxDKMH);
 
-
-            qlsv_xlDKMonHoc.ThemDKMonHoc();
-            dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.TimKiemSVDK();
-            //dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.LoadDL_DKMonHoc();
-            xlc.ClearAllTextBox(groupboxSVDKMH);
-            qlsv_xlDKMonHoc.TXTTIM = txtTim_MSSV;
-            qlsv_xlDKMonHoc.GoiYTimKiem();
-            lblTenSV.Text = qlsv_xlDKMonHoc.LayTenSV();
-            groupboxSVDKMH.Visible = true;
+            Enable_DKMH();
         }
         private void btnLuu_DKMH_Click(object sender, EventArgs e)
-        {
+        {      
+            if (flag == "thêm")
+            {
+                qlsv_xlDKMonHoc.MAMONHOC = cmbMonHocDK.SelectedValue.ToString();
+                qlsv_xlDKMonHoc.MASINHVIEN = txtMSV_DKMH.Text;
+                qlsv_xlDKMonHoc.NGAYDANGKY = dtp_NgayDKMH.Value;
+                qlsv_xlDKMonHoc.SOTINCHI = (int)numSoTCDK.Value;
+                if (txtHocky.Text == "")
+                {
+                    MessageBox.Show("Chưa nhập học kỳ! ");
+                    return;
+                }
+                else
+                    qlsv_xlDKMonHoc.HOCKY = int.Parse(txtHocky.Text);
 
+
+                qlsv_xlDKMonHoc.ThemDKMonHoc();
+                dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.TimKiemSVDK();
+                //dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.LoadDL_DKMonHoc();
+                xlc.ClearAllTextBox(groupboxSVDKMH);
+                qlsv_xlDKMonHoc.TXTTIM = txtTim_MSSV;
+                qlsv_xlDKMonHoc.GoiYTimKiem();
+                lblTenSV.Text = qlsv_xlDKMonHoc.LayTenSV();
+                groupboxSVDKMH.Visible = true;
+
+                DisEnable_DKMH();
+
+                btnThem_DKMH.Visible = true;
+                btnLamlai_DKMH.Enabled = true;
+                btnCancel_DKMH.Enabled = true;
+                dgvDangkyMH.Enabled = true;
+
+                int i;
+                for (i = 0; i < dgvDangkyMH.RowCount - 1; i++)
+                {
+                    if (dgvDangkyMH.Rows[i].Cells[1].Value.ToString() == txtMSV_DKMH.Text)
+                        break;
+                }
+                dgvDangkyMH.CurrentCell = dgvDangkyMH[0, i];
+
+            }
+            else if (flag == "sửa")
+            {
+
+                qlsv_xlDKMonHoc.MAMONHOC = cmbMonHocDK.SelectedValue.ToString();
+                qlsv_xlDKMonHoc.MASINHVIEN = txtMSV_DKMH.Text;
+                qlsv_xlDKMonHoc.NGAYDANGKY = dtp_NgayDKMH.Value;
+                qlsv_xlDKMonHoc.SOTINCHI = (int)numSoTCDK.Value;
+                qlsv_xlDKMonHoc.HOCKY = int.Parse(txtHocky.Text);
+
+                qlsv_xlDKMonHoc.CapNhatDKMonHoc();
+                dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.TimKiemSVDK();
+               
+                xlc.ClearAllTextBox(groupboxSVDKMH);
+                DisEnable_DKMH();
+
+                btnThem_DKMH.Visible = true;
+                btnLamlai_DKMH.Enabled = true;
+                btnCancel_DKMH.Enabled = true;
+                dgvDangkyMH.Enabled = true;
+                //focus
+                dgvDangkyMH.CurrentCell = dgvDangkyMH[0, index];
+            }
         }
 
         private void btnCancel_DKMH_Click(object sender, EventArgs e)
         {
+            qlsv_xlDKMonHoc.XoaDKMonHoc();
+            dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.LoadDL_DKMonHoc();
+            xlc.ClearAllTextBox(groupBoxDKMH);
+            DisEnable_DKMH();
 
         }
         private void btnLamlai_DKMH_Click(object sender, EventArgs e)
         {
-            xlc.ClearAllTextBox(groupBoxDKMH);
+            flag = "sửa";
+            //button
+            btnThem_DKMH.Visible = false;
+            btnCancel_DKMH.Enabled = false;
+            dgvDangkyMH.Enabled = false;
+            txtMSV_DKMH.Focus();
+
+
+            Enable_DKMH();
         }
 
         private void btnTimDKMH_Click(object sender, EventArgs e)

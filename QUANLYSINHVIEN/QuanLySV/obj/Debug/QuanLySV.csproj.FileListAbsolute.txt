@@ -246,11 +246,12 @@ C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technol
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.Reports.frmReportSinhVien.resources
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.uc_DK_MonHoc.resources
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_NhapDiem.resources
-C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_SinhVien_Lop_MonHoc.resources
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.uc_User.resources
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QuanLySV.csproj.GenerateResource.cache
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QuanLySV.csproj.CoreCompileInputs.cache
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QuanLySV.csproj.CopyComplete
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QuanLySV.exe
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QuanLySV.pdb
-C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_GiaoVien_KhoaHoc_Khoa.resources
+C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_KhoaHoc_Nganh_Lop.resources
+C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_GiaoVien_Khoa.resources
+C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_SinhVien_Mon_DKMH.resources

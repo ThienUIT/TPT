@@ -9,13 +9,13 @@ using System.Windows.Forms;
 using QLSV_Xuly;
 namespace QLSV_GiaoDien.UserControls
 {
-    public partial class uc_GiaoVien_KhoaHoc_Khoa : UserControl
+    public partial class uc_GiaoVien_Khoa : UserControl
     {
       
         QLSV_XGiaoVien qlsv_xlGiaoVien = new QLSV_XGiaoVien();
         QLSV_XKhoa qlsv_xlKhoa = new QLSV_XKhoa();
         c_XuLyChung cXLC = new c_XuLyChung();
-        public uc_GiaoVien_KhoaHoc_Khoa()
+        public uc_GiaoVien_Khoa()
         {
             InitializeComponent();
         }
@@ -23,8 +23,6 @@ namespace QLSV_GiaoDien.UserControls
         private void uc_GiaoVien_KhoaHoc_Khoa_He_Load(object sender, EventArgs e)
         {
            
-            dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
-
             dgvGiaoVien.DataSource = qlsv_xlGiaoVien.LoadDLGiaoVien();
             qlsv_xlGiaoVien.cmbMAKHOA = cmbMaKhoa;
             qlsv_xlGiaoVien.LoadDLVao_cmbMaKhoa();
@@ -35,92 +33,7 @@ namespace QLSV_GiaoDien.UserControls
         }
 
 
-
-      
-
-        #region Quản lý Khóa Học
-        QLSV_XKhoaHoc qlsv_xKhoaHoc = new QLSV_XKhoaHoc();
-        c_XuLyChung XLC = new c_XuLyChung();
-        private void btnThemKhoaHoc_Click(object sender, EventArgs e)
-        {
-            txtMaKhoaHoc.Text = qlsv_xKhoaHoc.TaoMaKhoaHoc();
-            qlsv_xKhoaHoc.MAKHOAHOC = txtMaKhoaHoc.Text;
-            qlsv_xKhoaHoc.TENKHOAHOC = txtTenKhoaHoc.Text;
-            qlsv_xKhoaHoc.NGAYBATDAU = dtpNgayBatDau.Value;
-            qlsv_xKhoaHoc.NGAYKETTHUC = dtpNgayKetThuc.Value;
-            qlsv_xKhoaHoc.GHICHU = txtGhichu_KhoaHoc.Text;
-            qlsv_xKhoaHoc.ThemKhoaHoc();
-           dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
-           XLC.ClearAllTextBox(groupBox7);
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-       
-
-        private void dgvKhoaHoc_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int n = dgvKhoaHoc.SelectedRows.Count;
-           
-           
-            
-                for (int i = 0; i < n; i++)
-                {
-                    txtMaKhoaHoc.Text = dgvKhoaHoc.SelectedRows[i].Cells[2].Value.ToString();
-                    txtTenKhoaHoc.Text = dgvKhoaHoc.SelectedRows[i].Cells[3].Value.ToString();
-                    if (dgvKhoaHoc.SelectedRows[i].Cells[4].Value.ToString() != "")
-                    {
-                        dtpNgayBatDau.Value = (DateTime)dgvKhoaHoc.SelectedRows[i].Cells[4].Value;
-                    }
-                    if (dgvKhoaHoc.SelectedRows[i].Cells[5].Value.ToString() != "")
-                    {
-                        dtpNgayKetThuc.Value = (DateTime)dgvKhoaHoc.SelectedRows[i].Cells[5].Value;
-                    }
-                   
-                    txtGhichu_KhoaHoc.Text = dgvKhoaHoc.SelectedRows[i].Cells[6].Value.ToString();
-
-                }
-                qlsv_xKhoaHoc.MAKHOAHOC = txtMaKhoaHoc.Text;
-                qlsv_xKhoaHoc.TENKHOAHOC = txtTenKhoaHoc.Text;
-                qlsv_xKhoaHoc.NGAYBATDAU = dtpNgayBatDau.Value;
-                qlsv_xKhoaHoc.NGAYKETTHUC = dtpNgayKetThuc.Value;
-                qlsv_xKhoaHoc.GHICHU = txtGhichu_KhoaHoc.Text;
-
-                
-            if (e.ColumnIndex == 0)
-            {
-              
-                qlsv_xKhoaHoc.CapNhatKhoaHoc();
-                dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
-                XLC.ClearAllTextBox(groupBox7);
-            }
-            if (e.ColumnIndex == 1)
-            {
-               
-                qlsv_xKhoaHoc.XoaKhoaHoc();
-                dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
-                XLC.ClearAllTextBox(groupBox7);
-            }
-        }
-
-        private void btnNhapLaiKhoahoc_Click(object sender, EventArgs e)
-        {
-            XLC.ClearAllTextBox(groupBox7);
-        }
-
-        private void btnThoatKhoaHoc_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        #endregion
-
-
-        #region Quản lý giáo viên
+        #region giáo viên
         private void btnThem_Click(object sender, EventArgs e)
         {
             txtMaGiaoVien.Text = qlsv_xlGiaoVien.TaoMaGV();
@@ -132,7 +45,7 @@ namespace QLSV_GiaoDien.UserControls
 
             qlsv_xlGiaoVien.ThemGiaoVien();
             dgvGiaoVien.DataSource = qlsv_xlGiaoVien.LoadDLGiaoVien();
-            XLC.ClearAllTextBox(groupboxGV);
+            cXLC.ClearAllTextBox(groupboxGV);
 
             qlsv_xlGiaoVien.TXT = txtThongTinTimKiem_GV;
             qlsv_xlGiaoVien.GoiYGiaoVien();
@@ -140,7 +53,7 @@ namespace QLSV_GiaoDien.UserControls
 
         private void btnLamlai_Click(object sender, EventArgs e)
         {
-            XLC.ClearAllTextBox(groupboxGV);
+            cXLC.ClearAllTextBox(groupboxGV);
         }
 
        
@@ -205,19 +118,19 @@ namespace QLSV_GiaoDien.UserControls
             {
                 qlsv_xlGiaoVien.CapNhatGiaoVien();
                 dgvGiaoVien.DataSource = qlsv_xlGiaoVien.LoadDLGiaoVien();
-                XLC.ClearAllTextBox(groupboxGV);
+                cXLC.ClearAllTextBox(groupboxGV);
             }
             if (e.ColumnIndex == 1)
             {
                 qlsv_xlGiaoVien.XoaGiaoVien();
                 dgvGiaoVien.DataSource = qlsv_xlGiaoVien.LoadDLGiaoVien();
-                XLC.ClearAllTextBox(groupboxGV);
+                cXLC.ClearAllTextBox(groupboxGV);
             }
         }
 
         #endregion
 
-        #region Quản lý Khoa
+        #region Khoa
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
@@ -233,7 +146,7 @@ namespace QLSV_GiaoDien.UserControls
 
             qlsv_xlKhoa.ThemKhoa();
             dgvKhoa.DataSource = qlsv_xlKhoa.LoadDLKhoa();
-            XLC.ClearAllTextBox(groupboxKhoa);
+            cXLC.ClearAllTextBox(groupboxKhoa);
 
             qlsv_xlGiaoVien.cmbMAKHOA = cmbMaKhoa;
             qlsv_xlGiaoVien.LoadDLVao_cmbMaKhoa();
@@ -242,7 +155,7 @@ namespace QLSV_GiaoDien.UserControls
 
         private void btnNhaplaiKhoa_Click(object sender, EventArgs e)
         {
-            XLC.ClearAllTextBox(groupboxKhoa);
+            cXLC.ClearAllTextBox(groupboxKhoa);
         }
 
         private void dgvKhoa_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -259,7 +172,7 @@ namespace QLSV_GiaoDien.UserControls
             {
                 qlsv_xlKhoa.CapNhatKhoa();
                 dgvKhoa.DataSource = qlsv_xlKhoa.LoadDLKhoa();
-                XLC.ClearAllTextBox(groupboxKhoa);
+                cXLC.ClearAllTextBox(groupboxKhoa);
 
                 qlsv_xlGiaoVien.cmbMAKHOA = cmbMaKhoa;
                 qlsv_xlGiaoVien.LoadDLVao_cmbMaKhoa();
@@ -270,7 +183,7 @@ namespace QLSV_GiaoDien.UserControls
             {
                 qlsv_xlKhoa.XoaKhoa();
                 dgvKhoa.DataSource = qlsv_xlKhoa.LoadDLKhoa();
-                XLC.ClearAllTextBox(groupboxKhoa);
+                cXLC.ClearAllTextBox(groupboxKhoa);
 
                 qlsv_xlGiaoVien.cmbMAKHOA = cmbMaKhoa;
                 qlsv_xlGiaoVien.LoadDLVao_cmbMaKhoa();
