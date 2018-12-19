@@ -65,6 +65,27 @@ namespace QLSV_GiaoDien.UserControls
 
         }
         #endregion
+        //load Uc_
+        private void uc_KhoaHoc_Nganh_Lop_Load_1(object sender, EventArgs e)
+        {
+            #region Lop
+            qlsv_xlLop.cmbMAKHOAHOC = cmbMaKhoaHoc;
+            qlsv_xlLop.LoadDLVaoCombobox_MaKhoaHoc();
+
+            qlsv_xlLop.cmbMANGANH = cmbMaNganh;
+            qlsv_xlLop.LoadDLVaoCombobox_MaNganh();
+
+            dgvLop.DataSource = qlsv_xlLop.LoadDL_dgvLop();
+
+            #endregion
+
+            dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
+            dgvNganh.DataSource = qlsv_xlNganh.LoadDL();
+            //ko cho thao tác 
+            DisEnable_LOP();
+            DisEnable_NGANH();
+
+        }
 
         #region LOP
         private void btnLuu_Lop_Click(object sender, EventArgs e)
@@ -191,8 +212,6 @@ namespace QLSV_GiaoDien.UserControls
                 qlsv_xlLop.MAKHOAHOC = cmbMaKhoaHoc.SelectedValue.ToString();
                 qlsv_xlLop.MANGANH = cmbMaNganh.SelectedValue.ToString();
             }
-
-
             qlsv_xlLop.TENLOP = txtTenLop.Text;
             qlsv_xlLop.GHICHU = txtGhichu_Lop.Text;
 
@@ -396,22 +415,6 @@ namespace QLSV_GiaoDien.UserControls
         }
         #endregion
 
-        private void uc_KhoaHoc_Nganh_Lop_Load_1(object sender, EventArgs e)
-        {
-            #region Lop
-            qlsv_xlLop.cmbMAKHOAHOC = cmbMaKhoaHoc;
-            qlsv_xlLop.LoadDLVaoCombobox_MaKhoaHoc();
-
-            qlsv_xlLop.cmbMANGANH = cmbMaNganh;
-            qlsv_xlLop.LoadDLVaoCombobox_MaNganh();
-
-            dgvLop.DataSource = qlsv_xlLop.LoadDL_dgvLop();
-
-            #endregion
-           
-            dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
-            dgvNganh.DataSource = qlsv_xlNganh.LoadDL();
-
-        }
+     
     }
 }

@@ -32,7 +32,7 @@
             this.tabSinhVien = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnQuanLySV = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_SV = new System.Windows.Forms.DataGridView();
             this.cbMaLop = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCancel_SV = new System.Windows.Forms.Button();
@@ -123,7 +123,7 @@
             this.tabSV_Mon_DKMH.SuspendLayout();
             this.tabSinhVien.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_SV)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcHinhSV)).BeginInit();
             this.tabMonHoc.SuspendLayout();
@@ -172,7 +172,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnQuanLySV);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgv_SV);
             this.groupBox1.Controls.Add(this.cbMaLop);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.pcHinhSV);
@@ -217,15 +217,16 @@
             this.btnQuanLySV.UseVisualStyleBackColor = true;
             this.btnQuanLySV.Click += new System.EventHandler(this.btnQuanLySV_Click);
             // 
-            // dataGridView1
+            // dgv_SV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 441);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(860, 143);
-            this.dataGridView1.TabIndex = 35;
+            this.dgv_SV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_SV.Location = new System.Drawing.Point(19, 441);
+            this.dgv_SV.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_SV.Name = "dgv_SV";
+            this.dgv_SV.ReadOnly = true;
+            this.dgv_SV.Size = new System.Drawing.Size(860, 143);
+            this.dgv_SV.TabIndex = 35;
+            this.dgv_SV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // cbMaLop
             // 
@@ -1186,7 +1187,7 @@
             this.tabSinhVien.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_SV)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcHinhSV)).EndInit();
             this.tabMonHoc.ResumeLayout(false);
@@ -1221,7 +1222,7 @@
         private System.Windows.Forms.TabPage tabDKMH;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnQuanLySV;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_SV;
         private System.Windows.Forms.ComboBox cbMaLop;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnClear;

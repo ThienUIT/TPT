@@ -39,15 +39,18 @@
             // crystalReportViewer1
             // 
             this.crystalReportViewer1.ActiveViewIndex = -1;
-            this.crystalReportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.crystalReportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 92);
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 113);
+            this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.SelectionFormula = "";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(684, 501);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(911, 616);
             this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.ToolPanelWidth = 267;
             this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             // 
             // groupBox1
@@ -55,18 +58,21 @@
             this.groupBox1.Controls.Add(this.btnXemDiem);
             this.groupBox1.Controls.Add(this.txtMSSV);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(41, 12);
+            this.groupBox1.Location = new System.Drawing.Point(55, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(537, 61);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(716, 75);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tra cứu điểm";
             // 
             // btnXemDiem
             // 
-            this.btnXemDiem.Location = new System.Drawing.Point(348, 22);
+            this.btnXemDiem.Location = new System.Drawing.Point(464, 27);
+            this.btnXemDiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXemDiem.Name = "btnXemDiem";
-            this.btnXemDiem.Size = new System.Drawing.Size(75, 23);
+            this.btnXemDiem.Size = new System.Drawing.Size(100, 28);
             this.btnXemDiem.TabIndex = 2;
             this.btnXemDiem.Text = "Xem điểm";
             this.btnXemDiem.UseVisualStyleBackColor = true;
@@ -74,27 +80,30 @@
             // 
             // txtMSSV
             // 
-            this.txtMSSV.Location = new System.Drawing.Point(153, 24);
+            this.txtMSSV.Location = new System.Drawing.Point(204, 30);
+            this.txtMSSV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMSSV.Name = "txtMSSV";
-            this.txtMSSV.Size = new System.Drawing.Size(174, 20);
+            this.txtMSSV.Size = new System.Drawing.Size(231, 22);
             this.txtMSSV.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 27);
+            this.label1.Location = new System.Drawing.Point(43, 33);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 13);
+            this.label1.Size = new System.Drawing.Size(152, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập mã số Sinh Viên:";
             // 
             // frmBaocaoDiem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 593);
+            this.ClientSize = new System.Drawing.Size(912, 730);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.crystalReportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBaocaoDiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBaocaoDiem";

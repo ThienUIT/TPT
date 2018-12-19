@@ -72,6 +72,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnLuuGV = new System.Windows.Forms.Button();
+            this.btnLuuKhoa = new System.Windows.Forms.Button();
+            this.btnXoaK = new System.Windows.Forms.Button();
             this.tabGV_Khoa.SuspendLayout();
             this.tabGiaoVien.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -261,6 +264,7 @@
             // 
             // groupboxGV
             // 
+            this.groupboxGV.Controls.Add(this.btnLuuGV);
             this.groupboxGV.Controls.Add(this.btnLamlai);
             this.groupboxGV.Controls.Add(this.btnThem);
             this.groupboxGV.Controls.Add(this.cmbMaKhoa);
@@ -284,7 +288,7 @@
             // 
             this.btnLamlai.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
             this.btnLamlai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLamlai.Location = new System.Drawing.Point(276, 210);
+            this.btnLamlai.Location = new System.Drawing.Point(168, 210);
             this.btnLamlai.Margin = new System.Windows.Forms.Padding(4);
             this.btnLamlai.Name = "btnLamlai";
             this.btnLamlai.Size = new System.Drawing.Size(100, 28);
@@ -296,7 +300,7 @@
             // 
             this.btnThem.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThem.Location = new System.Drawing.Point(156, 210);
+            this.btnThem.Location = new System.Drawing.Point(22, 210);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 28);
@@ -465,6 +469,8 @@
             // 
             // groupboxKhoa
             // 
+            this.groupboxKhoa.Controls.Add(this.btnXoaK);
+            this.groupboxKhoa.Controls.Add(this.btnLuuKhoa);
             this.groupboxKhoa.Controls.Add(this.btnNhaplaiKhoa);
             this.groupboxKhoa.Controls.Add(this.btnThemKhoa);
             this.groupboxKhoa.Controls.Add(this.txtGhiChu_Khoa);
@@ -484,9 +490,9 @@
             // 
             // btnNhaplaiKhoa
             // 
-            this.btnNhaplaiKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
+            this.btnNhaplaiKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
             this.btnNhaplaiKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNhaplaiKhoa.Location = new System.Drawing.Point(690, 113);
+            this.btnNhaplaiKhoa.Location = new System.Drawing.Point(606, 112);
             this.btnNhaplaiKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnNhaplaiKhoa.Name = "btnNhaplaiKhoa";
             this.btnNhaplaiKhoa.Size = new System.Drawing.Size(100, 57);
@@ -498,7 +504,7 @@
             // 
             this.btnThemKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThemKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThemKhoa.Location = new System.Drawing.Point(524, 113);
+            this.btnThemKhoa.Location = new System.Drawing.Point(474, 113);
             this.btnThemKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemKhoa.Name = "btnThemKhoa";
             this.btnThemKhoa.Size = new System.Drawing.Size(100, 57);
@@ -563,13 +569,46 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Mã Khoa:";
             // 
-            // uc_GiaoVien_KhoaHoc_Khoa
+            // btnLuuGV
+            // 
+            this.btnLuuGV.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
+            this.btnLuuGV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuuGV.Location = new System.Drawing.Point(22, 210);
+            this.btnLuuGV.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuuGV.Name = "btnLuuGV";
+            this.btnLuuGV.Size = new System.Drawing.Size(100, 28);
+            this.btnLuuGV.TabIndex = 14;
+            this.btnLuuGV.UseVisualStyleBackColor = true;
+            // 
+            // btnLuuKhoa
+            // 
+            this.btnLuuKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
+            this.btnLuuKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuuKhoa.Location = new System.Drawing.Point(474, 113);
+            this.btnLuuKhoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuuKhoa.Name = "btnLuuKhoa";
+            this.btnLuuKhoa.Size = new System.Drawing.Size(100, 57);
+            this.btnLuuKhoa.TabIndex = 9;
+            this.btnLuuKhoa.UseVisualStyleBackColor = true;
+            // 
+            // btnXoaK
+            // 
+            this.btnXoaK.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
+            this.btnXoaK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXoaK.Location = new System.Drawing.Point(735, 112);
+            this.btnXoaK.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoaK.Name = "btnXoaK";
+            this.btnXoaK.Size = new System.Drawing.Size(100, 57);
+            this.btnXoaK.TabIndex = 10;
+            this.btnXoaK.UseVisualStyleBackColor = true;
+            // 
+            // uc_GiaoVien_Khoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tabGV_Khoa);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "uc_GiaoVien_KhoaHoc_Khoa";
+            this.Name = "uc_GiaoVien_Khoa";
             this.Size = new System.Drawing.Size(920, 640);
             this.Load += new System.EventHandler(this.uc_GiaoVien_KhoaHoc_Khoa_He_Load);
             this.tabGV_Khoa.ResumeLayout(false);
@@ -635,5 +674,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu_Khoa;
         private System.Windows.Forms.DataGridViewButtonColumn btnSua_Khoa;
         private System.Windows.Forms.DataGridViewButtonColumn btnXoa_Khoa;
+        private System.Windows.Forms.Button btnLuuGV;
+        private System.Windows.Forms.Button btnXoaK;
+        private System.Windows.Forms.Button btnLuuKhoa;
     }
 }

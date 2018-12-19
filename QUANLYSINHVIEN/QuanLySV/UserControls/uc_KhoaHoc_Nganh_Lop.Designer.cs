@@ -97,6 +97,8 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.btnLuuKhoa = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabKhoaHoc_Nganh_Lop.SuspendLayout();
             this.tabKhoaHoc.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -230,6 +232,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnLuuKhoa);
             this.groupBox1.Controls.Add(this.dtpNgayKetThuc);
             this.groupBox1.Controls.Add(this.dtpNgayBatDau);
             this.groupBox1.Controls.Add(this.label14);
@@ -295,9 +299,9 @@
             // 
             // btnNhapLaiKhoahoc
             // 
-            this.btnNhapLaiKhoahoc.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
+            this.btnNhapLaiKhoahoc.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
             this.btnNhapLaiKhoahoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNhapLaiKhoahoc.Location = new System.Drawing.Point(681, 130);
+            this.btnNhapLaiKhoahoc.Location = new System.Drawing.Point(653, 130);
             this.btnNhapLaiKhoahoc.Margin = new System.Windows.Forms.Padding(4);
             this.btnNhapLaiKhoahoc.Name = "btnNhapLaiKhoahoc";
             this.btnNhapLaiKhoahoc.Size = new System.Drawing.Size(100, 54);
@@ -309,7 +313,7 @@
             // 
             this.btnThemKhoaHoc.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThemKhoaHoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThemKhoaHoc.Location = new System.Drawing.Point(508, 130);
+            this.btnThemKhoaHoc.Location = new System.Drawing.Point(519, 130);
             this.btnThemKhoaHoc.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemKhoaHoc.Name = "btnThemKhoaHoc";
             this.btnThemKhoaHoc.Size = new System.Drawing.Size(100, 54);
@@ -871,6 +875,28 @@
             this.label32.TabIndex = 0;
             this.label32.Text = "Mã Lớp:";
             // 
+            // btnLuuKhoa
+            // 
+            this.btnLuuKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
+            this.btnLuuKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuuKhoa.Location = new System.Drawing.Point(519, 130);
+            this.btnLuuKhoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuuKhoa.Name = "btnLuuKhoa";
+            this.btnLuuKhoa.Size = new System.Drawing.Size(100, 54);
+            this.btnLuuKhoa.TabIndex = 14;
+            this.btnLuuKhoa.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Location = new System.Drawing.Point(776, 130);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 54);
+            this.button1.TabIndex = 15;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // uc_KhoaHoc_Nganh_Lop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -972,5 +998,7 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLuuKhoa;
     }
 }

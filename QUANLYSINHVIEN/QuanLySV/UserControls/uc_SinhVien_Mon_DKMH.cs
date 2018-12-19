@@ -15,10 +15,12 @@ namespace QLSV_GiaoDien.UserControls
     {
         string flag = "";// dùng để thêm hoặc sửa
         int index;
+
         QLSV_XSinhVien qlsv_xlSV = new QLSV_XSinhVien();
-        QLSV_XLop qlsv_xlLop = new QLSV_XLop();
         QLSV_XMonHoc qlsv_slMonHoc = new QLSV_XMonHoc();
         QLSV_XDKMonHoc qlsv_xlDKMonHoc = new QLSV_XDKMonHoc();
+        QLSV_XLop qlsv_xlop = new QLSV_XLop();
+
         c_XuLyChung xlc = new c_XuLyChung();
         c_ThaoTacChung ctc = new c_ThaoTacChung();
         #region hide and show txt
@@ -111,7 +113,7 @@ namespace QLSV_GiaoDien.UserControls
         private void uc_SinhVien_Lop_MonHoc_Load(object sender, EventArgs e)
         {
             #region SinhVien
-            dataGridView1.DataSource = qlsv_xlSV.LoadDL();
+            dgv_SV.DataSource = qlsv_xlSV.LoadDL();
             qlsv_xlSV.CMB = cbMaLop;
             qlsv_xlSV.LayDLVaoComboboxMaLop();
             DisEnable_SV();
@@ -165,7 +167,7 @@ namespace QLSV_GiaoDien.UserControls
             qlsv_xlSV.GHICHU = txtGhichu.Text;
 
             qlsv_xlSV.ThemSinhVien();
-            dataGridView1.DataSource = qlsv_xlSV.LoadDL();
+            dgv_SV.DataSource = qlsv_xlSV.LoadDL();
 
         }
         private void btnCancel_SV_Click(object sender, EventArgs e)
@@ -194,6 +196,38 @@ namespace QLSV_GiaoDien.UserControls
         private void cbMaLop_SelectedIndexChanged(object sender, EventArgs e)
         {
            
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMSSV.Text = dgv_SV.CurrentRow.Cells[0].Value.ToString();
+            txtHotenSv.Text = dgv_SV.CurrentRow.Cells[1].Value.ToString();
+            txtQueQuan.Text = dgv_SV.CurrentRow.Cells[2].Value.ToString();
+            if((dgv_SV.CurrentRow.Cells[3].Value.ToString()==""))
+                { dtp_NgaySinh.Value = DateTime.Now; }
+            else
+                dtp_NgaySinh.Value = (DateTime)dgv_SV.CurrentRow.Cells[3].Value;
+            txtNoiSinh.Text = dgv_SV.CurrentRow.Cells[4].Value.ToString();
+            txtHinh.Text = dgv_SV.CurrentRow.Cells[7].Value.ToString();
+            txtGhichu.Text = dgv_SV.CurrentRow.Cells[8].Value.ToString();
+
+            if (dgv_SV.CurrentRow.Cells[5].Value.ToString() == "Nam")
+            {
+                rdNam.Checked = true;
+            }
+            else if (dgv_SV.CurrentRow.Cells[5].Value.ToString() == "Nữ")
+            {
+                rdNu.Checked = true;
+            }
+            else
+            {
+                rdNam.Checked = false;
+                rdNu.Checked = false;
+            }
+            qlsv_xlop.MALOP = cbMaLop.Text;
+           
+
+
         }
         #endregion
 
@@ -433,6 +467,7 @@ namespace QLSV_GiaoDien.UserControls
             txtQueQuan.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(txtQueQuan.Text);
             txtQueQuan.Select(txtQueQuan.Text.Length, 0);
         }
+
 
 
 
