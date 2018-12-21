@@ -21,11 +21,7 @@ namespace QLSV_GiaoDien.Reports
         private void btnXemDiem_Click(object sender, EventArgs e)
         {
             xlDiem.MASV = txtMSSV.Text;
-            crpDiem crp = new crpDiem();
-            crp.SetDataSource(xlDiem.xemdiem());
-            crystalReportViewer1.ReportSource = crp;
-            crystalReportViewer1.Refresh();
-
+            dgvDiem.DataSource=xlDiem.xemdiem();            
         }
 
         private void frmBaocaoDiem_Load(object sender, EventArgs e)
