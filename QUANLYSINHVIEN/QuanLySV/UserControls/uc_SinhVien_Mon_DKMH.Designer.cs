@@ -638,6 +638,7 @@
             this.dgvMonhoc.ReadOnly = true;
             this.dgvMonhoc.Size = new System.Drawing.Size(852, 197);
             this.dgvMonhoc.TabIndex = 25;
+            this.dgvMonhoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMonhoc_CellClick);
             // 
             // groupBox5
             // 

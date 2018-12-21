@@ -273,7 +273,29 @@ namespace QLSV_GiaoDien.UserControls
             xlc.ClearAllTextBox(groupBox3);
             DisEnable_MH();
         }
+        private void dgvMonhoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaMH.Text = dgvMonhoc.CurrentRow.Cells[0].Value.ToString();
+            txtTenMh.Text = dgvMonhoc.CurrentRow.Cells[1].Value.ToString();
+            numSoTinChi.Value = Convert.ToInt32(dgvMonhoc.CurrentRow.Cells[3].Value);
+            numSoTCDK.Value = Convert.ToInt32(dgvMonhoc.CurrentRow.Cells[5].Value);
+            numSoTietLT.Value = Convert.ToInt32(dgvMonhoc.CurrentRow.Cells[6].Value);
+            numSoTietTH.Value = Convert.ToInt32(dgvMonhoc.CurrentRow.Cells[7].Value);
+            if(dgvMonhoc.CurrentRow.Cells[2].Value.ToString()=="Môn bắt buộc")
+            {
+                rdMonbatbuoc.Checked = true;
+            }
+            else if(dgvMonhoc.CurrentRow.Cells[2].Value.ToString() == "Môn tự chọn")
+            {
+                rdMontuchon.Checked = true;
+            }
+            else
+            {
+                rdMontuchon.Checked = false;
+                rdMonbatbuoc.Checked = false;
+            }
 
+        }
         #endregion
 
 
@@ -467,6 +489,7 @@ namespace QLSV_GiaoDien.UserControls
             txtQueQuan.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(txtQueQuan.Text);
             txtQueQuan.Select(txtQueQuan.Text.Length, 0);
         }
+
 
 
 

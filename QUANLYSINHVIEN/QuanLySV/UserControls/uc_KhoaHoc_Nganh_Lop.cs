@@ -29,6 +29,26 @@ namespace QLSV_GiaoDien.UserControls
         c_XuLyChung xlc = new c_XuLyChung();
         c_ThaoTacChung ctc = new c_ThaoTacChung();
         #region hide and show txt
+        public void Enable_KhoaHoc()
+        {
+            txtMaKhoaHoc.Enabled = true;
+            txtTenKhoaHoc.Enabled = true;
+            dtpNgayBatDau.Enabled = true;
+            dtpNgayKetThuc.Enabled = true;
+            txtGhichu_KhoaHoc.Enabled = true;
+            btnLuuKhoa.Visible = true;
+        }
+        public void DisEnable_KhoaHoc()
+        {
+            txtMaKhoaHoc.Enabled = false;
+            txtTenKhoaHoc.Enabled = false;
+            dtpNgayBatDau.Enabled = false;
+            dtpNgayKetThuc.Enabled = false;
+            txtGhichu_KhoaHoc.Enabled = false;
+            btnLuuKhoa.Visible = false;
+        }
+
+
         public void DisEnable_LOP()
         {
             btnLuu_Lop.Visible = false;
@@ -84,6 +104,7 @@ namespace QLSV_GiaoDien.UserControls
             //ko cho thao tác 
             DisEnable_LOP();
             DisEnable_NGANH();
+            DisEnable_KhoaHoc();
 
         }
 
@@ -338,7 +359,7 @@ namespace QLSV_GiaoDien.UserControls
 
         private void dgvNganh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            index = e.RowIndex;
+          
             txtMaNganh.Text = dgvNganh.CurrentRow.Cells[0].Value.ToString();
             txtTenNganh.Text = dgvNganh.CurrentRow.Cells[1].Value.ToString();
             txtGhiChu_Nganh.Text = dgvNganh.CurrentRow.Cells[2].Value.ToString();
@@ -353,68 +374,86 @@ namespace QLSV_GiaoDien.UserControls
         #region KHOÁ HỌC
         private void btnThemKhoaHoc_Click(object sender, EventArgs e)
         {
-            txtMaKhoaHoc.Text = qlsv_xKhoaHoc.TaoMaKhoaHoc();
-            qlsv_xKhoaHoc.MAKHOAHOC = txtMaKhoaHoc.Text;
-            qlsv_xKhoaHoc.TENKHOAHOC = txtTenKhoaHoc.Text;
-            qlsv_xKhoaHoc.NGAYBATDAU = dtpNgayBatDau.Value;
-            qlsv_xKhoaHoc.NGAYKETTHUC = dtpNgayKetThuc.Value;
-            qlsv_xKhoaHoc.GHICHU = txtGhichu_KhoaHoc.Text;
-            qlsv_xKhoaHoc.ThemKhoaHoc();
-            dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
-            xlc.ClearAllTextBox(groupBox7);
+            flag = "thêm";
+            btnCancel_KhoaHoc.Enabled = false;
+            btnNhapLaiKhoahoc.Enabled = false;
+            xlc.ClearAllTextBox(groupBox1);
+            Enable_KhoaHoc();
+        }
+        private void btnLuuKhoa_Click(object sender, EventArgs e)
+        {
+            if (flag == "thêm")
+            {
+                txtMaKhoaHoc.Text = qlsv_xKhoaHoc.TaoMaKhoaHoc();
+                qlsv_xKhoaHoc.MAKHOAHOC = txtMaKhoaHoc.Text;
+                qlsv_xKhoaHoc.TENKHOAHOC = txtTenKhoaHoc.Text;
+                qlsv_xKhoaHoc.NGAYBATDAU = dtpNgayBatDau.Value;
+                qlsv_xKhoaHoc.NGAYKETTHUC = dtpNgayKetThuc.Value;
+                qlsv_xKhoaHoc.GHICHU = txtGhichu_KhoaHoc.Text;
+                qlsv_xKhoaHoc.ThemKhoaHoc();
+                dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
+                DisEnable_KhoaHoc();
+                btnCancel_KhoaHoc.Enabled = true;
+                btnNhapLaiKhoahoc.Enabled = true;
+            }
+            else if (flag == "sửa")
+            {
+                txtMaKhoaHoc.Text = qlsv_xKhoaHoc.TaoMaKhoaHoc();
+                qlsv_xKhoaHoc.MAKHOAHOC = txtMaKhoaHoc.Text;
+                qlsv_xKhoaHoc.TENKHOAHOC = txtTenKhoaHoc.Text;
+                qlsv_xKhoaHoc.NGAYBATDAU = dtpNgayBatDau.Value;
+                qlsv_xKhoaHoc.NGAYKETTHUC = dtpNgayKetThuc.Value;
+                qlsv_xKhoaHoc.GHICHU = txtGhichu_KhoaHoc.Text;
+                qlsv_xKhoaHoc.CapNhatKhoaHoc();
+                dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
+                DisEnable_KhoaHoc();
+                btnCancel_KhoaHoc.Enabled = true;
+                btnNhapLaiKhoahoc.Enabled = true;
+
+            }
         }
 
         private void btnNhapLaiKhoahoc_Click(object sender, EventArgs e)
         {
-            xlc.ClearAllTextBox(groupBox7);
+            flag = "sửa";
+            btnCancel_KhoaHoc.Enabled = false;
+            btnNhapLaiKhoahoc.Enabled = false;
+            Enable_KhoaHoc();
         }
 
         private void dgvKhoaHoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int n = dgvKhoaHoc.SelectedRows.Count;
-
-
-
-            for (int i = 0; i < n; i++)
-            {
-                txtMaKhoaHoc.Text = dgvKhoaHoc.SelectedRows[i].Cells[2].Value.ToString();
-                txtTenKhoaHoc.Text = dgvKhoaHoc.SelectedRows[i].Cells[3].Value.ToString();
-                if (dgvKhoaHoc.SelectedRows[i].Cells[4].Value.ToString() != "")
+           
+                txtMaKhoaHoc.Text = dgvKhoaHoc.CurrentRow.Cells[0].Value.ToString();
+                txtTenKhoaHoc.Text = dgvKhoaHoc.CurrentRow.Cells[1].Value.ToString();
+                if (dgvKhoaHoc.CurrentRow.Cells[2].Value.ToString() != "")
                 {
-                    dtpNgayBatDau.Value = (DateTime)dgvKhoaHoc.SelectedRows[i].Cells[4].Value;
+                    dtpNgayBatDau.Value = (DateTime)dgvKhoaHoc.CurrentRow.Cells[2].Value;
                 }
-                if (dgvKhoaHoc.SelectedRows[i].Cells[5].Value.ToString() != "")
+                if (dgvKhoaHoc.CurrentRow.Cells[3].Value.ToString() != "")
                 {
-                    dtpNgayKetThuc.Value = (DateTime)dgvKhoaHoc.SelectedRows[i].Cells[5].Value;
+                    dtpNgayKetThuc.Value = (DateTime)dgvKhoaHoc.CurrentRow.Cells[3].Value;
                 }
 
-                txtGhichu_KhoaHoc.Text = dgvKhoaHoc.SelectedRows[i].Cells[6].Value.ToString();
+                txtGhichu_KhoaHoc.Text = dgvKhoaHoc.CurrentRow.Cells[4].Value.ToString();
 
-            }
+            
             qlsv_xKhoaHoc.MAKHOAHOC = txtMaKhoaHoc.Text;
             qlsv_xKhoaHoc.TENKHOAHOC = txtTenKhoaHoc.Text;
             qlsv_xKhoaHoc.NGAYBATDAU = dtpNgayBatDau.Value;
             qlsv_xKhoaHoc.NGAYKETTHUC = dtpNgayKetThuc.Value;
             qlsv_xKhoaHoc.GHICHU = txtGhichu_KhoaHoc.Text;
 
-
-            if (e.ColumnIndex == 0)
-            {
-
-                qlsv_xKhoaHoc.CapNhatKhoaHoc();
-                dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
-                xlc.ClearAllTextBox(groupBox7);
-            }
-            if (e.ColumnIndex == 1)
-            {
-
-                qlsv_xKhoaHoc.XoaKhoaHoc();
-                dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
-                xlc.ClearAllTextBox(groupBox7);
-            }
         }
+        private void btnCancel_KhoaHoc_Click(object sender, EventArgs e)
+        {
+            qlsv_xKhoaHoc.XoaKhoaHoc();
+            dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
+            xlc.ClearAllTextBox(groupBox1);
+        }
+
         #endregion
 
-     
+
     }
 }

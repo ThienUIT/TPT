@@ -22,19 +22,59 @@ namespace QLSV_GiaoDien.UserControls
 
         private void uc_GiaoVien_KhoaHoc_Khoa_He_Load(object sender, EventArgs e)
         {
-           
+            dgvKhoa.DataSource = qlsv_xlKhoa.LoadDLKhoa();
             dgvGiaoVien.DataSource = qlsv_xlGiaoVien.LoadDLGiaoVien();
             qlsv_xlGiaoVien.cmbMAKHOA = cmbMaKhoa;
             qlsv_xlGiaoVien.LoadDLVao_cmbMaKhoa();
-
-            dgvKhoa.DataSource = qlsv_xlKhoa.LoadDLKhoa();
-
-            
+            DisEnable_GiaoVien();
+            DisEnable_khoa();
+        }
+        public void Enable_Giaovien()
+        {
+            txtMaGiaoVien.Enabled = true;
+            txtTenGiaoVien.Enabled = true;
+            cmbMaKhoa.Enabled = true;
+            txtGhiChu.Enabled = true;
+            btnLuuGV.Visible = true;
+        }
+        public void DisEnable_GiaoVien()
+        {
+            txtMaGiaoVien.Enabled = false;
+            txtTenGiaoVien.Enabled = false;
+            cmbMaKhoa.Enabled = false;
+            txtGhiChu.Enabled = false;
+            btnLuuGV.Visible = false;
+        }
+        public void Enable_khoa()
+        {
+            txtMaKhoa.Enabled = true;
+            txtTenKhoa.Enabled = true;
+            txtGhiChu_Khoa.Enabled = true;
+            btnLuuKhoa.Enabled = true;
+        }
+        public void DisEnable_khoa()
+        {
+            txtMaKhoa.Enabled = false;
+            txtTenKhoa.Enabled = false;
+            txtGhiChu_Khoa.Enabled = false;
+            btnLuuKhoa.Enabled = false;
         }
 
 
         #region giáo viên
         private void btnThem_Click(object sender, EventArgs e)
+        {
+            Enable_Giaovien();
+            cXLC.ClearAllTextBox(groupboxGV);  
+        }
+
+        private void btnLamlai_Click(object sender, EventArgs e)
+        {
+            cXLC.ClearAllTextBox(groupboxGV);
+        }
+
+
+        private void btnLuuGV_Click(object sender, EventArgs e)
         {
             txtMaGiaoVien.Text = qlsv_xlGiaoVien.TaoMaGV();
 
@@ -49,14 +89,8 @@ namespace QLSV_GiaoDien.UserControls
 
             qlsv_xlGiaoVien.TXT = txtThongTinTimKiem_GV;
             qlsv_xlGiaoVien.GoiYGiaoVien();
+            DisEnable_GiaoVien();
         }
-
-        private void btnLamlai_Click(object sender, EventArgs e)
-        {
-            cXLC.ClearAllTextBox(groupboxGV);
-        }
-
-       
         private void btnTim_Click(object sender, EventArgs e)
         {
             if (cmbDieuKienTim.Text == "-- Chọn điều kiện --")
@@ -105,38 +139,63 @@ namespace QLSV_GiaoDien.UserControls
             {
                 cmbMaKhoa.SelectedValue = dgvGiaoVien.CurrentRow.Cells[4].Value;
                 qlsv_xlGiaoVien.MAKHOA = cmbMaKhoa.SelectedValue.ToString();
-               
+                
+             
             }
+            else
+            {
+                cmbMaKhoa.SelectedValue = "";
+            }
+
+
+
             txtGhiChu.Text = dgvGiaoVien.CurrentRow.Cells[5].Value.ToString();
 
             qlsv_xlGiaoVien.MAGIAOVIEN = txtMaGiaoVien.Text;
             qlsv_xlGiaoVien.TENGIAOVIEN = txtTenGiaoVien.Text;
             qlsv_xlGiaoVien.GHICHU = txtGhiChu.Text;
-           
+
            
             if (e.ColumnIndex == 0)
             {
-                qlsv_xlGiaoVien.CapNhatGiaoVien();
-                dgvGiaoVien.DataSource = qlsv_xlGiaoVien.LoadDLGiaoVien();
-                cXLC.ClearAllTextBox(groupboxGV);
+                DialogResult dlr = MessageBox.Show("Bạn có muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dlr == DialogResult.Yes)
+                {
+                    qlsv_xlGiaoVien.CapNhatGiaoVien();
+                    dgvGiaoVien.DataSource = qlsv_xlGiaoVien.LoadDLGiaoVien();
+                   
+                }                 
             }
             if (e.ColumnIndex == 1)
             {
-                qlsv_xlGiaoVien.XoaGiaoVien();
-                dgvGiaoVien.DataSource = qlsv_xlGiaoVien.LoadDLGiaoVien();
-                cXLC.ClearAllTextBox(groupboxGV);
+                DialogResult dlr = MessageBox.Show("Bạn có muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dlr == DialogResult.Yes)
+                {
+                    qlsv_xlGiaoVien.XoaGiaoVien();
+                    dgvGiaoVien.DataSource = qlsv_xlGiaoVien.LoadDLGiaoVien();
+                    cXLC.ClearAllTextBox(groupboxGV);
+                }
             }
         }
 
         #endregion
 
         #region Khoa
-        private void textBox3_TextChanged(object sender, EventArgs e)
+      
+
+        private void btnThemKhoa_Click(object sender, EventArgs e)
         {
+            Enable_khoa();
+            cXLC.ClearAllTextBox(groupboxKhoa);
+            txtTenKhoa.Focus();
 
         }
 
-        private void btnThemKhoa_Click(object sender, EventArgs e)
+        private void btnNhaplaiKhoa_Click(object sender, EventArgs e)
+        {
+            cXLC.ClearAllTextBox(groupboxKhoa);
+        }
+        private void btnLuuKhoa_Click(object sender, EventArgs e)
         {
             txtMaKhoa.Text = qlsv_xlKhoa.TaoMaKhoa();
 
@@ -146,18 +205,12 @@ namespace QLSV_GiaoDien.UserControls
 
             qlsv_xlKhoa.ThemKhoa();
             dgvKhoa.DataSource = qlsv_xlKhoa.LoadDLKhoa();
-            cXLC.ClearAllTextBox(groupboxKhoa);
+            
 
             qlsv_xlGiaoVien.cmbMAKHOA = cmbMaKhoa;
             qlsv_xlGiaoVien.LoadDLVao_cmbMaKhoa();
-
+            DisEnable_khoa();
         }
-
-        private void btnNhaplaiKhoa_Click(object sender, EventArgs e)
-        {
-            cXLC.ClearAllTextBox(groupboxKhoa);
-        }
-
         private void dgvKhoa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaKhoa.Text = dgvKhoa.CurrentRow.Cells[2].Value.ToString();
@@ -170,32 +223,37 @@ namespace QLSV_GiaoDien.UserControls
 
             if (e.ColumnIndex == 0)
             {
-                qlsv_xlKhoa.CapNhatKhoa();
-                dgvKhoa.DataSource = qlsv_xlKhoa.LoadDLKhoa();
-                cXLC.ClearAllTextBox(groupboxKhoa);
+                DialogResult dlr = MessageBox.Show("Bạn có muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dlr == DialogResult.Yes)
+                {
+                    qlsv_xlKhoa.CapNhatKhoa();
+                    dgvKhoa.DataSource = qlsv_xlKhoa.LoadDLKhoa();
+                    cXLC.ClearAllTextBox(groupboxKhoa);
 
-                qlsv_xlGiaoVien.cmbMAKHOA = cmbMaKhoa;
-                qlsv_xlGiaoVien.LoadDLVao_cmbMaKhoa();
+                    qlsv_xlGiaoVien.cmbMAKHOA = cmbMaKhoa;
+                    qlsv_xlGiaoVien.LoadDLVao_cmbMaKhoa();
+                }
                
             }
 
             if (e.ColumnIndex == 1)
             {
-                qlsv_xlKhoa.XoaKhoa();
-                dgvKhoa.DataSource = qlsv_xlKhoa.LoadDLKhoa();
-                cXLC.ClearAllTextBox(groupboxKhoa);
+                DialogResult dlr = MessageBox.Show("Bạn có muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dlr == DialogResult.Yes)
+                {
+                    qlsv_xlKhoa.XoaKhoa();
+                    dgvKhoa.DataSource = qlsv_xlKhoa.LoadDLKhoa();
+                    cXLC.ClearAllTextBox(groupboxKhoa);
 
-                qlsv_xlGiaoVien.cmbMAKHOA = cmbMaKhoa;
-                qlsv_xlGiaoVien.LoadDLVao_cmbMaKhoa();
+                    qlsv_xlGiaoVien.cmbMAKHOA = cmbMaKhoa;
+                    qlsv_xlGiaoVien.LoadDLVao_cmbMaKhoa();
+                }
+
                
             }
         }
-
         #endregion
 
-        
-    
-
-      
+  
     }
 }

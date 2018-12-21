@@ -37,9 +37,9 @@
             this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChuKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSuaKhoaHoc = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXoaKhoaHoc = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancel_KhoaHoc = new System.Windows.Forms.Button();
+            this.btnLuuKhoa = new System.Windows.Forms.Button();
             this.dtpNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayBatDau = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
@@ -97,8 +97,6 @@
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.btnLuuKhoa = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabKhoaHoc_Nganh_Lop.SuspendLayout();
             this.tabKhoaHoc.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -158,14 +156,11 @@
             this.TenKhoaHoc,
             this.NgayBatDau,
             this.NgayKetThuc,
-            this.GhiChuKhoaHoc,
-            this.btnSuaKhoaHoc,
-            this.btnXoaKhoaHoc});
+            this.GhiChuKhoaHoc});
             this.dgvKhoaHoc.Location = new System.Drawing.Point(11, 36);
             this.dgvKhoaHoc.Margin = new System.Windows.Forms.Padding(4);
             this.dgvKhoaHoc.Name = "dgvKhoaHoc";
             this.dgvKhoaHoc.ReadOnly = true;
-            this.dgvKhoaHoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKhoaHoc.Size = new System.Drawing.Size(875, 265);
             this.dgvKhoaHoc.TabIndex = 0;
             this.dgvKhoaHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhoaHoc_CellClick);
@@ -210,29 +205,9 @@
             this.GhiChuKhoaHoc.Name = "GhiChuKhoaHoc";
             this.GhiChuKhoaHoc.ReadOnly = true;
             // 
-            // btnSuaKhoaHoc
-            // 
-            this.btnSuaKhoaHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnSuaKhoaHoc.HeaderText = "Sửa";
-            this.btnSuaKhoaHoc.Name = "btnSuaKhoaHoc";
-            this.btnSuaKhoaHoc.ReadOnly = true;
-            this.btnSuaKhoaHoc.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.btnSuaKhoaHoc.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnSuaKhoaHoc.Text = "Sửa";
-            this.btnSuaKhoaHoc.UseColumnTextForButtonValue = true;
-            // 
-            // btnXoaKhoaHoc
-            // 
-            this.btnXoaKhoaHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnXoaKhoaHoc.HeaderText = "Xóa";
-            this.btnXoaKhoaHoc.Name = "btnXoaKhoaHoc";
-            this.btnXoaKhoaHoc.ReadOnly = true;
-            this.btnXoaKhoaHoc.Text = "Xóa";
-            this.btnXoaKhoaHoc.UseColumnTextForButtonValue = true;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnCancel_KhoaHoc);
             this.groupBox1.Controls.Add(this.btnLuuKhoa);
             this.groupBox1.Controls.Add(this.dtpNgayKetThuc);
             this.groupBox1.Controls.Add(this.dtpNgayBatDau);
@@ -254,6 +229,30 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thêm mới một Khóa học";
+            // 
+            // btnCancel_KhoaHoc
+            // 
+            this.btnCancel_KhoaHoc.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
+            this.btnCancel_KhoaHoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel_KhoaHoc.Location = new System.Drawing.Point(776, 130);
+            this.btnCancel_KhoaHoc.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel_KhoaHoc.Name = "btnCancel_KhoaHoc";
+            this.btnCancel_KhoaHoc.Size = new System.Drawing.Size(100, 54);
+            this.btnCancel_KhoaHoc.TabIndex = 15;
+            this.btnCancel_KhoaHoc.UseVisualStyleBackColor = true;
+            this.btnCancel_KhoaHoc.Click += new System.EventHandler(this.btnCancel_KhoaHoc_Click);
+            // 
+            // btnLuuKhoa
+            // 
+            this.btnLuuKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
+            this.btnLuuKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuuKhoa.Location = new System.Drawing.Point(519, 130);
+            this.btnLuuKhoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuuKhoa.Name = "btnLuuKhoa";
+            this.btnLuuKhoa.Size = new System.Drawing.Size(100, 54);
+            this.btnLuuKhoa.TabIndex = 14;
+            this.btnLuuKhoa.UseVisualStyleBackColor = true;
+            this.btnLuuKhoa.Click += new System.EventHandler(this.btnLuuKhoa_Click);
             // 
             // dtpNgayKetThuc
             // 
@@ -875,28 +874,6 @@
             this.label32.TabIndex = 0;
             this.label32.Text = "Mã Lớp:";
             // 
-            // btnLuuKhoa
-            // 
-            this.btnLuuKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
-            this.btnLuuKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLuuKhoa.Location = new System.Drawing.Point(519, 130);
-            this.btnLuuKhoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLuuKhoa.Name = "btnLuuKhoa";
-            this.btnLuuKhoa.Size = new System.Drawing.Size(100, 54);
-            this.btnLuuKhoa.TabIndex = 14;
-            this.btnLuuKhoa.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(776, 130);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 54);
-            this.button1.TabIndex = 15;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // uc_KhoaHoc_Nganh_Lop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -933,13 +910,6 @@
         private System.Windows.Forms.TabPage tabKhoaHoc;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView dgvKhoaHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoaHoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayBatDau;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgayKetThuc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChuKhoaHoc;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSuaKhoaHoc;
-        private System.Windows.Forms.DataGridViewButtonColumn btnXoaKhoaHoc;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtpNgayKetThuc;
         private System.Windows.Forms.DateTimePicker dtpNgayBatDau;
@@ -998,7 +968,12 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancel_KhoaHoc;
         private System.Windows.Forms.Button btnLuuKhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoaHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayBatDau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayKetThuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChuKhoaHoc;
     }
 }
