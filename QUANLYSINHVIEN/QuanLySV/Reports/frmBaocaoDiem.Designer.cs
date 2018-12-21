@@ -41,12 +41,14 @@
             this.LanThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnExel);
             this.groupBox1.Controls.Add(this.btnXemDiem);
             this.groupBox1.Controls.Add(this.txtMSSV);
             this.groupBox1.Controls.Add(this.label1);
@@ -170,6 +172,16 @@
             this.GhiChu.Name = "GhiChu";
             this.GhiChu.ReadOnly = true;
             // 
+            // btnExel
+            // 
+            this.btnExel.Location = new System.Drawing.Point(439, 22);
+            this.btnExel.Name = "btnExel";
+            this.btnExel.Size = new System.Drawing.Size(75, 23);
+            this.btnExel.TabIndex = 3;
+            this.btnExel.Text = "Exel";
+            this.btnExel.UseVisualStyleBackColor = true;
+            this.btnExel.Click += new System.EventHandler(this.Exel_Click);
+            // 
             // frmBaocaoDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,5 +215,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LanThi;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayThi;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
+        private System.Windows.Forms.Button btnExel;
     }
 }

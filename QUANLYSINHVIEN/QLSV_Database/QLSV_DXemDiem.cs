@@ -14,7 +14,7 @@ namespace QLSV_Database
             DataTable dt = new DataTable();
           
             string strSQL;
-            strSQL = "  SELECT        MonHoc.TenMonHoc,MonHoc.SoTinChi, Diem.DiemLanI, Diem.DiemLanII, Diem.LanThi, Diem.NgayThi, Diem.GhiChu, SinhVien.Hoten ";
+            strSQL = "  SELECT        MonHoc.TenMonHoc,MonHoc.SoTinChi,SinhVien.Hoten, Diem.DiemLanI, Diem.DiemLanII, Diem.LanThi, Diem.NgayThi, Diem.GhiChu ";
                    strSQL +=" FROM  Diem INNER JOIN";
                    strSQL += " MonHoc ON Diem.MaMonHoc = MonHoc.MaMonHoc INNER JOIN SinhVien ON   Diem.MaSV = SinhVien.MaSinhVien and Sinhvien.MaSinhVien = '" + masv + "'";
             dt = cThaotacchung.Reports(strSQL,"Diem");

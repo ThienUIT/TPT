@@ -29,5 +29,12 @@ namespace QLSV_GiaoDien.Reports
             
             
         }
+
+        private void Exel_Click(object sender, EventArgs e)
+        {
+            xlDiem.MASV = txtMSSV.Text;
+            XemDiem excel = new XemDiem();
+            excel.Export(xlDiem.xemdiem(), "Danh sach", "Bảng Điểm");
+        }
     }
 }
