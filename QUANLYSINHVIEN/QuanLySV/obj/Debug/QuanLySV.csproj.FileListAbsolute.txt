@@ -198,9 +198,7 @@ C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_G
 C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.Reports.frmBaocaoMH.resources
 C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.Reports.frmReportSinhVien.resources
 C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.uc_DK_MonHoc.resources
-C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_GiaoVien_KhoaHoc_Khoa_He.resources
 C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_NhapDiem.resources
-C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_SinhVien_Lop_MonHoc.resources
 C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.uc_User.resources
 C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QuanLySV.csproj.GenerateResource.cache
 C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QuanLySV.csproj.CoreCompileInputs.cache
@@ -255,3 +253,6 @@ C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technol
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_KhoaHoc_Nganh_Lop.resources
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_GiaoVien_Khoa.resources
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_SinhVien_Mon_DKMH.resources
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_KhoaHoc_Nganh_Lop.resources
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_GiaoVien_Khoa.resources
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_SinhVien_Mon_DKMH.resources

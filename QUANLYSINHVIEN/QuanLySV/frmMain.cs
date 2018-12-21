@@ -303,13 +303,12 @@ namespace QLSV_GiaoDien
             lblTitle.Text = "Chương trình quản lý sinh viên";
         }
         //
-        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            notifyIcon1.Visible = true;
+            this.ShowInTaskbar = false;
+            this.Hide();
+           // WindowState = FormWindowState.Minimized;
         }
 
         #endregion
@@ -425,6 +424,30 @@ namespace QLSV_GiaoDien
             lnkXuatSV.BackColor = System.Drawing.Color.Empty;
         }
 
+        private void notifyIcon1_BalloonTipClosed(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void frmMain_Resize(object sender, EventArgs e)
+        {
+            if(WindowState==FormWindowState.Minimized)
+            {
+                notifyIcon1.Visible = true;
+                this.ShowInTaskbar = false;
+                this.Hide();
+            }
+        }
+
+        private void notifyIcon1_Click(object sender, EventArgs e)
+        {
+            notifyIcon1.Visible = false;
+            WindowState = FormWindowState.Normal;
+            this.ShowInTaskbar = true;
+            this.Show();
+        }
+
+
         private void lnkXemDiem_MouseHover(object sender, EventArgs e)
         {
             lnkXemDiem.BackColor = System.Drawing.Color.AliceBlue;
@@ -451,7 +474,8 @@ namespace QLSV_GiaoDien
             Aboutme ab = new Aboutme();
             ab.ShowDialog();
         }
-
+        
+        
        
     }
 }
