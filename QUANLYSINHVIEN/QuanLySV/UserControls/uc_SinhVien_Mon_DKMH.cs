@@ -117,14 +117,13 @@ namespace QLSV_GiaoDien.UserControls
             qlsv_xlSV.CMB = cbMaLop;
             qlsv_xlSV.LayDLVaoComboboxMaLop();
             DisEnable_SV();
-            DisEnable_MH();
-            DisEnable_DKMH();
             #endregion
 
             #region Monhoc
             qlsv_slMonHoc.CMB = cmbMaKhoa_MH;
             qlsv_slMonHoc.LoadDLVaoCombobox_cmbMaKhoa_MH();
             dgvMonhoc.DataSource = qlsv_slMonHoc.LoadDLMonHoc();
+            DisEnable_MH();
             #endregion 
 
             #region DK môn học
@@ -136,6 +135,8 @@ namespace QLSV_GiaoDien.UserControls
            qlsv_xlDKMonHoc.GoiYTimKiem();
             qlsv_xlDKMonHoc.TXTMSV = txtMSV_DKMH;
             qlsv_xlDKMonHoc.GoiYMSSV();
+
+            DisEnable_DKMH();
             #endregion
         }
         #endregion
@@ -145,6 +146,7 @@ namespace QLSV_GiaoDien.UserControls
         private void btnDongy_Click(object sender, EventArgs e)
         {
             Enable_SV();
+            btnLamlai.Visible = false;
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
@@ -169,11 +171,16 @@ namespace QLSV_GiaoDien.UserControls
             qlsv_xlSV.ThemSinhVien();
             dgv_SV.DataSource = qlsv_xlSV.LoadDL();
 
+            DisEnable_SV();
+            btnThem_SV.Visible = true;
+            btnLamlai.Visible = true;
+
         }
         private void btnCancel_SV_Click(object sender, EventArgs e)
         {
             xlc.ClearAllTextBox(groupBox1);
             DisEnable_SV();
+            btnThem_SV.Visible = true;
             
         }
         private void tabSinhVien_Click(object sender, EventArgs e)
@@ -187,11 +194,6 @@ namespace QLSV_GiaoDien.UserControls
             frmQLSV.ShowDialog();
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            xlc.ClearAllTextBox(groupBox1);
-        }
-
 
         private void cbMaLop_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -203,6 +205,7 @@ namespace QLSV_GiaoDien.UserControls
             txtMSSV.Text = dgv_SV.CurrentRow.Cells[0].Value.ToString();
             txtHotenSv.Text = dgv_SV.CurrentRow.Cells[1].Value.ToString();
             txtQueQuan.Text = dgv_SV.CurrentRow.Cells[2].Value.ToString();
+            cbMaLop.SelectedValue = dgv_SV.CurrentRow.Cells[6].Value.ToString();
             if((dgv_SV.CurrentRow.Cells[3].Value.ToString()==""))
                 { dtp_NgaySinh.Value = DateTime.Now; }
             else
@@ -224,7 +227,7 @@ namespace QLSV_GiaoDien.UserControls
                 rdNam.Checked = false;
                 rdNu.Checked = false;
             }
-            qlsv_xlop.MALOP = cbMaLop.Text;
+            
            
 
 
@@ -258,16 +261,16 @@ namespace QLSV_GiaoDien.UserControls
             qlsv_slMonHoc.ThemMonHoc();
             dgvMonhoc.DataSource = qlsv_slMonHoc.LoadDLMonHoc();
             xlc.ClearAllTextBox(groupBox3);
+
             DisEnable_MH();
+            btnThem_MH.Visible = true;
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
             Enable_MH();
+            btnThem_MH.Visible = false;
         }
-        private void btnLamlai_Click(object sender, EventArgs e)
-        {
-            xlc.ClearAllTextBox(groupBox3);
-        }
+
         private void btnCancel_MH_Click(object sender, EventArgs e)
         {
             xlc.ClearAllTextBox(groupBox3);
@@ -276,11 +279,13 @@ namespace QLSV_GiaoDien.UserControls
         private void dgvMonhoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaMH.Text = dgvMonhoc.CurrentRow.Cells[0].Value.ToString();
-            txtTenMh.Text = dgvMonhoc.CurrentRow.Cells[1].Value.ToString();
+            txtTenMh.Text = dgvMonhoc.CurrentRow.Cells[1].Value.ToString();            
             numSoTinChi.Value = Convert.ToInt32(dgvMonhoc.CurrentRow.Cells[3].Value);
+            cmbMaKhoa_MH.SelectedValue = dgvMonhoc.CurrentRow.Cells[4].Value.ToString();
             numSoTCDK.Value = Convert.ToInt32(dgvMonhoc.CurrentRow.Cells[5].Value);
             numSoTietLT.Value = Convert.ToInt32(dgvMonhoc.CurrentRow.Cells[6].Value);
             numSoTietTH.Value = Convert.ToInt32(dgvMonhoc.CurrentRow.Cells[7].Value);
+
             if(dgvMonhoc.CurrentRow.Cells[2].Value.ToString()=="Môn bắt buộc")
             {
                 rdMonbatbuoc.Checked = true;
@@ -310,7 +315,6 @@ namespace QLSV_GiaoDien.UserControls
             dgvDangkyMH.Enabled = false;
             txtMSV_DKMH.Focus();
             xlc.ClearAllTextBox(groupBoxDKMH);
-
             Enable_DKMH();
         }
         private void btnLuu_DKMH_Click(object sender, EventArgs e)
@@ -331,12 +335,14 @@ namespace QLSV_GiaoDien.UserControls
 
 
                 qlsv_xlDKMonHoc.ThemDKMonHoc();
-                dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.TimKiemSVDK();
-                //dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.LoadDL_DKMonHoc();
+               // dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.TimKiemSVDK();
+                dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.LoadDL_DKMonHoc();
                 xlc.ClearAllTextBox(groupboxSVDKMH);
+
                 qlsv_xlDKMonHoc.TXTTIM = txtTim_MSSV;
                 qlsv_xlDKMonHoc.GoiYTimKiem();
                 lblTenSV.Text = qlsv_xlDKMonHoc.LayTenSV();
+
                 groupboxSVDKMH.Visible = true;
 
                 DisEnable_DKMH();
@@ -366,7 +372,6 @@ namespace QLSV_GiaoDien.UserControls
 
                 qlsv_xlDKMonHoc.CapNhatDKMonHoc();
                 dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.TimKiemSVDK();
-               
                 xlc.ClearAllTextBox(groupboxSVDKMH);
                 DisEnable_DKMH();
 
@@ -376,6 +381,8 @@ namespace QLSV_GiaoDien.UserControls
                 dgvDangkyMH.Enabled = true;
                 //focus
                 dgvDangkyMH.CurrentCell = dgvDangkyMH[0, index];
+
+
             }
         }
 
@@ -385,6 +392,7 @@ namespace QLSV_GiaoDien.UserControls
             dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.LoadDL_DKMonHoc();
             xlc.ClearAllTextBox(groupBoxDKMH);
             DisEnable_DKMH();
+
 
         }
         private void btnLamlai_DKMH_Click(object sender, EventArgs e)
@@ -415,7 +423,7 @@ namespace QLSV_GiaoDien.UserControls
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
-
+        //đang bị lỗi chưa fix
         private void dgvDangkyMH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvDangkyMH.CurrentRow.Cells[2].Value.ToString() != "" && dgvDangkyMH.CurrentRow.Cells[4].Value.ToString() != "")
@@ -431,19 +439,7 @@ namespace QLSV_GiaoDien.UserControls
                 qlsv_xlDKMonHoc.NGAYDANGKY = dtp_NgayDKMH.Value;
                 qlsv_xlDKMonHoc.SOTINCHI = (int)numSoTCDK.Value;
                 qlsv_xlDKMonHoc.HOCKY = int.Parse(txtHocky.Text);
-
-                if (e.ColumnIndex == 0)
-                {
-                    qlsv_xlDKMonHoc.CapNhatDKMonHoc();
-                    dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.TimKiemSVDK();
-                    xlc.ClearAllTextBox(groupboxSVDKMH);
-                }
-                else if (e.ColumnIndex == 1)
-                {
-                    qlsv_xlDKMonHoc.XoaDKMonHoc();
-                    dgvDangkyMH.DataSource = qlsv_xlDKMonHoc.TimKiemSVDK();
-                    xlc.ClearAllTextBox(groupboxSVDKMH);
-                }
+          
             }
 
 

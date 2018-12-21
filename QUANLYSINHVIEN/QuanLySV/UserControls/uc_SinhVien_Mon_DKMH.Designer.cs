@@ -256,7 +256,7 @@
             // 
             this.btnCancel_SV.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_cancel;
             this.btnCancel_SV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCancel_SV.Location = new System.Drawing.Point(60, 102);
+            this.btnCancel_SV.Location = new System.Drawing.Point(60, 103);
             this.btnCancel_SV.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel_SV.Name = "btnCancel_SV";
             this.btnCancel_SV.Size = new System.Drawing.Size(87, 48);
@@ -280,13 +280,12 @@
             // 
             this.btnClear.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClear.Location = new System.Drawing.Point(60, 102);
+            this.btnClear.Location = new System.Drawing.Point(60, 103);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(87, 48);
             this.btnClear.TabIndex = 2;
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnThem_SV
             // 
@@ -590,7 +589,6 @@
             this.btnLamlai.Size = new System.Drawing.Size(100, 39);
             this.btnLamlai.TabIndex = 30;
             this.btnLamlai.UseVisualStyleBackColor = true;
-            this.btnLamlai.Click += new System.EventHandler(this.btnLamlai_Click);
             // 
             // btnQLMH
             // 
