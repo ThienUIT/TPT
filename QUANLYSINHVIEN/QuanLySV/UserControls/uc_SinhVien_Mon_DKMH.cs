@@ -148,6 +148,7 @@ namespace QLSV_GiaoDien.UserControls
         private void btnDongy_Click(object sender, EventArgs e)
         {
             Enable_SV();
+            btnTakePhoto.Enabled = true;
             xlc.ClearAllTextBox(groupBox1);
             btnLamlai.Visible = false;
         }
@@ -523,8 +524,13 @@ namespace QLSV_GiaoDien.UserControls
 
 
 
+
         #endregion
 
-
+        private void TakePhoto_Click(object sender, EventArgs e)
+        {
+            WebCam wb = new WebCam();
+            wb.Show();
+        }
     }
 }

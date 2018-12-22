@@ -258,3 +258,9 @@ C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_G
 C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.UserControls.uc_SinhVien_Mon_DKMH.resources
 C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\bin\Debug\Microsoft.Office.Interop.Excel.dll
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\bin\Debug\AForge.dll
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\bin\Debug\AForge.Video.dll
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\bin\Debug\AForge.xml
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\bin\Debug\AForge.Video.xml
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\bin\Debug\AForge.Video.DirectShow.xml
