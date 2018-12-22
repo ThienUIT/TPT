@@ -112,6 +112,8 @@ namespace QLSV_GiaoDien.UserControls
  
         private void uc_SinhVien_Lop_MonHoc_Load(object sender, EventArgs e)
         {
+          
+
             #region SinhVien
             dgv_SV.DataSource = qlsv_xlSV.LoadDL();
             qlsv_xlSV.CMB = cbMaLop;
@@ -146,6 +148,7 @@ namespace QLSV_GiaoDien.UserControls
         private void btnDongy_Click(object sender, EventArgs e)
         {
             Enable_SV();
+            xlc.ClearAllTextBox(groupBox1);
             btnLamlai.Visible = false;
         }
         private void btnLuu_Click(object sender, EventArgs e)
@@ -192,6 +195,7 @@ namespace QLSV_GiaoDien.UserControls
         {
             frmQuanLySV frmQLSV = new frmQuanLySV();
             frmQLSV.ShowDialog();
+
         }
 
 
@@ -268,6 +272,7 @@ namespace QLSV_GiaoDien.UserControls
         private void btnThem_Click(object sender, EventArgs e)
         {
             Enable_MH();
+            xlc.ClearAllTextBox(groupBox3);
             btnThem_MH.Visible = false;
         }
 
@@ -279,18 +284,27 @@ namespace QLSV_GiaoDien.UserControls
         private void dgvMonhoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaMH.Text = dgvMonhoc.CurrentRow.Cells[0].Value.ToString();
-            txtTenMh.Text = dgvMonhoc.CurrentRow.Cells[1].Value.ToString();            
-            numSoTinChi.Value = Convert.ToInt32(dgvMonhoc.CurrentRow.Cells[3].Value);
-            cmbMaKhoa_MH.SelectedValue = dgvMonhoc.CurrentRow.Cells[4].Value.ToString();
-            numSoTCDK.Value = Convert.ToInt32(dgvMonhoc.CurrentRow.Cells[5].Value);
-            numSoTietLT.Value = Convert.ToInt32(dgvMonhoc.CurrentRow.Cells[6].Value);
-            numSoTietTH.Value = Convert.ToInt32(dgvMonhoc.CurrentRow.Cells[7].Value);
-
-            if(dgvMonhoc.CurrentRow.Cells[2].Value.ToString()=="Môn bắt buộc")
+            txtTenMh.Text = dgvMonhoc.CurrentRow.Cells[1].Value.ToString();
+            cmbMaKhoa_MH.SelectedValue = dgvMonhoc.CurrentRow.Cells[2].Value.ToString();
+            if (dgvMonhoc.CurrentRow.Cells[3].Value.ToString() == "")
+            {
+                numSoTinChi.Value = 0;
+                numTongsotiet.Value = 0;
+                numSoTietLT.Value = 0;
+                numSoTietTH.Value = 0;
+            }
+            else
+            {
+                numSoTinChi.Value = (int)dgvMonhoc.CurrentRow.Cells[3].Value;
+                numTongsotiet.Value = (int)dgvMonhoc.CurrentRow.Cells[5].Value;
+                numSoTietLT.Value = (int)dgvMonhoc.CurrentRow.Cells[6].Value;
+                numSoTietTH.Value = (int)dgvMonhoc.CurrentRow.Cells[7].Value;
+            }
+            if(dgvMonhoc.CurrentRow.Cells[4].Value.ToString()=="Bắt buộc")
             {
                 rdMonbatbuoc.Checked = true;
             }
-            else if(dgvMonhoc.CurrentRow.Cells[2].Value.ToString() == "Môn tự chọn")
+            else if(dgvMonhoc.CurrentRow.Cells[4].Value.ToString() == "Tự chọn")
             {
                 rdMontuchon.Checked = true;
             }
@@ -423,24 +437,30 @@ namespace QLSV_GiaoDien.UserControls
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
-        //đang bị lỗi chưa fix
+       
         private void dgvDangkyMH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvDangkyMH.CurrentRow.Cells[2].Value.ToString() != "" && dgvDangkyMH.CurrentRow.Cells[4].Value.ToString() != "")
-            {
-                cmbMonHocDK.SelectedValue = dgvDangkyMH.CurrentRow.Cells[2].Value;
-                txtMSV_DKMH.Text = dgvDangkyMH.CurrentRow.Cells[3].Value.ToString();
-                dtp_NgayDKMH.Value = (DateTime)dgvDangkyMH.CurrentRow.Cells[4].Value;
-                numSoTCDK.Value = (int)dgvDangkyMH.CurrentRow.Cells[5].Value;
-                txtHocky.Text = dgvDangkyMH.CurrentRow.Cells[6].Value.ToString();
+            //if (dgvDangkyMH.CurrentRow.Cells[2].Value.ToString() != "" && dgvDangkyMH.CurrentRow.Cells[4].Value.ToString() != "")
+            //{
+            //    cmbMonHocDK.SelectedValue = dgvDangkyMH.CurrentRow.Cells[2].Value;
+            //    txtMSV_DKMH.Text = dgvDangkyMH.CurrentRow.Cells[3].Value.ToString();
+            //    dtp_NgayDKMH.Value = (DateTime)dgvDangkyMH.CurrentRow.Cells[4].Value;
+            //    numSoTCDK.Value = (int)dgvDangkyMH.CurrentRow.Cells[5].Value;
+            //    txtHocky.Text = dgvDangkyMH.CurrentRow.Cells[6].Value.ToString();
 
-                qlsv_xlDKMonHoc.MAMONHOC = cmbMonHocDK.SelectedValue.ToString();
-                qlsv_xlDKMonHoc.MASINHVIEN = txtMSV_DKMH.Text;
-                qlsv_xlDKMonHoc.NGAYDANGKY = dtp_NgayDKMH.Value;
-                qlsv_xlDKMonHoc.SOTINCHI = (int)numSoTCDK.Value;
-                qlsv_xlDKMonHoc.HOCKY = int.Parse(txtHocky.Text);
-          
-            }
+            //    qlsv_xlDKMonHoc.MAMONHOC = cmbMonHocDK.SelectedValue.ToString();
+            //    qlsv_xlDKMonHoc.MASINHVIEN = txtMSV_DKMH.Text;
+            //    qlsv_xlDKMonHoc.NGAYDANGKY = dtp_NgayDKMH.Value;
+            //    qlsv_xlDKMonHoc.SOTINCHI = (int)numSoTCDK.Value;
+            //    qlsv_xlDKMonHoc.HOCKY = int.Parse(txtHocky.Text);
+
+            //}
+
+            cmbMonHocDK.SelectedValue = dgvDangkyMH.CurrentRow.Cells[0].Value.ToString();
+            txtMSV_DKMH.Text = dgvDangkyMH.CurrentRow.Cells[1].Value.ToString();
+            dtp_NgayDKMH.Value = (DateTime)dgvDangkyMH.CurrentRow.Cells[2].Value;
+            txtHocky.Text = dgvDangkyMH.CurrentRow.Cells[3].Value.ToString();
+            numSoTCDK.Value = (int)dgvDangkyMH.CurrentRow.Cells[4].Value;
 
 
         }

@@ -18,10 +18,37 @@ namespace QLSV_GiaoDien
             InitializeComponent();
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        public void enable()
         {
-            this.Close();
+            txtMaMH.Enabled = true;
+            txtGhichu_MH.Enabled = true;
+            txtTenMh.Enabled = true;
+            txtTimMH.Enabled = true;
+            rdMonbatbuoc.Enabled = true;
+            rdMontuchon.Enabled = true;
+            numSoTietLT.Enabled = true;
+            numSoTietTH.Enabled = true;
+            numSoTinChi.Enabled = true;
+            numTongsotiet.Enabled = true;
+            cmbMaKhoa_MH.Enabled = true;
+            btnLuu.Visible = true;
         }
+        public void disenable()
+        {
+            txtMaMH.Enabled = false;
+            txtGhichu_MH.Enabled = false;
+            txtTenMh.Enabled = false;
+            txtTimMH.Enabled = false;
+            rdMonbatbuoc.Enabled = false;
+            rdMontuchon.Enabled = false;
+            numSoTietLT.Enabled = false;
+            numSoTietTH.Enabled = false;
+            numSoTinChi.Enabled = false;
+            numTongsotiet.Enabled = false;
+            cmbMaKhoa_MH.Enabled = false;
+            btnLuu.Visible = false;
+        }
+
 
         private void frmQuanLiMonHoc_Load(object sender, EventArgs e)
         {
@@ -29,6 +56,7 @@ namespace QLSV_GiaoDien
             qlsv_xlMonHoc.CMB = cmbMaKhoa_MH;
             qlsv_xlMonHoc.LoadDLVaoCombobox_cmbMaKhoa_MH();
 
+            disenable();
             //qlsv_xlMonHoc.TXTTIMKIEM = txtTimMH;
             //qlsv_xlMonHoc.GoiYTimMH();
         }
@@ -62,41 +90,8 @@ namespace QLSV_GiaoDien
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            qlsv_xlMonHoc.MAMONHOC = txtMaMH.Text;
-            qlsv_xlMonHoc.MAKHOA = cmbMaKhoa_MH.SelectedValue.ToString();
-            qlsv_xlMonHoc.TENMONHOC = txtTenMh.Text;
-            qlsv_xlMonHoc.SOTINCHI =(int) numSoTinChi.Value;
-            qlsv_xlMonHoc.SOTIETLYTHUYET = (int)numSoTietLT.Value;
-            qlsv_xlMonHoc.SOTIETTHUCHANH = (int)numSoTietTH.Value;
-            qlsv_xlMonHoc.TONGSOTIET = (int)numTongsotiet.Value;
-            qlsv_xlMonHoc.GHICHU = txtGhichu_MH.Text;
-            string hinhthuc = "";
-            if (rdMonbatbuoc.Checked == true)
-            {
-                hinhthuc = "Bắt buộc";
-            }
-            else
-                hinhthuc = "Tự chọn";
-
-            qlsv_xlMonHoc.HINHTHUC = hinhthuc;
-
-            qlsv_xlMonHoc.CapNhatMonHoc();
-            dgvMonhoc.DataSource = qlsv_xlMonHoc.LoadDLMonHoc();
-            xlc.ClearAllTextBox(groupBox3);
-
-            qlsv_xlMonHoc.TXTTIMKIEM = txtTimMH;
-            qlsv_xlMonHoc.GoiYTimMH();
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            qlsv_xlMonHoc.MAMONHOC = txtMaMH.Text;
-            qlsv_xlMonHoc.XoaMonHoc();
-            dgvMonhoc.DataSource = qlsv_xlMonHoc.LoadDLMonHoc();
-            xlc.ClearAllTextBox(groupBox3);
-
-            qlsv_xlMonHoc.TXTTIMKIEM = txtTimMH;
-            qlsv_xlMonHoc.GoiYTimMH();
+            enable();
+            groupBox1.Enabled = false;
         }
 
         private void cmbTimMH_SelectedIndexChanged(object sender, EventArgs e)
@@ -140,6 +135,45 @@ namespace QLSV_GiaoDien
 
         }
 
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            qlsv_xlMonHoc.MAMONHOC = txtMaMH.Text;
+            qlsv_xlMonHoc.MAKHOA = cmbMaKhoa_MH.SelectedValue.ToString();
+            qlsv_xlMonHoc.TENMONHOC = txtTenMh.Text;
+            qlsv_xlMonHoc.SOTINCHI = (int)numSoTinChi.Value;
+            qlsv_xlMonHoc.SOTIETLYTHUYET = (int)numSoTietLT.Value;
+            qlsv_xlMonHoc.SOTIETTHUCHANH = (int)numSoTietTH.Value;
+            qlsv_xlMonHoc.TONGSOTIET = (int)numTongsotiet.Value;
+            qlsv_xlMonHoc.GHICHU = txtGhichu_MH.Text;
+            string hinhthuc = "";
+            if (rdMonbatbuoc.Checked == true)
+            {
+                hinhthuc = "Bắt buộc";
+            }
+            else
+                hinhthuc = "Tự chọn";
 
+            qlsv_xlMonHoc.HINHTHUC = hinhthuc;
+
+            qlsv_xlMonHoc.CapNhatMonHoc();
+            dgvMonhoc.DataSource = qlsv_xlMonHoc.LoadDLMonHoc();
+            xlc.ClearAllTextBox(groupBox3);
+
+            qlsv_xlMonHoc.TXTTIMKIEM = txtTimMH;
+            qlsv_xlMonHoc.GoiYTimMH();
+            disenable();
+            groupBox1.Enabled = true;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            qlsv_xlMonHoc.MAMONHOC = txtMaMH.Text;
+            qlsv_xlMonHoc.XoaMonHoc();
+            dgvMonhoc.DataSource = qlsv_xlMonHoc.LoadDLMonHoc();
+            xlc.ClearAllTextBox(groupBox3);
+
+            qlsv_xlMonHoc.TXTTIMKIEM = txtTimMH;
+            qlsv_xlMonHoc.GoiYTimMH();
+        }
     }
 }

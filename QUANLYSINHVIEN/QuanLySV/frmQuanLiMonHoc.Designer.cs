@@ -59,6 +59,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoTinChi)).BeginInit();
@@ -72,6 +73,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.btnLuu);
             this.groupBox3.Controls.Add(this.btnback);
             this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.numSoTinChi);
@@ -95,7 +97,7 @@
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Location = new System.Drawing.Point(5, 4);
+            this.groupBox3.Location = new System.Drawing.Point(4, 1);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
@@ -106,12 +108,14 @@
             // 
             // btnback
             // 
+            this.btnback.BackColor = System.Drawing.Color.Transparent;
+            this.btnback.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnback.Location = new System.Drawing.Point(812, 8);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(100, 23);
+            this.btnback.Size = new System.Drawing.Size(100, 24);
             this.btnback.TabIndex = 5;
             this.btnback.Text = "Back";
-            this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.UseVisualStyleBackColor = false;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // groupBox1
@@ -132,14 +136,16 @@
             // 
             // btnTim
             // 
+            this.btnTim.BackColor = System.Drawing.Color.Transparent;
             this.btnTim.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.Magnify;
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTim.Location = new System.Drawing.Point(788, 23);
             this.btnTim.Margin = new System.Windows.Forms.Padding(4);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(100, 44);
             this.btnTim.TabIndex = 4;
-            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.UseVisualStyleBackColor = false;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTimMH
@@ -194,26 +200,30 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.Color.Transparent;
             this.btnXoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
             this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnXoa.Location = new System.Drawing.Point(731, 566);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 39);
             this.btnXoa.TabIndex = 30;
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
+            this.btnCapNhat.BackColor = System.Drawing.Color.Transparent;
+            this.btnCapNhat.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
             this.btnCapNhat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCapNhat.Location = new System.Drawing.Point(731, 497);
             this.btnCapNhat.Margin = new System.Windows.Forms.Padding(4);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(100, 41);
             this.btnCapNhat.TabIndex = 27;
-            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.UseVisualStyleBackColor = false;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // dgvMonhoc
@@ -413,12 +423,28 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Mã môn học:";
             // 
+            // btnLuu
+            // 
+            this.btnLuu.BackColor = System.Drawing.Color.Transparent;
+            this.btnLuu.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
+            this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLuu.Location = new System.Drawing.Point(731, 497);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(100, 41);
+            this.btnLuu.TabIndex = 32;
+            this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // frmQuanLiMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.backgroup;
             this.ClientSize = new System.Drawing.Size(956, 631);
             this.Controls.Add(this.groupBox3);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQuanLiMonHoc";
             this.Text = "frmQuanLiMonHoc";
@@ -471,5 +497,6 @@
         private System.Windows.Forms.ComboBox cmbTimMH;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnback;
+        private System.Windows.Forms.Button btnLuu;
     }
 }

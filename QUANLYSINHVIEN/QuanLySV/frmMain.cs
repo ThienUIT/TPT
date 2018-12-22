@@ -8,6 +8,7 @@ using QLSV_GiaoDien.UserControls;
 using QLSV_GiaoDien.Reports;
 namespace QLSV_GiaoDien
 {
+  
     public partial class frmMain : Form
     {
         c_XuLyChung qlsv_xl = new c_XuLyChung();

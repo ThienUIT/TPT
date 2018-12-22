@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace QLSV_Xuly
 {
@@ -31,5 +32,25 @@ namespace QLSV_Xuly
             pn.Controls.Add(uc);
         }
 
+
+        //public void doublue_buffer()
+        //{
+
+        //    BufferedGraphicsContext currentContext;
+        //    BufferedGraphics myBuffer;
+        //    // Lấy một tham chiếu của BufferedGraphicsContext
+        //    currentContext = BufferedGraphicsManager.Current;
+        //    // Tạo một buffer với kích cỡ là bề mặt form;
+        //    myBuffer = currentContext.Allocate(this.CreateGraphics(),
+
+        //    this.DisplayRectangle);
+
+        //    // Vẽ một ellipse
+        //    myBuffer.Graphics.DrawEllipse(Pens.Blue, this.DisplayRectangle);
+        //    // Render nội dung
+        //    myBuffer.Render();
+        //    myBuffer.Dispose();
+
+        //}
     }
 }

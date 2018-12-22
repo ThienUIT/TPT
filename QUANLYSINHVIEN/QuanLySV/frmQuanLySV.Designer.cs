@@ -32,6 +32,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.grouptextBox = new System.Windows.Forms.GroupBox();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.txtMSSV = new System.Windows.Forms.TextBox();
@@ -72,27 +73,30 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnBack);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(8, 5);
+            this.groupBox1.Location = new System.Drawing.Point(0, -8);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(912, 633);
+            this.groupBox1.Size = new System.Drawing.Size(924, 637);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản lý Sinh Viên";
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBack.Location = new System.Drawing.Point(796, 12);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(100, 28);
             this.btnBack.TabIndex = 3;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // groupBox3
@@ -110,6 +114,7 @@
             // 
             // grouptextBox
             // 
+            this.grouptextBox.Controls.Add(this.btnLuu);
             this.grouptextBox.Controls.Add(this.btnXoa);
             this.grouptextBox.Controls.Add(this.btnSua);
             this.grouptextBox.Controls.Add(this.txtMSSV);
@@ -141,10 +146,24 @@
             this.grouptextBox.TabIndex = 55;
             this.grouptextBox.TabStop = false;
             // 
+            // btnLuu
+            // 
+            this.btnLuu.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
+            this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLuu.Location = new System.Drawing.Point(535, 177);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(100, 64);
+            this.btnLuu.TabIndex = 57;
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // btnXoa
             // 
             this.btnXoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
             this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnXoa.Location = new System.Drawing.Point(684, 177);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
@@ -254,13 +273,16 @@
             // 
             // btnBrowseHinh
             // 
+            this.btnBrowseHinh.BackColor = System.Drawing.Color.Black;
+            this.btnBrowseHinh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.bg;
+            this.btnBrowseHinh.ForeColor = System.Drawing.Color.Black;
             this.btnBrowseHinh.Location = new System.Drawing.Point(791, 135);
             this.btnBrowseHinh.Margin = new System.Windows.Forms.Padding(4);
             this.btnBrowseHinh.Name = "btnBrowseHinh";
             this.btnBrowseHinh.Size = new System.Drawing.Size(77, 28);
             this.btnBrowseHinh.TabIndex = 50;
             this.btnBrowseHinh.Text = "Browse";
-            this.btnBrowseHinh.UseVisualStyleBackColor = true;
+            this.btnBrowseHinh.UseVisualStyleBackColor = false;
             this.btnBrowseHinh.Click += new System.EventHandler(this.btnBrowseHinh_Click);
             // 
             // label10
@@ -374,6 +396,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.btnRefresh);
             this.groupBox2.Controls.Add(this.btnTim);
             this.groupBox2.Controls.Add(this.label1);
@@ -391,26 +414,30 @@
             // 
             // btnRefresh
             // 
+            this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
             this.btnRefresh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
             this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefresh.Location = new System.Drawing.Point(788, 17);
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRefresh.Location = new System.Drawing.Point(803, 17);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(83, 49);
             this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnTim
             // 
+            this.btnTim.BackColor = System.Drawing.Color.Transparent;
             this.btnTim.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.Magnify;
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTim.Location = new System.Drawing.Point(680, 17);
             this.btnTim.Margin = new System.Windows.Forms.Padding(4);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(100, 49);
             this.btnTim.TabIndex = 4;
-            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.UseVisualStyleBackColor = false;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // label1
@@ -465,8 +492,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.backgroup;
             this.ClientSize = new System.Drawing.Size(925, 642);
             this.Controls.Add(this.groupBox1);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQuanLySV";
             this.Text = "Quản lý Sinh Viên";
@@ -519,6 +548,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-
+        private System.Windows.Forms.Button btnLuu;
     }
 }

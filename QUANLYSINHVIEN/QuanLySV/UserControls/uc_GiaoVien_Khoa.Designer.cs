@@ -38,7 +38,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvGiaoVien = new System.Windows.Forms.DataGridView();
+            this.MaGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GhiChu_GV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupboxGV = new System.Windows.Forms.GroupBox();
+            this.btnXoa_GV = new System.Windows.Forms.Button();
             this.btnLuuGV = new System.Windows.Forms.Button();
             this.btnLamlai = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -56,9 +61,8 @@
             this.Ma_Khoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu_Khoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSua_Khoa = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnXoa_Khoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupboxKhoa = new System.Windows.Forms.GroupBox();
+            this.btndelete_K = new System.Windows.Forms.Button();
             this.btnLuuKhoa = new System.Windows.Forms.Button();
             this.btnNhaplaiKhoa = new System.Windows.Forms.Button();
             this.btnThemKhoa = new System.Windows.Forms.Button();
@@ -68,11 +72,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.MaGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GhiChu_GV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXoa_GV = new System.Windows.Forms.Button();
             this.tabGV_Khoa.SuspendLayout();
             this.tabGiaoVien.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -87,9 +86,10 @@
             // 
             // tabGV_Khoa
             // 
+            this.tabGV_Khoa.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabGV_Khoa.Controls.Add(this.tabGiaoVien);
             this.tabGV_Khoa.Controls.Add(this.tabKhoa);
-            this.tabGV_Khoa.Location = new System.Drawing.Point(3, 2);
+            this.tabGV_Khoa.Location = new System.Drawing.Point(0, 0);
             this.tabGV_Khoa.Margin = new System.Windows.Forms.Padding(4);
             this.tabGV_Khoa.Name = "tabGV_Khoa";
             this.tabGV_Khoa.SelectedIndex = 0;
@@ -98,20 +98,22 @@
             // 
             // tabGiaoVien
             // 
+            this.tabGiaoVien.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.backgroup;
             this.tabGiaoVien.Controls.Add(this.groupBox3);
             this.tabGiaoVien.Controls.Add(this.groupBox2);
             this.tabGiaoVien.Controls.Add(this.groupboxGV);
-            this.tabGiaoVien.Location = new System.Drawing.Point(4, 25);
+            this.tabGiaoVien.Location = new System.Drawing.Point(4, 28);
             this.tabGiaoVien.Margin = new System.Windows.Forms.Padding(4);
             this.tabGiaoVien.Name = "tabGiaoVien";
             this.tabGiaoVien.Padding = new System.Windows.Forms.Padding(4);
-            this.tabGiaoVien.Size = new System.Drawing.Size(912, 611);
+            this.tabGiaoVien.Size = new System.Drawing.Size(912, 608);
             this.tabGiaoVien.TabIndex = 0;
             this.tabGiaoVien.Text = "Giáo Viên";
             this.tabGiaoVien.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.btnTim);
             this.groupBox3.Controls.Add(this.cmbDieuKienTim);
             this.groupBox3.Controls.Add(this.label6);
@@ -128,14 +130,16 @@
             // 
             // btnTim
             // 
+            this.btnTim.BackColor = System.Drawing.Color.Transparent;
             this.btnTim.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.Magnify;
             this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTim.Location = new System.Drawing.Point(289, 119);
             this.btnTim.Margin = new System.Windows.Forms.Padding(4);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(100, 63);
             this.btnTim.TabIndex = 4;
-            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.UseVisualStyleBackColor = false;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // cmbDieuKienTim
@@ -182,6 +186,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.dgvGiaoVien);
             this.groupBox2.Location = new System.Drawing.Point(8, 318);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
@@ -208,8 +213,41 @@
             this.dgvGiaoVien.TabIndex = 0;
             this.dgvGiaoVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaoVien_CellClick);
             // 
+            // MaGiaoVien
+            // 
+            this.MaGiaoVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaGiaoVien.DataPropertyName = "MaGiaoVien";
+            this.MaGiaoVien.HeaderText = "Mã GV";
+            this.MaGiaoVien.Name = "MaGiaoVien";
+            this.MaGiaoVien.ReadOnly = true;
+            // 
+            // TenGiaoVien
+            // 
+            this.TenGiaoVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenGiaoVien.DataPropertyName = "TenGiaoVien";
+            this.TenGiaoVien.HeaderText = "Tên GV";
+            this.TenGiaoVien.Name = "TenGiaoVien";
+            this.TenGiaoVien.ReadOnly = true;
+            // 
+            // MaKhoa
+            // 
+            this.MaKhoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaKhoa.DataPropertyName = "MaKhoa";
+            this.MaKhoa.HeaderText = "Mã khoa";
+            this.MaKhoa.Name = "MaKhoa";
+            this.MaKhoa.ReadOnly = true;
+            // 
+            // GhiChu_GV
+            // 
+            this.GhiChu_GV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GhiChu_GV.DataPropertyName = "GhiChu";
+            this.GhiChu_GV.HeaderText = "Ghi chú";
+            this.GhiChu_GV.Name = "GhiChu_GV";
+            this.GhiChu_GV.ReadOnly = true;
+            // 
             // groupboxGV
             // 
+            this.groupboxGV.BackColor = System.Drawing.Color.Transparent;
             this.groupboxGV.Controls.Add(this.btnXoa_GV);
             this.groupboxGV.Controls.Add(this.btnLuuGV);
             this.groupboxGV.Controls.Add(this.btnLamlai);
@@ -231,40 +269,60 @@
             this.groupboxGV.TabStop = false;
             this.groupboxGV.Text = "Thêm Giáo Viên";
             // 
+            // btnXoa_GV
+            // 
+            this.btnXoa_GV.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoa_GV.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
+            this.btnXoa_GV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXoa_GV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXoa_GV.Location = new System.Drawing.Point(266, 210);
+            this.btnXoa_GV.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa_GV.Name = "btnXoa_GV";
+            this.btnXoa_GV.Size = new System.Drawing.Size(100, 28);
+            this.btnXoa_GV.TabIndex = 15;
+            this.btnXoa_GV.UseVisualStyleBackColor = false;
+            this.btnXoa_GV.Click += new System.EventHandler(this.btnXoa_GV_Click);
+            // 
             // btnLuuGV
             // 
+            this.btnLuuGV.BackColor = System.Drawing.Color.Transparent;
             this.btnLuuGV.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
             this.btnLuuGV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuuGV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLuuGV.Location = new System.Drawing.Point(22, 210);
             this.btnLuuGV.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuuGV.Name = "btnLuuGV";
             this.btnLuuGV.Size = new System.Drawing.Size(100, 28);
             this.btnLuuGV.TabIndex = 14;
-            this.btnLuuGV.UseVisualStyleBackColor = true;
+            this.btnLuuGV.UseVisualStyleBackColor = false;
             this.btnLuuGV.Click += new System.EventHandler(this.btnLuuGV_Click);
             // 
             // btnLamlai
             // 
+            this.btnLamlai.BackColor = System.Drawing.Color.Transparent;
             this.btnLamlai.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
             this.btnLamlai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLamlai.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLamlai.Location = new System.Drawing.Point(146, 210);
             this.btnLamlai.Margin = new System.Windows.Forms.Padding(4);
             this.btnLamlai.Name = "btnLamlai";
             this.btnLamlai.Size = new System.Drawing.Size(100, 28);
             this.btnLamlai.TabIndex = 13;
-            this.btnLamlai.UseVisualStyleBackColor = true;
+            this.btnLamlai.UseVisualStyleBackColor = false;
             this.btnLamlai.Click += new System.EventHandler(this.btnLamlai_Click);
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnThem.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThem.Location = new System.Drawing.Point(22, 210);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(100, 28);
             this.btnThem.TabIndex = 12;
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // cmbMaKhoa
@@ -283,6 +341,7 @@
             this.txtTenGiaoVien.Name = "txtTenGiaoVien";
             this.txtTenGiaoVien.Size = new System.Drawing.Size(267, 22);
             this.txtTenGiaoVien.TabIndex = 10;
+            this.txtTenGiaoVien.TextChanged += new System.EventHandler(this.txtTenGiaoVien_TextChanged);
             // 
             // txtGhiChu
             // 
@@ -344,16 +403,17 @@
             // 
             // tabKhoa
             // 
+            this.tabKhoa.BackColor = System.Drawing.Color.Transparent;
+            this.tabKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.backgroup;
             this.tabKhoa.Controls.Add(this.groupBox5);
             this.tabKhoa.Controls.Add(this.groupboxKhoa);
-            this.tabKhoa.Location = new System.Drawing.Point(4, 25);
+            this.tabKhoa.Location = new System.Drawing.Point(4, 28);
             this.tabKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.tabKhoa.Name = "tabKhoa";
             this.tabKhoa.Padding = new System.Windows.Forms.Padding(4);
-            this.tabKhoa.Size = new System.Drawing.Size(912, 611);
+            this.tabKhoa.Size = new System.Drawing.Size(912, 608);
             this.tabKhoa.TabIndex = 1;
             this.tabKhoa.Text = "Khoa";
-            this.tabKhoa.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -373,9 +433,7 @@
             this.dgvKhoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Ma_Khoa,
             this.TenKhoa,
-            this.GhiChu_Khoa,
-            this.btnSua_Khoa,
-            this.btnXoa_Khoa});
+            this.GhiChu_Khoa});
             this.dgvKhoa.Location = new System.Drawing.Point(11, 36);
             this.dgvKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.dgvKhoa.Name = "dgvKhoa";
@@ -408,26 +466,9 @@
             this.GhiChu_Khoa.Name = "GhiChu_Khoa";
             this.GhiChu_Khoa.ReadOnly = true;
             // 
-            // btnSua_Khoa
-            // 
-            this.btnSua_Khoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnSua_Khoa.HeaderText = "Sửa";
-            this.btnSua_Khoa.Name = "btnSua_Khoa";
-            this.btnSua_Khoa.ReadOnly = true;
-            this.btnSua_Khoa.Text = "Sửa";
-            this.btnSua_Khoa.UseColumnTextForButtonValue = true;
-            // 
-            // btnXoa_Khoa
-            // 
-            this.btnXoa_Khoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.btnXoa_Khoa.HeaderText = "Xóa";
-            this.btnXoa_Khoa.Name = "btnXoa_Khoa";
-            this.btnXoa_Khoa.ReadOnly = true;
-            this.btnXoa_Khoa.Text = "Xóa";
-            this.btnXoa_Khoa.UseColumnTextForButtonValue = true;
-            // 
             // groupboxKhoa
             // 
+            this.groupboxKhoa.Controls.Add(this.btndelete_K);
             this.groupboxKhoa.Controls.Add(this.btnLuuKhoa);
             this.groupboxKhoa.Controls.Add(this.btnNhaplaiKhoa);
             this.groupboxKhoa.Controls.Add(this.btnThemKhoa);
@@ -446,40 +487,61 @@
             this.groupboxKhoa.TabStop = false;
             this.groupboxKhoa.Text = "Thêm mới một Khoa";
             // 
+            // btndelete_K
+            // 
+            this.btndelete_K.BackColor = System.Drawing.Color.Transparent;
+            this.btndelete_K.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
+            this.btndelete_K.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btndelete_K.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btndelete_K.Location = new System.Drawing.Point(754, 113);
+            this.btndelete_K.Margin = new System.Windows.Forms.Padding(4);
+            this.btndelete_K.Name = "btndelete_K";
+            this.btndelete_K.Size = new System.Drawing.Size(100, 57);
+            this.btndelete_K.TabIndex = 10;
+            this.btndelete_K.UseVisualStyleBackColor = false;
+            this.btndelete_K.Click += new System.EventHandler(this.btndelete_K_Click);
+            // 
             // btnLuuKhoa
             // 
+            this.btnLuuKhoa.BackColor = System.Drawing.Color.Transparent;
             this.btnLuuKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
             this.btnLuuKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLuuKhoa.Location = new System.Drawing.Point(471, 113);
+            this.btnLuuKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLuuKhoa.Location = new System.Drawing.Point(475, 112);
             this.btnLuuKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuuKhoa.Name = "btnLuuKhoa";
             this.btnLuuKhoa.Size = new System.Drawing.Size(100, 57);
             this.btnLuuKhoa.TabIndex = 9;
-            this.btnLuuKhoa.UseVisualStyleBackColor = true;
+            this.btnLuuKhoa.UseVisualStyleBackColor = false;
             this.btnLuuKhoa.Click += new System.EventHandler(this.btnLuuKhoa_Click);
             // 
             // btnNhaplaiKhoa
             // 
-            this.btnNhaplaiKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
+            this.btnNhaplaiKhoa.BackColor = System.Drawing.Color.Transparent;
+            this.btnNhaplaiKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
             this.btnNhaplaiKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnNhaplaiKhoa.Location = new System.Drawing.Point(733, 113);
+            this.btnNhaplaiKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNhaplaiKhoa.Location = new System.Drawing.Point(615, 113);
             this.btnNhaplaiKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnNhaplaiKhoa.Name = "btnNhaplaiKhoa";
             this.btnNhaplaiKhoa.Size = new System.Drawing.Size(100, 57);
             this.btnNhaplaiKhoa.TabIndex = 8;
-            this.btnNhaplaiKhoa.UseVisualStyleBackColor = true;
+            this.btnNhaplaiKhoa.UseVisualStyleBackColor = false;
             this.btnNhaplaiKhoa.Click += new System.EventHandler(this.btnNhaplaiKhoa_Click);
             // 
             // btnThemKhoa
             // 
+            this.btnThemKhoa.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnThemKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThemKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThemKhoa.Location = new System.Drawing.Point(598, 113);
+            this.btnThemKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnThemKhoa.ForeColor = System.Drawing.Color.Transparent;
+            this.btnThemKhoa.Location = new System.Drawing.Point(475, 112);
             this.btnThemKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemKhoa.Name = "btnThemKhoa";
             this.btnThemKhoa.Size = new System.Drawing.Size(100, 57);
             this.btnThemKhoa.TabIndex = 7;
-            this.btnThemKhoa.UseVisualStyleBackColor = true;
+            this.btnThemKhoa.UseVisualStyleBackColor = false;
             this.btnThemKhoa.Click += new System.EventHandler(this.btnThemKhoa_Click);
             // 
             // txtGhiChu_Khoa
@@ -498,6 +560,7 @@
             this.txtTenKhoa.Name = "txtTenKhoa";
             this.txtTenKhoa.Size = new System.Drawing.Size(295, 22);
             this.txtTenKhoa.TabIndex = 5;
+            this.txtTenKhoa.TextChanged += new System.EventHandler(this.txtTenKhoa_TextChanged);
             // 
             // txtMaKhoa
             // 
@@ -538,55 +601,13 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Mã Khoa:";
             // 
-            // MaGiaoVien
-            // 
-            this.MaGiaoVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaGiaoVien.DataPropertyName = "MaGiaoVien";
-            this.MaGiaoVien.HeaderText = "Mã GV";
-            this.MaGiaoVien.Name = "MaGiaoVien";
-            this.MaGiaoVien.ReadOnly = true;
-            // 
-            // TenGiaoVien
-            // 
-            this.TenGiaoVien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenGiaoVien.DataPropertyName = "TenGiaoVien";
-            this.TenGiaoVien.HeaderText = "Tên GV";
-            this.TenGiaoVien.Name = "TenGiaoVien";
-            this.TenGiaoVien.ReadOnly = true;
-            // 
-            // MaKhoa
-            // 
-            this.MaKhoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaKhoa.DataPropertyName = "MaKhoa";
-            this.MaKhoa.HeaderText = "Mã khoa";
-            this.MaKhoa.Name = "MaKhoa";
-            this.MaKhoa.ReadOnly = true;
-            // 
-            // GhiChu_GV
-            // 
-            this.GhiChu_GV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GhiChu_GV.DataPropertyName = "GhiChu";
-            this.GhiChu_GV.HeaderText = "Ghi chú";
-            this.GhiChu_GV.Name = "GhiChu_GV";
-            this.GhiChu_GV.ReadOnly = true;
-            // 
-            // btnXoa_GV
-            // 
-            this.btnXoa_GV.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
-            this.btnXoa_GV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXoa_GV.Location = new System.Drawing.Point(266, 210);
-            this.btnXoa_GV.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa_GV.Name = "btnXoa_GV";
-            this.btnXoa_GV.Size = new System.Drawing.Size(100, 28);
-            this.btnXoa_GV.TabIndex = 15;
-            this.btnXoa_GV.UseVisualStyleBackColor = true;
-            this.btnXoa_GV.Click += new System.EventHandler(this.button1_Click);
-            // 
             // uc_GiaoVien_Khoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.backgroup;
             this.Controls.Add(this.tabGV_Khoa);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uc_GiaoVien_Khoa";
             this.Size = new System.Drawing.Size(920, 640);
@@ -643,11 +664,6 @@
         private System.Windows.Forms.TextBox txtTenKhoa;
         private System.Windows.Forms.TextBox txtMaKhoa;
         private System.Windows.Forms.DataGridView dgvKhoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ma_Khoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu_Khoa;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSua_Khoa;
-        private System.Windows.Forms.DataGridViewButtonColumn btnXoa_Khoa;
         private System.Windows.Forms.Button btnLuuGV;
         private System.Windows.Forms.Button btnLuuKhoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaGiaoVien;
@@ -655,5 +671,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu_GV;
         private System.Windows.Forms.Button btnXoa_GV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ma_Khoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu_Khoa;
+        private System.Windows.Forms.Button btndelete_K;
     }
 }

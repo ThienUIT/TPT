@@ -13,10 +13,44 @@ namespace QLSV_GiaoDien
     {
         QLSV_XSinhVien qlsv_xlSV = new QLSV_XSinhVien();
         c_XuLyChung xlchung = new c_XuLyChung();
+        
         int col = 0;
         string Field ="";
         
+        public void Enable()
+        {
+            txtMSSV.Enabled = true;
+            txtHotenSv.Enabled = true;
+            txtNoiSinh.Enabled = true;
+            txtQueQuan.Enabled = true;
+            txtGhichu.Enabled = true;
+            txtHinh.Enabled = true;
+            btnBrowseHinh.Enabled = true;
+            dtp_NgaySinh.Enabled = true;
+            cbMaLop.Enabled = true;
+            rdNam.Enabled = true;
+            rdNu.Enabled = true;
+           
 
+
+        }
+        public void DisEnable()
+        {
+            txtMSSV.Enabled = false;
+            txtHotenSv.Enabled = false;
+            txtNoiSinh.Enabled = false;
+            txtQueQuan.Enabled = false;
+            txtGhichu.Enabled = false;
+            txtHinh.Enabled = false;
+            btnBrowseHinh.Enabled = false;
+            dtp_NgaySinh.Enabled = false;
+            cbMaLop.Enabled = false;
+            rdNam.Enabled = false;
+            rdNu.Enabled = false;
+           
+            btnLuu.Visible = false;
+          
+        }
 
         public frmQuanLySV()
         {
@@ -26,6 +60,7 @@ namespace QLSV_GiaoDien
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void frmQuanLySV_Load(object sender, EventArgs e)
@@ -37,6 +72,7 @@ namespace QLSV_GiaoDien
 
             qlsv_xlSV.CMB = cbMaLop;
             qlsv_xlSV.LayDLVaoComboboxMaLop();
+            DisEnable();
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -49,13 +85,21 @@ namespace QLSV_GiaoDien
             else
             {
                 qlsv_xlSV.FIELD = Field;
-             
-                qlsv_xlSV.DKTIM = txtNoidungTimKiem.Text.Trim();
-               
-               
-                dataGridView1.DataSource = qlsv_xlSV.TimKiemSV();
-                int n = dataGridView1.Rows.Count - 1;
-                MessageBox.Show("Tìm thay " + n + " kết quả");
+                if (txtNoidungTimKiem.Text == "")
+                {
+                    dataGridView1.DataSource = qlsv_xlSV.TimKiemSV();
+                    int n = dataGridView1.Rows.Count - 1;
+                    MessageBox.Show("Tìm thay " + n + " kết quả");
+                }
+                else
+                {
+                    qlsv_xlSV.DKTIM = txtNoidungTimKiem.Text.Trim();
+
+
+                    dataGridView1.DataSource = qlsv_xlSV.TimKiemSV();
+                    int n = dataGridView1.Rows.Count - 1;
+                    MessageBox.Show("Tìm thay " + n + " kết quả");
+                }
             }
            
 
@@ -76,6 +120,7 @@ namespace QLSV_GiaoDien
                 Field = "Hoten";
                 //Dktim = txtNoidungTimKiem.Text;
             }
+   
 
             qlsv_xlSV.COLUMN = col;
             qlsv_xlSV.TXT = txtNoidungTimKiem;
@@ -110,6 +155,14 @@ namespace QLSV_GiaoDien
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            Enable();
+            groupBox2.Enabled = false;
+            btnLuu.Visible = true;
+
+        }
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
             qlsv_xlSV.MASV = txtMSSV.Text;
             qlsv_xlSV.HOTEN = txtHotenSv.Text;
             qlsv_xlSV.QUEQUAN = txtQueQuan.Text;
@@ -123,15 +176,17 @@ namespace QLSV_GiaoDien
             {
                 gioitinh = "Nam";
             }
-            else 
-                gioitinh ="Nữ";
+            else
+                gioitinh = "Nữ";
             qlsv_xlSV.GIOITINH = gioitinh;
 
             qlsv_xlSV.CapNhatSinhVien();
-            dataGridView1.DataSource =  qlsv_xlSV.LoadDL();
+            dataGridView1.DataSource = qlsv_xlSV.LoadDL();
             xlchung.ClearAllTextBox(grouptextBox);
-        }
+            DisEnable();
+            groupBox2.Enabled = true;
 
+        }
         private void btnXoa_Click(object sender, EventArgs e)
         {
             qlsv_xlSV.MASV = txtMSSV.Text;
@@ -144,6 +199,7 @@ namespace QLSV_GiaoDien
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
             this.Close();
+             
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -193,5 +249,7 @@ namespace QLSV_GiaoDien
 
         }
         #endregion
+
+      
     }
 }

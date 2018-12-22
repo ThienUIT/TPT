@@ -31,12 +31,18 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNewPass = new System.Windows.Forms.TextBox();
             this.lblMatkhaumoi = new System.Windows.Forms.Label();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.lblTacvu = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rdXoa = new System.Windows.Forms.RadioButton();
             this.rdDoiMatkhau = new System.Windows.Forms.RadioButton();
             this.rdTaoUser = new System.Windows.Forms.RadioButton();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnTim = new System.Windows.Forms.Button();
             this.txtTenTimKiem = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,15 +50,9 @@
             this.d = new System.Windows.Forms.Button();
             this.lblPassword = new System.Windows.Forms.Label();
             this.dgvUser = new System.Windows.Forms.DataGridView();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnTim = new System.Windows.Forms.Button();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -61,6 +61,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.backgroup;
             this.groupBox1.Controls.Add(this.txtNewPass);
             this.groupBox1.Controls.Add(this.lblMatkhaumoi);
             this.groupBox1.Controls.Add(this.btnSua);
@@ -98,6 +99,7 @@
             // lblMatkhaumoi
             // 
             this.lblMatkhaumoi.AutoSize = true;
+            this.lblMatkhaumoi.BackColor = System.Drawing.Color.Transparent;
             this.lblMatkhaumoi.Location = new System.Drawing.Point(145, 545);
             this.lblMatkhaumoi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMatkhaumoi.Name = "lblMatkhaumoi";
@@ -106,9 +108,38 @@
             this.lblMatkhaumoi.Text = "Nhập mật khẩu mới:";
             this.lblMatkhaumoi.Visible = false;
             // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.Transparent;
+            this.btnSua.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
+            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSua.Location = new System.Drawing.Point(636, 517);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(100, 53);
+            this.btnSua.TabIndex = 10;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.Transparent;
+            this.btnXoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
+            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXoa.Location = new System.Drawing.Point(763, 455);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(100, 54);
+            this.btnXoa.TabIndex = 11;
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // lblTacvu
             // 
             this.lblTacvu.AutoSize = true;
+            this.lblTacvu.BackColor = System.Drawing.Color.Transparent;
             this.lblTacvu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTacvu.ForeColor = System.Drawing.Color.Maroon;
             this.lblTacvu.Location = new System.Drawing.Point(333, 410);
@@ -120,6 +151,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.rdXoa);
             this.groupBox3.Controls.Add(this.rdDoiMatkhau);
             this.groupBox3.Controls.Add(this.rdTaoUser);
@@ -172,8 +204,37 @@
             this.rdTaoUser.UseVisualStyleBackColor = true;
             this.rdTaoUser.CheckedChanged += new System.EventHandler(this.rdTaoUser_CheckedChanged);
             // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.Transparent;
+            this.btnThoat.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_exit1;
+            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnThoat.Location = new System.Drawing.Point(763, 517);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(100, 53);
+            this.btnThoat.TabIndex = 12;
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.Transparent;
+            this.btnThem.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
+            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnThem.Location = new System.Drawing.Point(636, 455);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(100, 54);
+            this.btnThem.TabIndex = 9;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.btnRefresh);
             this.groupBox2.Controls.Add(this.btnTim);
             this.groupBox2.Controls.Add(this.txtTenTimKiem);
@@ -186,6 +247,32 @@
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm User";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
+            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRefresh.Location = new System.Drawing.Point(732, 20);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(66, 50);
+            this.btnRefresh.TabIndex = 2;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnTim
+            // 
+            this.btnTim.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.Magnify;
+            this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTim.Location = new System.Drawing.Point(609, 20);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(92, 50);
+            this.btnTim.TabIndex = 1;
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTenTimKiem
             // 
@@ -208,6 +295,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(145, 463);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -238,6 +326,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Location = new System.Drawing.Point(145, 503);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
@@ -258,86 +347,6 @@
             this.dgvUser.TabIndex = 2;
             this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
             // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(303, 459);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(263, 22);
-            this.txtUserName.TabIndex = 6;
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
-            this.btnSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSua.Location = new System.Drawing.Point(636, 517);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(100, 53);
-            this.btnSua.TabIndex = 10;
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
-            this.btnXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnXoa.Location = new System.Drawing.Point(763, 455);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(100, 54);
-            this.btnXoa.TabIndex = 11;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_exit1;
-            this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThoat.Location = new System.Drawing.Point(763, 517);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(100, 53);
-            this.btnThoat.TabIndex = 12;
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
-            this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThem.Location = new System.Drawing.Point(636, 455);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 54);
-            this.btnThem.TabIndex = 9;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.refesh;
-            this.btnRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRefresh.Location = new System.Drawing.Point(732, 20);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(66, 50);
-            this.btnRefresh.TabIndex = 2;
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnTim
-            // 
-            this.btnTim.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.Magnify;
-            this.btnTim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnTim.Location = new System.Drawing.Point(609, 20);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(92, 50);
-            this.btnTim.TabIndex = 1;
-            this.btnTim.UseVisualStyleBackColor = true;
-            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
-            // 
             // Username
             // 
             this.Username.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -353,6 +362,14 @@
             this.Password.HeaderText = "Password";
             this.Password.Name = "Password";
             this.Password.ReadOnly = true;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(303, 459);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(263, 22);
+            this.txtUserName.TabIndex = 6;
             // 
             // uc_User
             // 

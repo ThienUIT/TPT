@@ -114,30 +114,36 @@
             // 
             // tabKhoaHoc_Nganh_Lop
             // 
+            this.tabKhoaHoc_Nganh_Lop.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.tabKhoaHoc_Nganh_Lop.Controls.Add(this.tabKhoaHoc);
             this.tabKhoaHoc_Nganh_Lop.Controls.Add(this.tabNganh);
             this.tabKhoaHoc_Nganh_Lop.Controls.Add(this.tabLOp);
+            this.tabKhoaHoc_Nganh_Lop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tabKhoaHoc_Nganh_Lop.ImeMode = System.Windows.Forms.ImeMode.On;
             this.tabKhoaHoc_Nganh_Lop.Location = new System.Drawing.Point(0, 0);
             this.tabKhoaHoc_Nganh_Lop.Name = "tabKhoaHoc_Nganh_Lop";
             this.tabKhoaHoc_Nganh_Lop.SelectedIndex = 0;
             this.tabKhoaHoc_Nganh_Lop.Size = new System.Drawing.Size(920, 640);
             this.tabKhoaHoc_Nganh_Lop.TabIndex = 0;
+            this.tabKhoaHoc_Nganh_Lop.Click += new System.EventHandler(this.tabKhoaHoc_Nganh_Lop_Click);
             // 
             // tabKhoaHoc
             // 
+            this.tabKhoaHoc.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.backgroup;
             this.tabKhoaHoc.Controls.Add(this.groupBox6);
             this.tabKhoaHoc.Controls.Add(this.groupBox1);
-            this.tabKhoaHoc.Location = new System.Drawing.Point(4, 25);
+            this.tabKhoaHoc.Location = new System.Drawing.Point(4, 28);
             this.tabKhoaHoc.Margin = new System.Windows.Forms.Padding(4);
             this.tabKhoaHoc.Name = "tabKhoaHoc";
             this.tabKhoaHoc.Padding = new System.Windows.Forms.Padding(4);
-            this.tabKhoaHoc.Size = new System.Drawing.Size(912, 611);
+            this.tabKhoaHoc.Size = new System.Drawing.Size(912, 608);
             this.tabKhoaHoc.TabIndex = 9;
             this.tabKhoaHoc.Text = "Khóa Học";
             this.tabKhoaHoc.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
+            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
             this.groupBox6.Controls.Add(this.dgvKhoaHoc);
             this.groupBox6.Location = new System.Drawing.Point(8, 246);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
@@ -207,6 +213,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnCancel_KhoaHoc);
             this.groupBox1.Controls.Add(this.btnLuuKhoa);
             this.groupBox1.Controls.Add(this.dtpNgayKetThuc);
@@ -232,26 +239,32 @@
             // 
             // btnCancel_KhoaHoc
             // 
+            this.btnCancel_KhoaHoc.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel_KhoaHoc.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
             this.btnCancel_KhoaHoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel_KhoaHoc.FlatAppearance.BorderSize = 0;
+            this.btnCancel_KhoaHoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel_KhoaHoc.Location = new System.Drawing.Point(776, 130);
             this.btnCancel_KhoaHoc.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel_KhoaHoc.Name = "btnCancel_KhoaHoc";
             this.btnCancel_KhoaHoc.Size = new System.Drawing.Size(100, 54);
             this.btnCancel_KhoaHoc.TabIndex = 15;
-            this.btnCancel_KhoaHoc.UseVisualStyleBackColor = true;
+            this.btnCancel_KhoaHoc.UseVisualStyleBackColor = false;
             this.btnCancel_KhoaHoc.Click += new System.EventHandler(this.btnCancel_KhoaHoc_Click);
             // 
             // btnLuuKhoa
             // 
+            this.btnLuuKhoa.BackColor = System.Drawing.Color.Transparent;
             this.btnLuuKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
             this.btnLuuKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuuKhoa.FlatAppearance.BorderSize = 0;
+            this.btnLuuKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLuuKhoa.Location = new System.Drawing.Point(519, 130);
             this.btnLuuKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuuKhoa.Name = "btnLuuKhoa";
             this.btnLuuKhoa.Size = new System.Drawing.Size(100, 54);
             this.btnLuuKhoa.TabIndex = 14;
-            this.btnLuuKhoa.UseVisualStyleBackColor = true;
+            this.btnLuuKhoa.UseVisualStyleBackColor = false;
             this.btnLuuKhoa.Click += new System.EventHandler(this.btnLuuKhoa_Click);
             // 
             // dtpNgayKetThuc
@@ -298,26 +311,31 @@
             // 
             // btnNhapLaiKhoahoc
             // 
+            this.btnNhapLaiKhoahoc.BackColor = System.Drawing.Color.Transparent;
             this.btnNhapLaiKhoahoc.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
             this.btnNhapLaiKhoahoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNhapLaiKhoahoc.FlatAppearance.BorderSize = 0;
+            this.btnNhapLaiKhoahoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNhapLaiKhoahoc.Location = new System.Drawing.Point(653, 130);
             this.btnNhapLaiKhoahoc.Margin = new System.Windows.Forms.Padding(4);
             this.btnNhapLaiKhoahoc.Name = "btnNhapLaiKhoahoc";
             this.btnNhapLaiKhoahoc.Size = new System.Drawing.Size(100, 54);
             this.btnNhapLaiKhoahoc.TabIndex = 8;
-            this.btnNhapLaiKhoahoc.UseVisualStyleBackColor = true;
+            this.btnNhapLaiKhoahoc.UseVisualStyleBackColor = false;
             this.btnNhapLaiKhoahoc.Click += new System.EventHandler(this.btnNhapLaiKhoahoc_Click);
             // 
             // btnThemKhoaHoc
             // 
+            this.btnThemKhoaHoc.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnThemKhoaHoc.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThemKhoaHoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThemKhoaHoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThemKhoaHoc.Location = new System.Drawing.Point(519, 130);
             this.btnThemKhoaHoc.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemKhoaHoc.Name = "btnThemKhoaHoc";
             this.btnThemKhoaHoc.Size = new System.Drawing.Size(100, 54);
             this.btnThemKhoaHoc.TabIndex = 7;
-            this.btnThemKhoaHoc.UseVisualStyleBackColor = true;
+            this.btnThemKhoaHoc.UseVisualStyleBackColor = false;
             this.btnThemKhoaHoc.Click += new System.EventHandler(this.btnThemKhoaHoc_Click);
             // 
             // txtGhichu_KhoaHoc
@@ -378,19 +396,21 @@
             // 
             // tabNganh
             // 
+            this.tabNganh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.backgroup;
             this.tabNganh.Controls.Add(this.groupBox8);
             this.tabNganh.Controls.Add(this.groupBox7);
-            this.tabNganh.Location = new System.Drawing.Point(4, 25);
+            this.tabNganh.Location = new System.Drawing.Point(4, 28);
             this.tabNganh.Margin = new System.Windows.Forms.Padding(4);
             this.tabNganh.Name = "tabNganh";
             this.tabNganh.Padding = new System.Windows.Forms.Padding(4);
-            this.tabNganh.Size = new System.Drawing.Size(912, 611);
+            this.tabNganh.Size = new System.Drawing.Size(912, 608);
             this.tabNganh.TabIndex = 10;
             this.tabNganh.Text = "Ngành học";
             this.tabNganh.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
+            this.groupBox8.BackColor = System.Drawing.Color.Transparent;
             this.groupBox8.Controls.Add(this.dgvNganh);
             this.groupBox8.Location = new System.Drawing.Point(8, 238);
             this.groupBox8.Margin = new System.Windows.Forms.Padding(4);
@@ -442,6 +462,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.BackColor = System.Drawing.Color.Transparent;
             this.groupBox7.Controls.Add(this.btnCancel_NGANH);
             this.groupBox7.Controls.Add(this.btnLuu_NGANH);
             this.groupBox7.Controls.Add(this.btnLamlai_Nganh);
@@ -463,50 +484,58 @@
             // 
             // btnCancel_NGANH
             // 
-            this.btnCancel_NGANH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_cancel;
+            this.btnCancel_NGANH.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel_NGANH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
             this.btnCancel_NGANH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel_NGANH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel_NGANH.Location = new System.Drawing.Point(663, 142);
             this.btnCancel_NGANH.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel_NGANH.Name = "btnCancel_NGANH";
             this.btnCancel_NGANH.Size = new System.Drawing.Size(74, 41);
             this.btnCancel_NGANH.TabIndex = 11;
-            this.btnCancel_NGANH.UseVisualStyleBackColor = true;
+            this.btnCancel_NGANH.UseVisualStyleBackColor = false;
             this.btnCancel_NGANH.Click += new System.EventHandler(this.btnCancel_NGANH_Click);
             // 
             // btnLuu_NGANH
             // 
+            this.btnLuu_NGANH.BackColor = System.Drawing.Color.Transparent;
             this.btnLuu_NGANH.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
             this.btnLuu_NGANH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuu_NGANH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLuu_NGANH.Location = new System.Drawing.Point(436, 142);
             this.btnLuu_NGANH.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu_NGANH.Name = "btnLuu_NGANH";
             this.btnLuu_NGANH.Size = new System.Drawing.Size(69, 41);
             this.btnLuu_NGANH.TabIndex = 10;
-            this.btnLuu_NGANH.UseVisualStyleBackColor = true;
+            this.btnLuu_NGANH.UseVisualStyleBackColor = false;
             this.btnLuu_NGANH.Click += new System.EventHandler(this.btnLuu_NGANH_Click);
             // 
             // btnLamlai_Nganh
             // 
+            this.btnLamlai_Nganh.BackColor = System.Drawing.Color.Transparent;
             this.btnLamlai_Nganh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
             this.btnLamlai_Nganh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLamlai_Nganh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLamlai_Nganh.Location = new System.Drawing.Point(546, 142);
             this.btnLamlai_Nganh.Margin = new System.Windows.Forms.Padding(4);
             this.btnLamlai_Nganh.Name = "btnLamlai_Nganh";
             this.btnLamlai_Nganh.Size = new System.Drawing.Size(74, 41);
             this.btnLamlai_Nganh.TabIndex = 9;
-            this.btnLamlai_Nganh.UseVisualStyleBackColor = true;
+            this.btnLamlai_Nganh.UseVisualStyleBackColor = false;
             this.btnLamlai_Nganh.Click += new System.EventHandler(this.btnLamlai_Nganh_Click);
             // 
             // btnThem_Nganh
             // 
+            this.btnThem_Nganh.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnThem_Nganh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThem_Nganh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThem_Nganh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThem_Nganh.Location = new System.Drawing.Point(436, 142);
             this.btnThem_Nganh.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem_Nganh.Name = "btnThem_Nganh";
             this.btnThem_Nganh.Size = new System.Drawing.Size(69, 41);
             this.btnThem_Nganh.TabIndex = 8;
-            this.btnThem_Nganh.UseVisualStyleBackColor = true;
+            this.btnThem_Nganh.UseVisualStyleBackColor = false;
             this.btnThem_Nganh.Click += new System.EventHandler(this.btnThem_Nganh_Click);
             // 
             // txtGhiChu_Nganh
@@ -567,6 +596,7 @@
             // 
             // tabLOp
             // 
+            this.tabLOp.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.backgroup;
             this.tabLOp.Controls.Add(this.btnTimLop);
             this.tabLOp.Controls.Add(this.cmbTimLop);
             this.tabLOp.Controls.Add(this.label38);
@@ -574,25 +604,27 @@
             this.tabLOp.Controls.Add(this.label23);
             this.tabLOp.Controls.Add(this.groupBox9);
             this.tabLOp.Controls.Add(this.groupboxLOP);
-            this.tabLOp.Location = new System.Drawing.Point(4, 25);
+            this.tabLOp.Location = new System.Drawing.Point(4, 28);
             this.tabLOp.Margin = new System.Windows.Forms.Padding(4);
             this.tabLOp.Name = "tabLOp";
             this.tabLOp.Padding = new System.Windows.Forms.Padding(4);
-            this.tabLOp.Size = new System.Drawing.Size(912, 611);
+            this.tabLOp.Size = new System.Drawing.Size(912, 608);
             this.tabLOp.TabIndex = 11;
             this.tabLOp.Text = "Lớp";
             this.tabLOp.UseVisualStyleBackColor = true;
             // 
             // btnTimLop
             // 
+            this.btnTimLop.BackColor = System.Drawing.Color.Transparent;
             this.btnTimLop.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.Magnify;
             this.btnTimLop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTimLop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTimLop.Location = new System.Drawing.Point(805, 240);
             this.btnTimLop.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimLop.Name = "btnTimLop";
             this.btnTimLop.Size = new System.Drawing.Size(96, 44);
             this.btnTimLop.TabIndex = 6;
-            this.btnTimLop.UseVisualStyleBackColor = true;
+            this.btnTimLop.UseVisualStyleBackColor = false;
             this.btnTimLop.Click += new System.EventHandler(this.btnTimLop_Click);
             // 
             // cmbTimLop
@@ -613,6 +645,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
             this.label38.Location = new System.Drawing.Point(480, 262);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
@@ -631,6 +664,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Location = new System.Drawing.Point(233, 262);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
@@ -640,6 +674,7 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.BackColor = System.Drawing.Color.Transparent;
             this.groupBox9.Controls.Add(this.dgvLop);
             this.groupBox9.Location = new System.Drawing.Point(8, 290);
             this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
@@ -709,6 +744,7 @@
             // 
             // groupboxLOP
             // 
+            this.groupboxLOP.BackColor = System.Drawing.Color.Transparent;
             this.groupboxLOP.Controls.Add(this.btnCancel_LOP);
             this.groupboxLOP.Controls.Add(this.btnLuu_Lop);
             this.groupboxLOP.Controls.Add(this.btnLamlai_Lop);
@@ -734,50 +770,58 @@
             // 
             // btnCancel_LOP
             // 
-            this.btnCancel_LOP.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_cancel;
+            this.btnCancel_LOP.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel_LOP.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_delete;
             this.btnCancel_LOP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancel_LOP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel_LOP.Location = new System.Drawing.Point(764, 119);
             this.btnCancel_LOP.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel_LOP.Name = "btnCancel_LOP";
             this.btnCancel_LOP.Size = new System.Drawing.Size(100, 43);
             this.btnCancel_LOP.TabIndex = 13;
-            this.btnCancel_LOP.UseVisualStyleBackColor = true;
+            this.btnCancel_LOP.UseVisualStyleBackColor = false;
             this.btnCancel_LOP.Click += new System.EventHandler(this.btnCancel_LOP_Click);
             // 
             // btnLuu_Lop
             // 
+            this.btnLuu_Lop.BackColor = System.Drawing.Color.Transparent;
             this.btnLuu_Lop.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_tick;
             this.btnLuu_Lop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLuu_Lop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLuu_Lop.Location = new System.Drawing.Point(491, 119);
             this.btnLuu_Lop.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu_Lop.Name = "btnLuu_Lop";
             this.btnLuu_Lop.Size = new System.Drawing.Size(100, 43);
             this.btnLuu_Lop.TabIndex = 12;
-            this.btnLuu_Lop.UseVisualStyleBackColor = true;
+            this.btnLuu_Lop.UseVisualStyleBackColor = false;
             this.btnLuu_Lop.Click += new System.EventHandler(this.btnLuu_Lop_Click);
             // 
             // btnLamlai_Lop
             // 
+            this.btnLamlai_Lop.BackColor = System.Drawing.Color.Transparent;
             this.btnLamlai_Lop.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.edit;
             this.btnLamlai_Lop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLamlai_Lop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLamlai_Lop.Location = new System.Drawing.Point(628, 119);
             this.btnLamlai_Lop.Margin = new System.Windows.Forms.Padding(4);
             this.btnLamlai_Lop.Name = "btnLamlai_Lop";
             this.btnLamlai_Lop.Size = new System.Drawing.Size(100, 43);
             this.btnLamlai_Lop.TabIndex = 11;
-            this.btnLamlai_Lop.UseVisualStyleBackColor = true;
+            this.btnLamlai_Lop.UseVisualStyleBackColor = false;
             this.btnLamlai_Lop.Click += new System.EventHandler(this.btnLamlai_Lop_Click);
             // 
             // btnThemLop
             // 
+            this.btnThemLop.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnThemLop.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThemLop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThemLop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnThemLop.Location = new System.Drawing.Point(491, 119);
             this.btnThemLop.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemLop.Name = "btnThemLop";
             this.btnThemLop.Size = new System.Drawing.Size(100, 43);
             this.btnThemLop.TabIndex = 10;
-            this.btnThemLop.UseVisualStyleBackColor = true;
+            this.btnThemLop.UseVisualStyleBackColor = false;
             this.btnThemLop.Click += new System.EventHandler(this.btnThemLop_Click);
             // 
             // cmbMaKhoaHoc
@@ -878,7 +922,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.tabKhoaHoc_Nganh_Lop);
+            this.DoubleBuffered = true;
             this.Location = new System.Drawing.Point(5, 5);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uc_KhoaHoc_Nganh_Lop";
