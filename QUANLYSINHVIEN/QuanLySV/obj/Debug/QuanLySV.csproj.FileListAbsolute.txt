@@ -379,3 +379,4 @@ D:\TPT-master\QUANLYSINHVIEN\QuanLySV\obj\Debug\QuanLySV.csproj.CoreCompileInput
 D:\TPT-master\QUANLYSINHVIEN\QuanLySV\obj\Debug\QuanLySV.csproj.CopyComplete
 D:\TPT-master\QUANLYSINHVIEN\QuanLySV\obj\Debug\QuanLySV.exe
 D:\TPT-master\QUANLYSINHVIEN\QuanLySV\obj\Debug\QuanLySV.pdb
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.WebCam.resources

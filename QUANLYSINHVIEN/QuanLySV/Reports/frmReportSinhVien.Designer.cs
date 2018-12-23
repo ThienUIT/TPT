@@ -30,18 +30,21 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dgvSinhVien = new System.Windows.Forms.DataGridView();
-            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MSSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QUEQUAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NOISINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbLop = new System.Windows.Forms.ComboBox();
             this.cmbKhoaHoc = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnDongY = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnExcel = new System.Windows.Forms.Button();
+            this.TenKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HOTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MSSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QUEQUAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NOISINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +62,8 @@
             this.dgvSinhVien.AllowUserToOrderColumns = true;
             this.dgvSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenKhoaHoc,
+            this.TenLop,
             this.HOTEN,
             this.MSSV,
             this.QUEQUAN,
@@ -70,6 +75,91 @@
             this.dgvSinhVien.ReadOnly = true;
             this.dgvSinhVien.Size = new System.Drawing.Size(795, 328);
             this.dgvSinhVien.TabIndex = 3;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnExcel);
+            this.groupBox1.Controls.Add(this.cmbLop);
+            this.groupBox1.Controls.Add(this.cmbKhoaHoc);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.btnDongY);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(80, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(675, 59);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Xuất Danh Sách Sinh Viên";
+            // 
+            // cmbLop
+            // 
+            this.cmbLop.Enabled = false;
+            this.cmbLop.FormattingEnabled = true;
+            this.cmbLop.Location = new System.Drawing.Point(373, 25);
+            this.cmbLop.Name = "cmbLop";
+            this.cmbLop.Size = new System.Drawing.Size(121, 21);
+            this.cmbLop.TabIndex = 7;
+            // 
+            // cmbKhoaHoc
+            // 
+            this.cmbKhoaHoc.FormattingEnabled = true;
+            this.cmbKhoaHoc.Location = new System.Drawing.Point(129, 25);
+            this.cmbKhoaHoc.Name = "cmbKhoaHoc";
+            this.cmbKhoaHoc.Size = new System.Drawing.Size(142, 21);
+            this.cmbKhoaHoc.TabIndex = 6;
+            this.cmbKhoaHoc.SelectedValueChanged += new System.EventHandler(this.cmbKhoa_SelectedValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(46, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Chọn Khóa học:";
+            // 
+            // btnDongY
+            // 
+            this.btnDongY.Location = new System.Drawing.Point(524, 25);
+            this.btnDongY.Name = "btnDongY";
+            this.btnDongY.Size = new System.Drawing.Size(65, 23);
+            this.btnDongY.TabIndex = 4;
+            this.btnDongY.Text = "Đồng ý";
+            this.btnDongY.UseVisualStyleBackColor = true;
+            this.btnDongY.Click += new System.EventHandler(this.btnDongY_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(299, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Chọn Lớp:";
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Location = new System.Drawing.Point(594, 25);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(75, 23);
+            this.btnExcel.TabIndex = 8;
+            this.btnExcel.Text = "Excel";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.Excel_Click);
+            // 
+            // TenKhoaHoc
+            // 
+            this.TenKhoaHoc.DataPropertyName = "TenKhoaHoc";
+            this.TenKhoaHoc.HeaderText = "Khóa Học";
+            this.TenKhoaHoc.Name = "TenKhoaHoc";
+            this.TenKhoaHoc.ReadOnly = true;
+            // 
+            // TenLop
+            // 
+            this.TenLop.DataPropertyName = "TenLop";
+            this.TenLop.HeaderText = "Tên Lớp";
+            this.TenLop.Name = "TenLop";
+            this.TenLop.ReadOnly = true;
             // 
             // HOTEN
             // 
@@ -125,66 +215,6 @@
             this.GIOITINH.Name = "GIOITINH";
             this.GIOITINH.ReadOnly = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cmbLop);
-            this.groupBox1.Controls.Add(this.cmbKhoaHoc);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btnDongY);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(108, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(624, 59);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Xuất Danh Sách Sinh Viên";
-            // 
-            // cmbLop
-            // 
-            this.cmbLop.Enabled = false;
-            this.cmbLop.FormattingEnabled = true;
-            this.cmbLop.Location = new System.Drawing.Point(373, 25);
-            this.cmbLop.Name = "cmbLop";
-            this.cmbLop.Size = new System.Drawing.Size(121, 21);
-            this.cmbLop.TabIndex = 7;
-            // 
-            // cmbKhoaHoc
-            // 
-            this.cmbKhoaHoc.FormattingEnabled = true;
-            this.cmbKhoaHoc.Location = new System.Drawing.Point(129, 25);
-            this.cmbKhoaHoc.Name = "cmbKhoaHoc";
-            this.cmbKhoaHoc.Size = new System.Drawing.Size(142, 21);
-            this.cmbKhoaHoc.TabIndex = 6;
-            this.cmbKhoaHoc.SelectedValueChanged += new System.EventHandler(this.cmbKhoa_SelectedValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Chọn Khóa học:";
-            // 
-            // btnDongY
-            // 
-            this.btnDongY.Location = new System.Drawing.Point(524, 25);
-            this.btnDongY.Name = "btnDongY";
-            this.btnDongY.Size = new System.Drawing.Size(65, 23);
-            this.btnDongY.TabIndex = 4;
-            this.btnDongY.Text = "Đồng ý";
-            this.btnDongY.UseVisualStyleBackColor = true;
-            this.btnDongY.Click += new System.EventHandler(this.btnDongY_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(299, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Chọn Lớp:";
-            // 
             // frmReportSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,12 +241,6 @@
 
         //private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MSSV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QUEQUAN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NGAYSINH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NOISINH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GIOITINH;
         private System.Windows.Forms.ComboBox cmbKhoaHoc;
         private System.Windows.Forms.ComboBox cmbLop;
         public System.Windows.Forms.DataGridView dgvSinhVien;
@@ -224,5 +248,14 @@
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Button btnDongY;
         public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnExcel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKhoaHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MSSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QUEQUAN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NGAYSINH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NOISINH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GIOITINH;
     }
 }

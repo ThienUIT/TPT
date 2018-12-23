@@ -13,7 +13,7 @@ namespace QLSV_Database
         public DataTable BaoCaoMH(string makhoa)
         {
             DataTable dt = new DataTable();
-            string strSQL = "SELECT        MonHoc.TenMonHoc, MonHoc.SoTinChi, MonHoc.HinhThuc, MonHoc.TongSoTiet, MonHoc.SoTietLyThuyet, MonHoc.SoTietThucHanh, MonHoc.GhiChu, Khoa.TenKhoa ";
+            string strSQL = "SELECT        MonHoc.TenMonHoc, MonHoc.SoTinChi, MonHoc.HinhThuc, MonHoc.TongSoTiet, MonHoc.SoTietLyThuyet, MonHoc.SoTietThucHanh, Khoa.TenKhoa,MonHoc.GhiChu ";
             strSQL += "FROM  MonHoc INNER JOIN Khoa ON MonHoc.MaKhoa = Khoa.MaKhoa and Khoa.MaKhoa = '" + makhoa + "'";
             dt = cThaotacchung.Reports(strSQL, "MonHoc");
             return dt;

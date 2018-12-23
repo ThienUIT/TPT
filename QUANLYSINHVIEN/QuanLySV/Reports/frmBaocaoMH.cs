@@ -30,5 +30,12 @@ namespace QLSV_GiaoDien.Reports
             xlMonHoc.CMB = cmbKhoa;
             xlMonHoc.LoadDLVaoCombobox_cmbMaKhoa_MH();
         }
+
+        private void Excel_Click(object sender, EventArgs e)
+        {
+            xlBaocaoMH.MAKHOA = cmbKhoa.SelectedValue.ToString();
+            MonHoc excel = new MonHoc();
+            excel.Export(xlBaocaoMH.BaoCaoMH(), "Danh sach", "Danh Sách Môn Học");
+        }
     }
 }

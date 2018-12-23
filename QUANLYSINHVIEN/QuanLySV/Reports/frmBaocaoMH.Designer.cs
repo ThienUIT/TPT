@@ -40,18 +40,20 @@
             this.SoTietLyThuyet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoTietThucHanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnExcel);
             this.groupBox1.Controls.Add(this.btnDongY);
             this.groupBox1.Controls.Add(this.cmbKhoa);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(108, 11);
+            this.groupBox1.Location = new System.Drawing.Point(84, 18);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(414, 59);
+            this.groupBox1.Size = new System.Drawing.Size(462, 59);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Xuất danh sách môn học";
@@ -162,6 +164,16 @@
             this.GhiChu.Name = "GhiChu";
             this.GhiChu.ReadOnly = true;
             // 
+            // btnExcel
+            // 
+            this.btnExcel.Location = new System.Drawing.Point(384, 24);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(75, 23);
+            this.btnExcel.TabIndex = 5;
+            this.btnExcel.Text = "Excel";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.Excel_Click);
+            // 
             // frmBaocaoMH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,5 +206,6 @@
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.DataGridView dgvMonHoc;
         public System.Windows.Forms.Button btnDongY;
+        private System.Windows.Forms.Button btnExcel;
     }
 }

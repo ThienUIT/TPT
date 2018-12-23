@@ -124,6 +124,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\MonHoc.cs" />
+    <Compile Include="Reports\SinhVien.cs" />
     <Compile Include="WebCam.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -54,5 +54,11 @@ namespace QLSV_GiaoDien.Reports
             cmbKhoaHoc.Text = "-- Chọn khóa học --";
         }
 
+        private void Excel_Click(object sender, EventArgs e)
+        {
+            xlBaocao.MALOP = cmbLop.SelectedValue.ToString();
+            SinhVien excel = new SinhVien();
+            excel.Export(xlBaocao.BaoCaoSV(), "Danh sach", "Danh Sách Sinh Viên");
+        }
     }
 }
