@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnExel = new System.Windows.Forms.Button();
             this.btnXemDiem = new System.Windows.Forms.Button();
             this.txtMSSV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.LanThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tra cứu điểm";
+            // 
+            // btnExel
+            // 
+            this.btnExel.Location = new System.Drawing.Point(439, 22);
+            this.btnExel.Name = "btnExel";
+            this.btnExel.Size = new System.Drawing.Size(75, 23);
+            this.btnExel.TabIndex = 3;
+            this.btnExel.Text = "Exel";
+            this.btnExel.UseVisualStyleBackColor = true;
+            this.btnExel.Click += new System.EventHandler(this.Exel_Click);
             // 
             // btnXemDiem
             // 
@@ -172,16 +182,6 @@
             this.GhiChu.Name = "GhiChu";
             this.GhiChu.ReadOnly = true;
             // 
-            // btnExel
-            // 
-            this.btnExel.Location = new System.Drawing.Point(439, 22);
-            this.btnExel.Name = "btnExel";
-            this.btnExel.Size = new System.Drawing.Size(75, 23);
-            this.btnExel.TabIndex = 3;
-            this.btnExel.Text = "Exel";
-            this.btnExel.UseVisualStyleBackColor = true;
-            this.btnExel.Click += new System.EventHandler(this.Exel_Click);
-            // 
             // frmBaocaoDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -201,12 +201,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnXemDiem;
         private System.Windows.Forms.TextBox txtMSSV;
-        private System.Windows.Forms.DataGridView dgvDiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenMonHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTinChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hoten;
@@ -216,5 +211,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayThi;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.Button btnExel;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Button btnXemDiem;
+        public System.Windows.Forms.DataGridView dgvDiem;
     }
 }

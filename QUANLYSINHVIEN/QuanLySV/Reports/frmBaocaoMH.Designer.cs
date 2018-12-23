@@ -182,13 +182,7 @@
         }
 
         #endregion
-
-        
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnDongY;
         private System.Windows.Forms.ComboBox cmbKhoa;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvMonHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenMonHoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTinChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn HinhThuc;
@@ -196,5 +190,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTietLyThuyet;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTietThucHanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.DataGridView dgvMonHoc;
+        public System.Windows.Forms.Button btnDongY;
     }
 }

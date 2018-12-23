@@ -211,18 +211,18 @@
 
         //private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvSinhVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn HOTEN;
         private System.Windows.Forms.DataGridViewTextBoxColumn MSSV;
         private System.Windows.Forms.DataGridViewTextBoxColumn QUEQUAN;
         private System.Windows.Forms.DataGridViewTextBoxColumn NGAYSINH;
         private System.Windows.Forms.DataGridViewTextBoxColumn NOISINH;
         private System.Windows.Forms.DataGridViewTextBoxColumn GIOITINH;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbKhoaHoc;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnDongY;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbLop;
+        public System.Windows.Forms.DataGridView dgvSinhVien;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Button btnDongY;
+        public System.Windows.Forms.Label label2;
     }
 }
