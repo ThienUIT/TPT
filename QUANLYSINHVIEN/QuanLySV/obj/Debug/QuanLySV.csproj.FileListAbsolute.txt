@@ -271,3 +271,4 @@ C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technol
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\bin\Debug\AForge.Video.xml
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\bin\Debug\AForge.Video.DirectShow.xml
 C:\Users\Thien\OneDrive - Trường ĐH CNTT - University of Information Technology\Tài liệu\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.WebCam.resources
+C:\Users\Kirichigo\Documents\GitHub\TPT\QUANLYSINHVIEN\QuanLySV\obj\Debug\QLSV_GiaoDien.WebCam.resources

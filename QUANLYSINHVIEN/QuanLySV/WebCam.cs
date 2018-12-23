@@ -59,23 +59,35 @@ namespace QLSV_GiaoDien
             output = folderBrowserDialog1.SelectedPath;
             if (output != null) btnTakePhoto.Enabled = true;
         }
-
+        string kiemtra(string b)
+        {
+            int i = 0;
+            while (true)
+            {
+                if (System.IO.File.Exists(b) == true)
+                {
+                    i++;
+                    b = output + "\\Image" + "(" + i + ").png";
+                }
+                else break;
+            }
+            return b;
+        }
         private void btnTakePhoto_Click(object sender, EventArgs e)
         {
             if (output != "" && ptxWebCam.Image != null)
             {
-                ptxWebCam.Image.Save(output + "\\Image.png");
-                MessageBox.Show("Lưu Thành Công", "OK");
+                string b = output + "\\Image.png";
+                ptxWebCam.Image.Save(kiemtra(b));
             }
+            MessageBox.Show("Lưu Thành Công", "OK");
             btnTakePhoto.Visible = false;
             btnStop.Visible = false;
         }
 
         private void WebCam_Closed(object sender, FormClosedEventArgs e)
-        {
-           
+        {          
             frame.Stop();
-            ptxWebCam.Image = null;
         }
     }
 }
