@@ -32,7 +32,9 @@ static        frmBaocaoMH frmMH = new frmBaocaoMH();
 
         private void Form1_Load(object sender, EventArgs e)
         {
-         
+            tiếngViệtToolStripMenuItem.Checked = true;
+            tiếngViệtToolStripMenuItem.Enabled = false;
+
             btnQLSV_collapse.Visible = true;
             btnQLSV_ex.Visible = false;
 
@@ -490,6 +492,11 @@ static        frmBaocaoMH frmMH = new frmBaocaoMH();
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            englishToolStripMenuItem.Enabled = false;
+            tiếngViệtToolStripMenuItem.Enabled = true;
+            btnQLSV_ex.Text = "Account Management";
+            btnQLMH_ex.Text = "General Management";
+            btnQLDIEM_ex.Text = "Report";
             quảnLýToolStripMenuItem1.Text = "Management";
             DangNhapToolStripMenuItem.Text = "Login";
             quanlyTK_ToolStripMenuItem.Text = "Account Management";
@@ -712,6 +719,8 @@ static        frmBaocaoMH frmMH = new frmBaocaoMH();
 
         private void tiếngViệtToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            englishToolStripMenuItem.Enabled = true;
+            tiếngViệtToolStripMenuItem.Enabled = false;
             quảnLýToolStripMenuItem1.Text = "Quản lý";
             DangNhapToolStripMenuItem.Text = "Đăng nhập";
             quanlyTK_ToolStripMenuItem.Text = "Quản lý tài khoản";
@@ -721,6 +730,10 @@ static        frmBaocaoMH frmMH = new frmBaocaoMH();
             lnkKH_Nganh_Lop.Text = "Khoa-ngành-lớp";
             lnkGV_Khoa.Text = "Giao viên-Khoa";
             lnkNhapDiem.Text = "Nhập điểm";
+            btnQLSV_collapse.Text = "Quản lý tài khoản";
+            btnQLSV_ex.Text = "Quản lý tài khoản";
+            btnQLMH_ex.Text = "Quản lý chung";
+            btnQLDIEM_ex.Text = "Báo cáo";
             nhapDiemToolStripMenuItem.Text = "Nhập điểm";
             báoCáoToolStripMenuItem.Text = "Báo cáo";
             TacVuToolStripMenuItem.Text = "Tác vụ";

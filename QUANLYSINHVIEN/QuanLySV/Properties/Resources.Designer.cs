@@ -63,6 +63,16 @@ namespace QLSV_GiaoDien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap American {
+            get {
+                object obj = ResourceManager.GetObject("American", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap backgroup {
             get {
                 object obj = ResourceManager.GetObject("backgroup", resourceCulture);
@@ -236,6 +246,16 @@ namespace QLSV_GiaoDien.Properties {
         internal static System.Drawing.Bitmap take_a_photo {
             get {
                 object obj = ResourceManager.GetObject("take a photo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap VN {
+            get {
+                object obj = ResourceManager.GetObject("VN", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
