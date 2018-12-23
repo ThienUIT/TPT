@@ -125,7 +125,6 @@
             this.tabKhoaHoc_Nganh_Lop.SelectedIndex = 0;
             this.tabKhoaHoc_Nganh_Lop.Size = new System.Drawing.Size(920, 640);
             this.tabKhoaHoc_Nganh_Lop.TabIndex = 0;
-            this.tabKhoaHoc_Nganh_Lop.Click += new System.EventHandler(this.tabKhoaHoc_Nganh_Lop_Click);
             // 
             // tabKhoaHoc
             // 
@@ -326,7 +325,7 @@
             // 
             // btnThemKhoaHoc
             // 
-            this.btnThemKhoaHoc.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnThemKhoaHoc.BackColor = System.Drawing.Color.Transparent;
             this.btnThemKhoaHoc.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThemKhoaHoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnThemKhoaHoc.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -526,7 +525,7 @@
             // 
             // btnThem_Nganh
             // 
-            this.btnThem_Nganh.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnThem_Nganh.BackColor = System.Drawing.Color.Transparent;
             this.btnThem_Nganh.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThem_Nganh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnThem_Nganh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -812,7 +811,7 @@
             // 
             // btnThemLop
             // 
-            this.btnThemLop.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnThemLop.BackColor = System.Drawing.Color.Transparent;
             this.btnThemLop.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThemLop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnThemLop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;

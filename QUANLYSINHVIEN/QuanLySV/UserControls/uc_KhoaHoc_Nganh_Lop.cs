@@ -31,7 +31,7 @@ namespace QLSV_GiaoDien.UserControls
         #region hide and show txt
         public void Enable_KhoaHoc()
         {
-            txtMaKhoaHoc.Enabled = true;
+            
             txtTenKhoaHoc.Enabled = true;
             dtpNgayBatDau.Enabled = true;
             dtpNgayKetThuc.Enabled = true;
@@ -389,8 +389,23 @@ namespace QLSV_GiaoDien.UserControls
                 txtMaKhoaHoc.Text = qlsv_xKhoaHoc.TaoMaKhoaHoc();
                 qlsv_xKhoaHoc.MAKHOAHOC = txtMaKhoaHoc.Text;
                 qlsv_xKhoaHoc.TENKHOAHOC = txtTenKhoaHoc.Text;
-                qlsv_xKhoaHoc.NGAYBATDAU = dtpNgayBatDau.Value;
-                qlsv_xKhoaHoc.NGAYKETTHUC = dtpNgayKetThuc.Value;
+
+                if ((int)dtpNgayKetThuc.Value.Year - (int)dtpNgayBatDau.Value.Year > 0)
+                {
+                    qlsv_xKhoaHoc.NGAYBATDAU = dtpNgayBatDau.Value;
+                    qlsv_xKhoaHoc.NGAYKETTHUC = dtpNgayKetThuc.Value;
+                }
+                else
+                {
+                    MessageBox.Show("Không được nhập ngày kết thúc nhỏ hơn ngày bắt đầu của khoá học","Thông báo");
+                    dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();
+                    txtMaKhoaHoc.Text = "";
+                    DisEnable_KhoaHoc();
+                    btnCancel_KhoaHoc.Enabled = true;
+                    btnNhapLaiKhoahoc.Enabled = true;
+                    return;
+                }
+
                 qlsv_xKhoaHoc.GHICHU = txtGhichu_KhoaHoc.Text;
                 qlsv_xKhoaHoc.ThemKhoaHoc();
                 dgvKhoaHoc.DataSource = qlsv_xKhoaHoc.LoadDLKhoaHoc();

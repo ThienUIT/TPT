@@ -53,8 +53,10 @@ namespace QLSV_GiaoDien
             báoCáoToolStripMenuItem.Enabled = false;
 
             lblTitle.Text = "CHƯƠNG TRÌNH QUẢN LÍ SINH VIÊN";
-         
-           
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
+
+
         }
 
         #region grBox Left
@@ -64,7 +66,7 @@ namespace QLSV_GiaoDien
             btnQLSV_collapse.Visible = false;
             do
             {
-                pan_MenuQLSV.Height = pan_MenuQLSV.Height - 1;
+                pan_MenuQLSV.Height = pan_MenuQLSV.Height - 279;
                 Application.DoEvents();
             } while (pan_MenuQLSV.Height > 0);
            
@@ -113,7 +115,7 @@ namespace QLSV_GiaoDien
             
             do
             {
-                pan_MenuMH.Height = pan_MenuMH.Height + 1;
+                pan_MenuMH.Height = pan_MenuMH.Height + 147;
                 Application.DoEvents();
             } while (pan_MenuMH.Height <= 120);
             btnQLMH_ex.Visible = false;
@@ -139,7 +141,7 @@ namespace QLSV_GiaoDien
             btnQLMH_Collapse.Visible = false ;
             do
             {
-                pan_MenuMH.Height = pan_MenuMH.Height - 1;
+                pan_MenuMH.Height = pan_MenuMH.Height - 279;
                 Application.DoEvents();
             } while (pan_MenuMH.Height >0);
             is_panQLMHExpand = false;
@@ -161,7 +163,7 @@ namespace QLSV_GiaoDien
            
             do
             {
-                pan_MenuQLDIEM.Height = pan_MenuQLDIEM.Height + 1;
+                pan_MenuQLDIEM.Height = pan_MenuQLDIEM.Height + 147;
                 Application.DoEvents();
             } while (pan_MenuQLDIEM.Height <= 120);
             btnQLDIEM_ex.Visible = false;
@@ -174,7 +176,7 @@ namespace QLSV_GiaoDien
             btnQLDIEM_Collapse.Visible = false ;
             do
             {
-                pan_MenuQLDIEM.Height = pan_MenuQLDIEM.Height - 1;
+                pan_MenuQLDIEM.Height = pan_MenuQLDIEM.Height - 147;
                 Application.DoEvents();
             } while (pan_MenuQLDIEM.Height >0);
         }
@@ -185,6 +187,8 @@ namespace QLSV_GiaoDien
         private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Quản lý tài khoản";
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
             uc_User user = new uc_User();
 
             qlsv_xl.AddControl(pan_Main, user);
@@ -192,6 +196,8 @@ namespace QLSV_GiaoDien
         private void lnkTaiKhoan_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             lblTitle.Text = "Quản lý tài khoản";
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
             uc_User user = new uc_User();
 
             qlsv_xl.AddControl(pan_Main, user);
@@ -200,12 +206,16 @@ namespace QLSV_GiaoDien
         private void lnk_QuanlySv_lop_mh_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             lblTitle.Text = "Quản lí Sinh Viên - Môn Học - DKMH";
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
             uc_SinhVien_Mon_DKMH slv = new uc_SinhVien_Mon_DKMH();
             qlsv_xl.AddControl(pan_Main, slv);
         }
         private void quanliSV_L_MH_NGToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Quản lí Sinh Viên - Môn học - ĐKMH";
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
             uc_SinhVien_Mon_DKMH slv = new uc_SinhVien_Mon_DKMH();
             qlsv_xl.AddControl(pan_Main, slv);
         }
@@ -213,6 +223,8 @@ namespace QLSV_GiaoDien
         private void lnkGV_K_e_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             lblTitle.Text = "Quản lí Giáo Viên - Khoa ";
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
             uc_GiaoVien_Khoa gkh = new uc_GiaoVien_Khoa();
             qlsv_xl.AddControl(pan_Main, gkh);
             
@@ -220,6 +232,8 @@ namespace QLSV_GiaoDien
         private void quanliGV_Khoa_khoahoc_HEToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Quản lí Giáo Viên - Khoa ";
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
             uc_GiaoVien_Khoa gkh = new uc_GiaoVien_Khoa();
             qlsv_xl.AddControl(pan_Main, gkh);
         }
@@ -227,12 +241,16 @@ namespace QLSV_GiaoDien
         private void lnkKH_Nganh_Lop_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             lblTitle.Text = "Khoá Học - Ngành - Lớp";
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
             uc_KhoaHoc_Nganh_Lop KH_N_L = new uc_KhoaHoc_Nganh_Lop();
             qlsv_xl.AddControl(pan_Main, KH_N_L);
         }
         private void quảnLíKhoáHọcNgànhLớpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Khoá Học - Ngành - Lớp";
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
             uc_KhoaHoc_Nganh_Lop KH_N_L = new uc_KhoaHoc_Nganh_Lop();
             qlsv_xl.AddControl(pan_Main, KH_N_L);
         }
@@ -240,12 +258,16 @@ namespace QLSV_GiaoDien
         private void lnkNhapDiem_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             lblTitle.Text = "Nhập Điểm";
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
             uc_NhapDiem nhapdiem = new uc_NhapDiem();
             qlsv_xl.AddControl(pan_Main, nhapdiem);
         }
         private void nhapDiemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lblTitle.Text = "Nhập Điểm";
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
             uc_NhapDiem nhapdiem = new uc_NhapDiem();
             qlsv_xl.AddControl(pan_Main, nhapdiem);
         }
@@ -289,6 +311,8 @@ namespace QLSV_GiaoDien
             pan_Main.BackgroundImage = Properties.Resources.school;
 
             lblTitle.Text = "Chương trình quản lý sinh viên";
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
         }
         private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -302,6 +326,8 @@ namespace QLSV_GiaoDien
             pan_Main.BackgroundImage = Properties.Resources.school;
 
             lblTitle.Text = "Chương trình quản lý sinh viên";
+            lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15, System.Drawing.FontStyle.Bold);
+
         }
         //
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
@@ -474,9 +500,18 @@ namespace QLSV_GiaoDien
         {
             Aboutme ab = new Aboutme();
             ab.ShowDialog();
+           
         }
-        
-        
-       
+        // no effect flicker double-buffer
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+            }
+        }
+
     }
 }

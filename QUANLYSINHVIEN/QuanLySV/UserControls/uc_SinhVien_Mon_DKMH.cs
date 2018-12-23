@@ -150,6 +150,7 @@ namespace QLSV_GiaoDien.UserControls
             Enable_SV();
             btnTakePhoto.Enabled = true;
             xlc.ClearAllTextBox(groupBox1);
+            qlsv_xlSV.CMB = cbMaLop;
             btnLamlai.Visible = false;
         }
         private void btnLuu_Click(object sender, EventArgs e)
@@ -217,7 +218,10 @@ namespace QLSV_GiaoDien.UserControls
                 dtp_NgaySinh.Value = (DateTime)dgv_SV.CurrentRow.Cells[3].Value;
             txtNoiSinh.Text = dgv_SV.CurrentRow.Cells[4].Value.ToString();
             txtHinh.Text = dgv_SV.CurrentRow.Cells[7].Value.ToString();
+
             txtGhichu.Text = dgv_SV.CurrentRow.Cells[8].Value.ToString();
+            pcHinhSV.ImageLocation = txtHinh.Text;
+            pcHinhSV.SizeMode = PictureBoxSizeMode.StretchImage;
 
             if (dgv_SV.CurrentRow.Cells[5].Value.ToString() == "Nam")
             {
@@ -232,10 +236,19 @@ namespace QLSV_GiaoDien.UserControls
                 rdNam.Checked = false;
                 rdNu.Checked = false;
             }
-            
-           
+        }
 
 
+        private void btnBrowseHinh_Click(object sender, EventArgs e)
+        {
+            oFD_Pic.ShowDialog();
+        }
+
+        private void oFD_Pic_FileOk(object sender, CancelEventArgs e)
+        {
+            txtHinh.Text = oFD_Pic.FileName.ToString();
+            pcHinhSV.ImageLocation = txtHinh.Text;
+            pcHinhSV.SizeMode = PictureBoxSizeMode.StretchImage;
         }
         #endregion
 
@@ -317,7 +330,6 @@ namespace QLSV_GiaoDien.UserControls
 
         }
         #endregion
-
 
         #region Dăng ký môn học
         private void btnThem_DKMH_Click(object sender, EventArgs e)
@@ -441,21 +453,7 @@ namespace QLSV_GiaoDien.UserControls
        
         private void dgvDangkyMH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //if (dgvDangkyMH.CurrentRow.Cells[2].Value.ToString() != "" && dgvDangkyMH.CurrentRow.Cells[4].Value.ToString() != "")
-            //{
-            //    cmbMonHocDK.SelectedValue = dgvDangkyMH.CurrentRow.Cells[2].Value;
-            //    txtMSV_DKMH.Text = dgvDangkyMH.CurrentRow.Cells[3].Value.ToString();
-            //    dtp_NgayDKMH.Value = (DateTime)dgvDangkyMH.CurrentRow.Cells[4].Value;
-            //    numSoTCDK.Value = (int)dgvDangkyMH.CurrentRow.Cells[5].Value;
-            //    txtHocky.Text = dgvDangkyMH.CurrentRow.Cells[6].Value.ToString();
-
-            //    qlsv_xlDKMonHoc.MAMONHOC = cmbMonHocDK.SelectedValue.ToString();
-            //    qlsv_xlDKMonHoc.MASINHVIEN = txtMSV_DKMH.Text;
-            //    qlsv_xlDKMonHoc.NGAYDANGKY = dtp_NgayDKMH.Value;
-            //    qlsv_xlDKMonHoc.SOTINCHI = (int)numSoTCDK.Value;
-            //    qlsv_xlDKMonHoc.HOCKY = int.Parse(txtHocky.Text);
-
-            //}
+        
 
             cmbMonHocDK.SelectedValue = dgvDangkyMH.CurrentRow.Cells[0].Value.ToString();
             txtMSV_DKMH.Text = dgvDangkyMH.CurrentRow.Cells[1].Value.ToString();
@@ -474,17 +472,7 @@ namespace QLSV_GiaoDien.UserControls
             frmQLMH.ShowDialog();
         }
 
-        private void btnBrowseHinh_Click(object sender, EventArgs e)
-        {
-            oFD_Pic.ShowDialog();
-        }
-
-        private void oFD_Pic_FileOk(object sender, CancelEventArgs e)
-        {
-            txtHinh.Text = oFD_Pic.FileName.ToString();
-            pcHinhSV.ImageLocation = txtHinh.Text;
-            pcHinhSV.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
+      
 
 
         #region chuẩn hoá
@@ -532,5 +520,7 @@ namespace QLSV_GiaoDien.UserControls
             WebCam wb = new WebCam();
             wb.Show();
         }
+
+        
     }
 }

@@ -313,7 +313,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnThem.BackColor = System.Drawing.Color.Transparent;
             this.btnThem.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -531,7 +531,7 @@
             // 
             // btnThemKhoa
             // 
-            this.btnThemKhoa.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnThemKhoa.BackColor = System.Drawing.Color.Transparent;
             this.btnThemKhoa.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.button_add;
             this.btnThemKhoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnThemKhoa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;

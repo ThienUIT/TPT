@@ -104,7 +104,7 @@
             this.pan_QLDIEM.Location = new System.Drawing.Point(9, 433);
             this.pan_QLDIEM.Margin = new System.Windows.Forms.Padding(4);
             this.pan_QLDIEM.Name = "pan_QLDIEM";
-            this.pan_QLDIEM.Size = new System.Drawing.Size(280, 203);
+            this.pan_QLDIEM.Size = new System.Drawing.Size(280, 219);
             this.pan_QLDIEM.TabIndex = 3;
             // 
             // btnQLDIEM_ex
@@ -275,9 +275,9 @@
             // 
             // lnkTaiKhoan
             // 
-            this.lnkTaiKhoan.DisabledLinkColor = System.Drawing.Color.Gold;
+            this.lnkTaiKhoan.DisabledLinkColor = System.Drawing.Color.Black;
             this.lnkTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lnkTaiKhoan.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lnkTaiKhoan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lnkTaiKhoan.LinkColor = System.Drawing.Color.Navy;
             this.lnkTaiKhoan.Location = new System.Drawing.Point(20, 12);
             this.lnkTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);

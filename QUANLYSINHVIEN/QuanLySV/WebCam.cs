@@ -18,6 +18,8 @@ namespace QLSV_GiaoDien
         public WebCam()
         {
             InitializeComponent();
+            btnTakePhoto.Visible = false;
+            btnStop.Visible = false;
         }
         void Start_cam()
         {
@@ -25,6 +27,7 @@ namespace QLSV_GiaoDien
             frame = new VideoCaptureDevice(Devices[0].MonikerString);
             frame.NewFrame += Frame_NewFrame;
             frame.Start();
+          
         }
 
         private void Frame_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
@@ -39,6 +42,8 @@ namespace QLSV_GiaoDien
         private void Start_Click(object sender, EventArgs e)
         {
             Start_cam();
+            btnTakePhoto.Visible = true;
+            btnStop.Visible = true;
         }
 
         private void Stop_Click(object sender, EventArgs e)
@@ -62,11 +67,15 @@ namespace QLSV_GiaoDien
                 ptxWebCam.Image.Save(output + "\\Image.png");
                 MessageBox.Show("Lưu Thành Công", "OK");
             }
+            btnTakePhoto.Visible = false;
+            btnStop.Visible = false;
         }
 
         private void WebCam_Closed(object sender, FormClosedEventArgs e)
         {
+           
             frame.Stop();
+            ptxWebCam.Image = null;
         }
     }
 }
