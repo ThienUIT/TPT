@@ -1,0 +1,199 @@
+qu?nLýToolStripMenuItem1.Text = "Qu?n lý";
+            DangNhapToolStripMenuItem.Text = "Ðang nh?p";
+            quanlyTK_ToolStripMenuItem.Text = "Qu?n lý tài kho?n";
+            DangXuatToolStripMenuItem.Text = "Ðang xu?t";
+            thoátToolStripMenuItem.Text = "Thoát";
+            lnk_QuanlySv__Mon_DKMH.Text = "Sinh viên-Môn-Ðang kí môn h?c";
+            lnkKH_Nganh_Lop.Text = "Khoa-ngành-l?p";
+            lnkGV_Khoa.Text = "Giao viên-Khoa";
+            lnkNhapDiem.Text = "Nh?p di?m";
+            nhapDiemToolStripMenuItem.Text = "Nh?p di?m";
+            báoCáoToolStripMenuItem.Text = "Báo cáo";
+            TacVuToolStripMenuItem.Text = "Tác v?";
+            xuatDSMonHocToolStripMenuItem.Text = "Danh sách môn h?c";
+            xuatDSSVToolStripMenuItem.Text = "Danh sách môn h?c";
+            xemDiemToolStripMenuItem.Text = "Xem di?m";
+            aboutMeToolStripMenuItem.Text = "Thông tin";
+            thoátToolStripMenuItem1.Text = "Thoát";
+            lnkTaiKhoan.Text = "Qu?n lí tài kho?n";
+            lnkDangXuat.Text = "Ðang xu?t";
+            btnQLSV_collapse.Text = "Qu?n lí tài kho?n";
+            lnkNhapDiem.Text = "Thêm di?m";
+            lnkXuatDSMH.Text = "Danh sách môn";
+            lnkXuatSV.Text = "Danh sách sinh viên";
+            lnkXemDiem.Text = "Xem di?m";
+            btnQLMH_Collapse.Text = "Qu?n lí chung";
+            btnQLDIEM_Collapse.Text = "Báo cáo";
+            lblTitle.Text ="CHUONG TRÌNH QU?N LÝ SINH VIÊN";
+            quanliSV_MH_DKMHToolStripMenuItem.Text= "Sinh viên-Môn-Ðang kí môn h?c Register";
+            qu?nLíKhoáH?cNgànhL?pToolStripMenuItem.Text= "Khóa-ngành-L?p";
+            quanliGV_KhoaToolStripMenuItem.Text= "Giao viên - Khoa";
+            ngônNg?ToolStripMenuItem.Text = "Ngôn ng?";
+            //Login Form
+            frmLogin.label1.Text = "ÐANG NH?P";
+
+            //QuanLiMonHoc
+            //SinhVien:
+            slv.tabSV_Mon_DKMH.TabPages[0].Text = "SINH VIÊN";
+            slv.tabSV_Mon_DKMH.TabPages[1].Text = "MÔN H?C";
+            slv.tabSV_Mon_DKMH.TabPages[2].Text = "ÐANG KÍ MÔN";
+            slv.groupBox1.Text = "NH?P THÔNG TIN SINH VIÊN";
+            slv.label1.Text = "Mã SV:";
+            slv.label2.Text = "Tên:";
+            slv.label5.Text = "Ngày sinh:";
+            slv.label6.Text = "Noi sinh:";
+            slv.label9.Text = "Quê quán:";
+            slv.label10.Text="Hình:";
+            slv.label15.Text = "Ghi chú:";
+            slv.label16.Text = "L?p:";
+            slv.label4.Text = "Gioi tinh:";
+            slv.rdNam.Text = "Nam";
+            slv.rdNu.Text = "N?";
+            slv.btnQuanLySV.Text = "Qu?n lí sinh viên";
+
+            //MonHoc:
+            slv.groupBox3.Text = "Thêm môn h?c:";
+            slv.label20.Text = "Mã môn:";
+            slv.label14.Text = "Tên môn:";
+            slv.label8.Text = "Lo?i: ";
+            slv.rdMonbatbuoc.Text = "B?t bu?c";
+            slv.rdMontuchon.Text = "Không b?t bu?c";
+            slv.label18.Text = "Tín ch?: ";
+            slv.label19.Text = "Tín ch? lí thuy?t:";
+            slv.label12.Text = "Tín ch? th?c hành:";
+            slv.label17.Text = "S? ti?t:";
+            slv.label11.Text = "Ghi chú:";
+            slv.btnQLMH.Text = "Qu?n lí môn";
+            slv.label7.Text = "Danh sách sinh viên hi?n t?i:";
+            slv.label13.Text = "Khoa:";
+
+            //Dang ki mon hoc:
+            slv.groupBox6.Text = "Ðang kí môn";
+            slv.groupBoxDKMH.Text = "Nh?p thông tin";
+            slv.label27.Text = "Ch?n môn:";
+            slv.label26.Text = "Mã SV:";
+            slv.label22.Text = "Ngày dang kí:";
+            slv.label24.Text = "H?c kì:";
+            slv.label21.Text = "Tín ch?:";
+            slv.groupBox4.Text = "Tìm môn dã dang kí:";
+            slv.label37.Text = "Nh?p mã sv:";
+            slv.groupboxSVDKMH.Text = "Môn dã dang kí:";
+            slv.label3.Text = "Danh sách nh?ng môn sinh viên:";
+            slv.label25.Text = "dã dang kí";
+            slv.dgvDangkyMH.Columns[0].HeaderText = "Mã môn";
+            slv.dgvDangkyMH.Columns[1].HeaderText = "Mã sv";
+            slv.dgvDangkyMH.Columns[2].HeaderText = "Ngày dang kí";
+            slv.dgvDangkyMH.Columns[3].HeaderText = "Tín ch?";
+            slv.dgvDangkyMH.Columns[4].HeaderText = "H?c kì";
+
+            //Khoahoc-Nganh
+            //Khoahoc
+            KH_N_L.tabKhoaHoc_Nganh_Lop.TabPages[0].Text = "Môn";
+            KH_N_L.tabKhoaHoc_Nganh_Lop.TabPages[1].Text = "Ngành";
+            KH_N_L.tabKhoaHoc_Nganh_Lop.TabPages[2].Text = "L?p";
+            KH_N_L.groupBox1.Text = "Thêm khóa h?c";
+            KH_N_L.label12.Text = "Mã khóa";
+            KH_N_L.label8.Text = "Tên khóa:";
+            KH_N_L.label11.Text = "Ghi chú:";
+            KH_N_L.label13.Text = "Ngày b?t d?u:";
+            KH_N_L.label14.Text = "Ngày k?t thúc:";
+            KH_N_L.dgvKhoaHoc.Columns[0].HeaderText= "Mã khóa";
+            KH_N_L.dgvKhoaHoc.Columns[1].HeaderText = "Tên khóa";
+            KH_N_L.dgvKhoaHoc.Columns[2].HeaderText = "Ngày b?t d?u";
+            KH_N_L.dgvKhoaHoc.Columns[3].HeaderText = "Ngày k?t thúc";
+            KH_N_L.dgvKhoaHoc.Columns[4].HeaderText = "Ghi chú";
+            KH_N_L.dgvKhoaHoc.Columns[5].HeaderText = "C?p nh?t";
+            KH_N_L.dgvKhoaHoc.Columns[6].HeaderText = "Xóa";
+            //Nganh hoc
+            KH_N_L.groupBox7.Text = "Thêm ngành";
+            KH_N_L.label28.Text = "Mã ngành";
+            KH_N_L.label29.Text = "Tên ngành";
+            KH_N_L.label31.Text = "Ghi chú";
+            KH_N_L.groupBox8.Text = "Danh sách môn h?c";
+            KH_N_L.dgvNganh.Columns[0].HeaderText = "Mã ngành";
+            KH_N_L.dgvNganh.Columns[1].HeaderText = "Tên ngành";
+            KH_N_L.dgvNganh.Columns[2].HeaderText = "Ghi chú";
+           
+            //Lop
+            KH_N_L.groupboxLOP.Text = "Thêm l?p";
+            KH_N_L.label32.Text = "Mã l?p";
+            KH_N_L.label33.Text = "Tên l?p:";
+            KH_N_L.label36.Text = "Ghi chú:";
+            KH_N_L.label34.Text = "Ngành:";
+            KH_N_L.label35.Text = "Khoa:";
+            KH_N_L.label23.Text = "Tìm theo:";
+            KH_N_L.label38.Text = "T? khóa:";
+            KH_N_L.groupBox9.Text = "Danh sách l?p:";
+            KH_N_L.cmbTimLop.Text = "-- Ch?n di?u ki?n --";
+            KH_N_L.dgvLop.Columns[0].HeaderText = "Mã l?p";
+            KH_N_L.dgvLop.Columns[1].HeaderText = "Mã khóa";
+            KH_N_L.dgvLop.Columns[2].HeaderText = "Mã ngành";
+            KH_N_L.dgvLop.Columns[3].HeaderText = "Tên l?p";
+            KH_N_L.dgvLop.Columns[4].HeaderText = "Ghi chú";
+            //Giaovien-Khoa
+            //GiaoVien
+            gkh.tabGV_Khoa.TabPages[0].Text = "Giao1 viên";
+            gkh.tabGV_Khoa.TabPages[1].Text = "Khoa";
+            gkh.groupboxGV.Text = "Thêm giáo viên";
+            gkh.label1.Text = "Mã giáo viên";
+            gkh.label3.Text = "Tên giáo viên";
+            gkh.label2.Text = "Khoa";
+            gkh.label5.Text = "Ghi chú";
+            gkh.groupBox3.Text = "Tìm thông tin giáo viên";
+            gkh.label6.Text = "Tìm theo";
+            gkh.cmbDieuKienTim.Text = "Ch?n di?u ki?n";
+            gkh.label4.Text = "Nh?p thông tin";
+            gkh.groupBox2.Text = "Danh sách h?c sinh hi?n t?i";
+            gkh.dgvGiaoVien.Columns[0].HeaderText = "Mã giáo viên";
+            gkh.dgvGiaoVien.Columns[1].HeaderText = "Tên giáo viên";
+            gkh.dgvGiaoVien.Columns[2].HeaderText = "Mã khóa";
+            gkh.dgvGiaoVien.Columns[3].HeaderText = "C?p nh?t";
+            gkh.dgvGiaoVien.Columns[4].HeaderText = "Xóa";
+            //Khoa
+            gkh.groupboxKhoa.Text = "Thêm khoa";
+            gkh.label7.Text = "Mã khoa";
+            gkh.label10.Text = "Tên khoa";
+            gkh.label9.Text = "Ghi chú";
+            gkh.groupBox5.Text = "Danh sách khoa";
+            gkh.dgvKhoa.Columns[0].HeaderText = "Mã khoa";
+            gkh.dgvKhoa.Columns[1].HeaderText = "Tên khoa";
+            gkh.dgvKhoa.Columns[2].HeaderText = "Ghi chú";
+            gkh.dgvKhoa.Columns[3].HeaderText = "C?p nh?t";
+            gkh.dgvKhoa.Columns[4].HeaderText = "Xóa";
+            //Nhap diem:
+            nhapdiem.groupBox1.Text = "Nh?p di?m";
+            nhapdiem.groupBox2.Text = "Nh?p di?m cho môn";
+            nhapdiem.label1.Text = "Ch?n khoa";
+            nhapdiem.label10.Text="Ch?n ngành";
+            nhapdiem.groupBox4.Text = "Tìm di?m sinh viên";
+            nhapdiem.groupBox3.Text = "Nh?p di?m:";
+            nhapdiem.label2.Text = "Mã môn";
+            nhapdiem.label3.Text = "Tên môn";
+            nhapdiem.label4.Text = "Ði?m l?n 1:";
+            nhapdiem.label5.Text = "Ði?m l?n 2:";
+            nhapdiem.label6.Text = "L?n:";
+            nhapdiem.label7.Text = "Ngày thi:";
+            nhapdiem.label8.Text = "Ghi chú:";
+            nhapdiem.label9.Text = "Nh?p mã sv:";
+            //BaoCaoMH:
+            frmMH.groupBox1.Text = "Xu?t danh sách môn h?c";
+            frmMH.label2.Text = "Xu?t danh sách môn h?c theo khoa";
+            frmMH.btnDongY.Text = "Ð?ng ý";
+            frmMH.dgvMonHoc.Columns[0].HeaderText = "Tên môn";
+            frmMH.dgvMonHoc.Columns[1].HeaderText = "Tín ch?";
+            frmMH.dgvMonHoc.Columns[2].HeaderText = "Lo?i";
+            frmMH.dgvMonHoc.Columns[3].HeaderText = "S? ti?t";
+            frmMH.dgvMonHoc.Columns[4].HeaderText = "S? tín ch? lí thuy?t";
+            frmMH.dgvMonHoc.Columns[5].HeaderText = "S? tín ch? th?c hành";
+            frmMH.dgvMonHoc.Columns[6].HeaderText = "Ghi chú:";
+            //Report sinh vien:
+            frm.groupBox1.Text = "Xu?t danh sách sinh viên:";
+            frm.label3.Text = "Ch?n khoa";
+            frm.label2.Text = "Ch?n l?p";
+            frm.btnDongY.Text = "Ð?ng ý";
+            frm.dgvSinhVien.Columns[0].HeaderText = "Tên";
+            frm.dgvSinhVien.Columns[1].HeaderText = "Mã sv";
+            frm.dgvSinhVien.Columns[2].HeaderText = "Quê quán";
+            frm.dgvSinhVien.Columns[3].HeaderText = "Ngày sinh";
+            frm.dgvSinhVien.Columns[4].HeaderText = "Noi sinh";
+            frm.dgvSinhVien.Columns[5].HeaderText = "Gioi tính";
