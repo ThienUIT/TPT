@@ -20,24 +20,97 @@
     <viet>Chương trình quản lý sinh viên</viet>
     <anh>Manage students</anh>
   </Language>
-  <!--<Language>
-    <viet>Lưu</viet>
-    <anh>Save</anh>
+  <Language>
+    <viet>Quản lý</viet>
+    <anh>Management</anh>
   </Language>
   <Language>
-    <viet>Lựa chọn</viet>
-    <anh>Option</anh>
+    <viet>Đăng nhập</viet>
+    <anh>Login</anh>
   </Language>
   <Language>
-    <viet>Thay đổi ngôn ngữ</viet>
-    <anh>Change Language</anh>
+    <viet>Quản lý tài khoản</viet>
+    <anh>Account Management</anh>
+  </Language>
+  <Language>
+    <viet>Đăng xuất</viet>
+    <anh>Logout</anh>
+  </Language>
+  <Language>
+    <viet>Thoát</viet>
+    <anh>Exit</anh>
+  </Language>
+  <Language>
+    <viet>Tác vụ</viet>
+    <anh>Tasks</anh>
+  </Language>
+  <Language>
+    <viet>Quản lí Sinh Viên - Môn Học - DKMH</viet>
+    <anh>Student-Subject-Course Register</anh>
+  </Language>
+  <Language>
+    <viet>Quản lí Khoá học - Ngành - Lớp</viet>
+    <anh>Course-Field-Class</anh>
+  </Language>
+  <Language>
+    <viet>Quản lí Giáo viên - Khoa</viet>
+    <anh>Lecturer-Faculty</anh>
+  </Language>
+  <Language>
+    <viet>Nhập điểm</viet>
+    <anh>Insert scores</anh>
+  </Language>
+  <Language>
+    <viet>Báo Cáo</viet>
+    <anh>Reports</anh>
+  </Language>
+  <Language>
+    <viet>Xuất danh sách môn học</viet>
+    <anh>Subject List</anh>
+  </Language>
+  <Language>
+    <viet>Xuất danh sách sinh viên</viet>
+    <anh>Student List</anh>
+  </Language>
+  <Language>
+    <viet>Xem điểm</viet>
+    <anh>Score View</anh>
+  </Language>
+  <Language>
+    <viet>Thông tin</viet>
+    <anh>Information</anh>
+  </Language>
+  <Language>
+    <viet>Ngôn ngữ</viet>
+    <anh>Languages</anh>
+  </Language>
+  <Language>
+    <viet>Tiếng Anh</viet>
+    <anh>English</anh>
   </Language>
   <Language>
     <viet>Tiếng Việt</viet>
     <anh>Vietnamese</anh>
   </Language>
   <Language>
-    <viet>Tiếng Anh</viet>
-    <anh>English</anh>
-  </Language>-->
+    <viet>Quản lý chung</viet>
+    <anh>General Management</anh>
+  </Language>
+  <Language>
+    <viet>Sinh viên - Môn Học - DKMH</viet>
+    <anh>Student-Subject-Course Register</anh>
+  </Language>
+  <Language>
+    <viet> Khoá Học - Ngành - Lớp</viet>
+    <anh>Course-Field-Class</anh>
+  </Language>
+  <Language>
+    <viet>Giáo viên - Khoa</viet>
+    <anh>Lecturer-Faculty</anh>
+  </Language>
+  <Language>
+    <viet>CHƯƠNG TRÌNH QUẢN LÝ SINH VIÊN</viet>
+    <anh>Manage students</anh>
+  </Language>
+
 </NewDataSet>

@@ -53,7 +53,7 @@
             this.lnkGV_Khoa = new System.Windows.Forms.LinkLabel();
             this.lnk_QuanlySv__Mon_DKMH = new System.Windows.Forms.LinkLabel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.quảnLýToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.DangNhapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quanlyTK_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,7 +82,7 @@
             this.pan_MenuQLSV.SuspendLayout();
             this.pan_QLMH.SuspendLayout();
             this.pan_MenuMH.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // grB_leftMenu
@@ -433,28 +433,30 @@
             this.lblTitle.Size = new System.Drawing.Size(0, 26);
             this.lblTitle.TabIndex = 4;
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.backgroup;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip.BackgroundImage = global::QLSV_GiaoDien.Properties.Resources.backgroup;
+            this.menuStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.menuStrip.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýToolStripMenuItem1,
             this.TacVuToolStripMenuItem,
             this.báoCáoToolStripMenuItem,
             this.aboutMeToolStripMenuItem,
             this.ngônNgữToolStripMenuItem,
             this.thoátToolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1272, 36);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(1272, 36);
+            this.menuStrip.TabIndex = 5;
+            this.menuStrip.Text = "menuStrip";
             // 
             // quảnLýToolStripMenuItem1
             // 
+            this.quảnLýToolStripMenuItem1.AutoToolTip = true;
             this.quảnLýToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.DangNhapToolStripMenuItem,
             this.quanlyTK_ToolStripMenuItem,
@@ -586,9 +588,8 @@
             // 
             this.englishToolStripMenuItem.CheckOnClick = true;
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(177, 32);
-            this.englishToolStripMenuItem.Text = "English";
-            this.englishToolStripMenuItem.CheckedChanged += new System.EventHandler(this.englishToolStripMenuItem_CheckedChanged);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
+            this.englishToolStripMenuItem.Text = "Tiếng Anh";
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // tiếngViệtToolStripMenuItem
@@ -597,9 +598,9 @@
             this.tiếngViệtToolStripMenuItem.CheckOnClick = true;
             this.tiếngViệtToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tiếngViệtToolStripMenuItem.Name = "tiếngViệtToolStripMenuItem";
-            this.tiếngViệtToolStripMenuItem.Size = new System.Drawing.Size(177, 32);
+            this.tiếngViệtToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
             this.tiếngViệtToolStripMenuItem.Text = "Tiếng Việt";
-            this.tiếngViệtToolStripMenuItem.CheckedChanged += new System.EventHandler(this.tiếngViệtToolStripMenuItem_CheckedChanged);
+            this.tiếngViệtToolStripMenuItem.Click += new System.EventHandler(this.tiếngViệtToolStripMenuItem_Click);
             // 
             // thoátToolStripMenuItem1
             // 
@@ -640,14 +641,15 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pan_Main);
             this.Controls.Add(this.grB_leftMenu);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStrip);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmMain";
+            this.Text = "Chương trình quản lý sinh viên";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.frmMain_Resize);
             this.grB_leftMenu.ResumeLayout(false);
@@ -659,8 +661,8 @@
             this.pan_QLMH.ResumeLayout(false);
             this.pan_MenuMH.ResumeLayout(false);
             this.pan_MenuMH.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -673,15 +675,10 @@
         private System.Windows.Forms.Label lblTitle;
         public System.Windows.Forms.Panel pan_Main;
         public System.Windows.Forms.GroupBox grB_leftMenu;
-        private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem DangNhapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quanlyTK_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DangXuatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem TacVuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutMeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem quanliSV_MH_DKMHToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quanliGV_KhoaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhapDiemToolStripMenuItem;
@@ -690,10 +687,8 @@
         private System.Windows.Forms.ToolStripMenuItem xemDiemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLíKhoáHọcNgànhLớpToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.ToolStripMenuItem ngônNgữToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tiếngViệtToolStripMenuItem;
-        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.MenuStrip menuStrip;
         public System.Windows.Forms.Button btnQLSV_ex;
         public System.Windows.Forms.Button btnQLSV_collapse;
         public System.Windows.Forms.Panel pan_MenuQLSV;
@@ -712,6 +707,13 @@
         public System.Windows.Forms.LinkLabel lnkXuatSV;
         public System.Windows.Forms.LinkLabel lnkXuatDSMH;
         public System.Windows.Forms.LinkLabel lnkKH_Nganh_Lop;
+        public System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem1;
+        public System.Windows.Forms.ToolStripMenuItem TacVuToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem aboutMeToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ngônNgữToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiếngViệtToolStripMenuItem;
     }
 }
 
