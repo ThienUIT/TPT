@@ -1,0 +1,13 @@
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\bin\Release\QuanLySV.exe
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\bin\Release\QuanLySV.pdb
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\obj\Release\ResolveAssemblyReference.cache
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\obj\Release\QuanLySV.Login.resources
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\obj\Release\QuanLySV.Properties.Resources.resources
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\obj\Release\QuanLySV.uc_DK_MonHoc.resources
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\obj\Release\QuanLySV.uc_NhapSV.resources
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\obj\Release\QuanLySV.csproj.GenerateResource.Cache
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\obj\Release\QuanLySV.exe
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\obj\Release\QuanLySV.pdb
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\obj\Release\QuanLySV.uc_NhapMonHoc.resources
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\obj\Release\QuanLySV.uc_User.resources
+D:\BaiTap\Phong Thi Nghiem\C#\QuanLySV\QuanLySV\obj\Release\QuanLySV.frmMain.resources
