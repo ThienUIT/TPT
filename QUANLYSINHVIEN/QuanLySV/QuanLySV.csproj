@@ -116,6 +116,7 @@
     <Compile Include="frmQuanLySV.Designer.cs">
       <DependentUpon>frmQuanLySV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Language.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -411,6 +412,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\American.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Language\frmMain.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

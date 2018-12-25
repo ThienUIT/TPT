@@ -116,7 +116,7 @@
             this.btnQLDIEM_ex.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnQLDIEM_ex.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQLDIEM_ex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnQLDIEM_ex.Location = new System.Drawing.Point(0, 4);
+            this.btnQLDIEM_ex.Location = new System.Drawing.Point(1, 4);
             this.btnQLDIEM_ex.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLDIEM_ex.Name = "btnQLDIEM_ex";
             this.btnQLDIEM_ex.Size = new System.Drawing.Size(280, 43);
@@ -223,7 +223,7 @@
             this.btnQLSV_collapse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnQLSV_collapse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQLSV_collapse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnQLSV_collapse.Location = new System.Drawing.Point(0, 4);
+            this.btnQLSV_collapse.Location = new System.Drawing.Point(1, 3);
             this.btnQLSV_collapse.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLSV_collapse.Name = "btnQLSV_collapse";
             this.btnQLSV_collapse.Size = new System.Drawing.Size(280, 43);
@@ -312,7 +312,7 @@
             this.btnQLMH_ex.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnQLMH_ex.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQLMH_ex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnQLMH_ex.Location = new System.Drawing.Point(1, 4);
+            this.btnQLMH_ex.Location = new System.Drawing.Point(0, 4);
             this.btnQLMH_ex.Margin = new System.Windows.Forms.Padding(4);
             this.btnQLMH_ex.Name = "btnQLMH_ex";
             this.btnQLMH_ex.Size = new System.Drawing.Size(280, 42);
@@ -584,23 +584,22 @@
             // 
             // englishToolStripMenuItem
             // 
-            this.englishToolStripMenuItem.Checked = true;
-            this.englishToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.englishToolStripMenuItem.Image = global::QLSV_GiaoDien.Properties.Resources.American;
+            this.englishToolStripMenuItem.CheckOnClick = true;
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(177, 32);
             this.englishToolStripMenuItem.Text = "English";
+            this.englishToolStripMenuItem.CheckedChanged += new System.EventHandler(this.englishToolStripMenuItem_CheckedChanged);
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // tiếngViệtToolStripMenuItem
             // 
             this.tiếngViệtToolStripMenuItem.Checked = true;
+            this.tiếngViệtToolStripMenuItem.CheckOnClick = true;
             this.tiếngViệtToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tiếngViệtToolStripMenuItem.Image = global::QLSV_GiaoDien.Properties.Resources.VN;
             this.tiếngViệtToolStripMenuItem.Name = "tiếngViệtToolStripMenuItem";
-            this.tiếngViệtToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
+            this.tiếngViệtToolStripMenuItem.Size = new System.Drawing.Size(177, 32);
             this.tiếngViệtToolStripMenuItem.Text = "Tiếng Việt";
-            this.tiếngViệtToolStripMenuItem.Click += new System.EventHandler(this.tiếngViệtToolStripMenuItem_Click);
+            this.tiếngViệtToolStripMenuItem.CheckedChanged += new System.EventHandler(this.tiếngViệtToolStripMenuItem_CheckedChanged);
             // 
             // thoátToolStripMenuItem1
             // 
@@ -648,7 +647,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Chương trình quản lý sinh viên";
+            this.Text = "frmMain";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.frmMain_Resize);
             this.grB_leftMenu.ResumeLayout(false);
@@ -668,36 +667,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnQLSV_ex;
-        private System.Windows.Forms.Button btnQLSV_collapse;
         private System.Windows.Forms.Panel pan_QLSV;
-        private System.Windows.Forms.Panel pan_MenuQLSV;
         private System.Windows.Forms.Panel pan_QLMH;
-        private System.Windows.Forms.Button btnQLMH_ex;
-        private System.Windows.Forms.Button btnQLMH_Collapse;
-        private System.Windows.Forms.Panel pan_MenuMH;
         private System.Windows.Forms.Panel pan_QLDIEM;
-        private System.Windows.Forms.Button btnQLDIEM_ex;
-        private System.Windows.Forms.Button btnQLDIEM_Collapse;
-        private System.Windows.Forms.Panel pan_MenuQLDIEM;
-        private System.Windows.Forms.LinkLabel lnk_QuanlySv__Mon_DKMH;
-        private System.Windows.Forms.LinkLabel lnkXemDiem;
-        private System.Windows.Forms.LinkLabel lnkGV_Khoa;
-        private System.Windows.Forms.LinkLabel lnkNhapDiem;
         private System.Windows.Forms.Label lblTitle;
         public System.Windows.Forms.Panel pan_Main;
         public System.Windows.Forms.GroupBox grB_leftMenu;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem DangNhapToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quanlyTK_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DangXuatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
-        private System.Windows.Forms.LinkLabel lnkTaiKhoan;
-        private System.Windows.Forms.LinkLabel lnkDangXuat;
-        private System.Windows.Forms.LinkLabel lnkXuatSV;
-        private System.Windows.Forms.LinkLabel lnkXuatDSMH;
         private System.Windows.Forms.ToolStripMenuItem TacVuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutMeToolStripMenuItem;
@@ -708,12 +688,30 @@
         private System.Windows.Forms.ToolStripMenuItem xuatDSMonHocToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xuatDSSVToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemDiemToolStripMenuItem;
-        private System.Windows.Forms.LinkLabel lnkKH_Nganh_Lop;
         private System.Windows.Forms.ToolStripMenuItem quảnLíKhoáHọcNgànhLớpToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ToolStripMenuItem ngônNgữToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiếngViệtToolStripMenuItem;
+        public System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.Button btnQLSV_ex;
+        public System.Windows.Forms.Button btnQLSV_collapse;
+        public System.Windows.Forms.Panel pan_MenuQLSV;
+        public System.Windows.Forms.Button btnQLMH_ex;
+        public System.Windows.Forms.Button btnQLMH_Collapse;
+        public System.Windows.Forms.Panel pan_MenuMH;
+        public System.Windows.Forms.Button btnQLDIEM_ex;
+        public System.Windows.Forms.Button btnQLDIEM_Collapse;
+        public System.Windows.Forms.Panel pan_MenuQLDIEM;
+        public System.Windows.Forms.LinkLabel lnk_QuanlySv__Mon_DKMH;
+        public System.Windows.Forms.LinkLabel lnkXemDiem;
+        public System.Windows.Forms.LinkLabel lnkGV_Khoa;
+        public System.Windows.Forms.LinkLabel lnkNhapDiem;
+        public System.Windows.Forms.LinkLabel lnkTaiKhoan;
+        public System.Windows.Forms.LinkLabel lnkDangXuat;
+        public System.Windows.Forms.LinkLabel lnkXuatSV;
+        public System.Windows.Forms.LinkLabel lnkXuatDSMH;
+        public System.Windows.Forms.LinkLabel lnkKH_Nganh_Lop;
     }
 }
 
